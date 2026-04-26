@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post — Real Mind Psychotherapy</title>
+  <meta name="description" content="Real Mind Psychotherapy blog">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <style>
+    /* ── POST HEADER ── */
+    .rm-post-header {
+      padding: clamp(3rem, 6vw, 5rem) 0 0;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .rm-post-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    #post-category {
+      background: var(--rm-green);
+      color: var(--rm-white);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.85rem;
+      border-radius: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    #post-date {
+      font-size: 0.85rem;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+    }
+
+    #post-title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    #post-author {
+      font-size: 0.875rem;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+      font-style: italic;
+      display: block;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .rm-post-image-wrap {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      border-radius: var(--rm-radius-lg);
+      overflow: hidden;
+    }
+
+    #post-image {
+      width: 100%;
+      aspect-ratio: 16/7;
+      object-fit: cover;
+    }
+
+    /* ── POST CONTENT ── */
+    #post-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    #post-content h2 {
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--rm-text);
+    }
+
+    #post-content h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--rm-text);
+    }
+
+    #post-content p {
+      font-size: clamp(1rem, 1.8vw, 1.05rem);
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    #post-content blockquote {
+      margin: 2rem 0;
+      padding: 1.25rem 1.75rem;
+      border-left: 4px solid var(--rm-accent);
+      background: var(--rm-bg-card);
+      border-radius: 0 var(--rm-radius) var(--rm-radius) 0;
+      font-family: Georgia, serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-style: italic;
+      color: var(--rm-text);
+      line-height: 1.6;
+    }
+
+    #post-content ul {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    #post-content ul li {
+      display: flex;
+      gap: 0.75rem;
+      font-size: clamp(0.95rem, 1.8vw, 1rem);
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    #post-content ul li::before {
+      content: '—';
+      color: var(--rm-accent);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    /* ── DIVIDER ── */
+    .rm-post-divider {
+      max-width: 700px;
+      margin: 3rem auto;
+      border: none;
+      border-top: 1px solid var(--rm-bg-card);
+    }
+
+    /* ── RELATED POSTS ── */
+    .rm-related {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: var(--rm-bg-card);
+    }
+
+    .rm-related h2 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    #related-posts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    /* blog-card styles shared with blog.html */
+    .blog-card {
+      background: var(--rm-white);
+      border-radius: var(--rm-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--rm-shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--rm-transition), box-shadow var(--rm-transition);
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--rm-shadow-lg); }
+    .blog-card__img-wrap { position: relative; display: block; overflow: hidden; aspect-ratio: 16/10; }
+    .blog-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .blog-card:hover .blog-card__img-wrap img { transform: scale(1.04); }
+    .blog-card__category { position: absolute; top: 1rem; left: 1rem; background: var(--rm-green); color: var(--rm-white); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 30px; font-family: Arial, sans-serif; }
+    .blog-card__body { padding: 1.75rem; display: flex; flex-direction: column; flex: 1; }
+    .blog-card__date { font-size: 0.78rem; color: var(--rm-text-muted); font-family: Arial, sans-serif; margin-bottom: 0.6rem; display: block; }
+    .blog-card__title { font-size: clamp(1rem, 2vw, 1.1rem); margin-bottom: 0.75rem; line-height: 1.35; }
+    .blog-card__title a { color: var(--rm-text); transition: color var(--rm-transition); }
+    .blog-card__title a:hover { color: var(--rm-green); }
+    .blog-card__excerpt { font-size: 0.875rem; color: var(--rm-text-muted); line-height: 1.65; margin-bottom: 1.25rem; flex: 1; }
+    .blog-card__read-more { font-size: 0.85rem; font-weight: 700; color: var(--rm-green); font-family: Arial, sans-serif; transition: opacity var(--rm-transition); }
+    .blog-card__read-more:hover { opacity: 0.7; }
+
+    /* ── POST CTA ── */
+    .rm-post-cta {
+      text-align: center;
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .rm-post-cta h2 { margin-bottom: 1rem; color: var(--rm-white); }
+    .rm-post-cta p { color: rgba(255,255,255,0.78); max-width: 480px; margin: 0 auto 2rem; }
+
+    @media (max-width: 768px) {
+      #related-posts { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      #related-posts { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-mount"></div>
+  <main>
+
+    <!-- POST HEADER -->
+    <section class="rm-section" style="padding-bottom:0">
+      <div class="container">
+        <div class="rm-post-header">
+          <div class="rm-post-meta">
+            <span id="post-category"></span>
+            <span id="post-date"></span>
+          </div>
+          <h1 id="post-title"></h1>
+          <span id="post-author"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED IMAGE -->
+    <div class="rm-post-image-wrap container">
+      <img id="post-image" src="" alt="">
+    </div>
+
+    <!-- POST CONTENT -->
+    <section style="padding-bottom: clamp(3rem, 6vw, 5rem)">
+      <div class="container">
+        <div id="post-content"></div>
+        <hr class="rm-post-divider">
+        <div style="max-width:700px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
+          <a href="/blog" style="font-size:0.875rem;font-weight:700;color:var(--rm-green);font-family:Arial,sans-serif">← Back to Journal</a>
+          <a href="/contact" class="rm-btn rm-btn-primary" style="margin-left:auto">Book a Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED POSTS -->
+    <section class="rm-related">
+      <div class="container">
+        <h2>More from the Journal</h2>
+        <div id="related-posts"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rm-bg-green">
+      <div class="container rm-post-cta">
+        <h2>Something in this post resonate?</h2>
+        <p>Our clinicians are here to help you go deeper. Schedule a consultation and take the next step.</p>
+        <a href="/contact" class="rm-btn rm-btn-primary">Schedule a Consultation</a>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <script src="/js/main.js" type="module"></script>
+  <script src="/js/blog.js" type="module"></script>
+</body>
+</html>

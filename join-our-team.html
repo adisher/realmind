@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Our Team — Real Mind Psychotherapy</title>
+  <meta name="description" content="Join the Real Mind Psychotherapy team. We welcome licensed therapists, limited permit holders, and practicum students in Ontario.">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <style>
+    /* ── STANDARDS ── */
+    .rm-join-standards__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .rm-value-card {
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .rm-value-card h4 { margin-bottom: 0.5rem; }
+    .rm-value-card p { font-size: 0.875rem; margin: 0; }
+    .rm-requirements-panel {
+      background: var(--rm-green);
+      border-radius: var(--rm-radius-lg);
+      padding: 2.5rem;
+    }
+    .rm-requirements-panel h3 { color: var(--rm-white); margin-bottom: 1.25rem; }
+    .rm-requirements-panel li {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.82);
+      font-family: Arial, sans-serif;
+    }
+    .rm-requirements-panel li:last-child { border-bottom: none; }
+    .rm-requirements-panel li::before { content: '✓'; color: var(--rm-accent); font-weight: 700; flex-shrink: 0; }
+
+    /* ── WHY JOIN ── */
+    .rm-why-join__cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .rm-why-join-col {
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius-lg);
+      padding: 2rem;
+    }
+    .rm-why-join-col__title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      font-family: Arial, sans-serif;
+      margin-bottom: 0.6rem;
+    }
+    .rm-why-join-col h4 { margin-bottom: 1.25rem; }
+    .rm-why-join-col li {
+      display: flex;
+      gap: 0.6rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.875rem;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+    }
+    .rm-why-join-col li:last-child { border-bottom: none; }
+    .rm-why-join-col li::before { content: '→'; color: var(--rm-green); flex-shrink: 0; font-weight: 700; }
+    .rm-culture-statement {
+      background: var(--rm-green);
+      border-radius: var(--rm-radius-lg);
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .rm-culture-statement p {
+      font-family: Georgia, serif;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255,255,255,0.9);
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ── PROCESS ── */
+    .rm-process__cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .rm-process-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius-lg);
+      position: relative;
+    }
+    .rm-process-card__num {
+      font-size: 2.5rem;
+      font-family: Georgia, serif;
+      color: var(--rm-accent);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .rm-process-card h4 { margin-bottom: 0.5rem; }
+    .rm-process-card p { font-size: 0.875rem; margin: 0; }
+
+    /* ── APPLICATION FORM ── */
+    .rm-application-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius-lg);
+      padding: clamp(2rem, 4vw, 3rem);
+    }
+    .rm-application-wrap h3 { margin-bottom: 0.35rem; }
+    .rm-application-wrap > p { font-size: 0.9rem; margin-bottom: 2rem; }
+
+    @media (max-width: 900px) {
+      .rm-why-join__cols { grid-template-columns: 1fr; }
+      .rm-process__cards { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .rm-join-standards__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .rm-process__cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-mount"></div>
+  <main>
+
+    <!-- HERO -->
+    <section class="rm-page-hero rm-bg-green">
+      <div class="container">
+        <span class="rm-label hero-content">Careers</span>
+        <h1 class="hero-content delay-1">Join Our Team</h1>
+        <p class="hero-content delay-2">We're building a practice where excellent clinicians can do their best work — with support, community, and purpose.</p>
+      </div>
+    </section>
+
+    <!-- STANDARDS & VALUES -->
+    <section class="rm-section">
+      <div class="container">
+        <div class="rm-join-standards__grid">
+          <div>
+            <span class="rm-label" data-animate="fade">Who We're Looking For</span>
+            <h2 data-animate>Clinicians Who Lead with Curiosity</h2>
+            <div class="rm-divider" data-animate></div>
+            <div class="rm-value-card" data-animate data-delay="100">
+              <h4>Clinically Excellent</h4>
+              <p>You are committed to evidence-based practice and pursue ongoing learning — not because you have to, but because you want to.</p>
+            </div>
+            <div class="rm-value-card" data-animate data-delay="200">
+              <h4>Relationally Skilled</h4>
+              <p>You understand that the therapeutic relationship is not a backdrop to the work — it is the work. You build trust with precision and warmth.</p>
+            </div>
+            <div class="rm-value-card" data-animate data-delay="300">
+              <h4>Culturally Humble</h4>
+              <p>You approach every client's context with genuine curiosity, awareness of power, and a commitment to learning what you don't know.</p>
+            </div>
+            <div class="rm-value-card" data-animate data-delay="400">
+              <h4>Faith-Sensitive</h4>
+              <p>You can work respectfully with clients for whom faith is central — or peripheral, or absent — without imposing your own framework.</p>
+            </div>
+          </div>
+          <div data-animate="right">
+            <div class="rm-requirements-panel">
+              <h3>Minimum Requirements</h3>
+              <ul>
+                <li>Active registration with OCSWSSW, CPO, or CRPO (Ontario)</li>
+                <li>Liability insurance through OASW, OPA, or equivalent</li>
+                <li>Clear criminal record check (within 6 months)</li>
+                <li>Commitment to ongoing clinical supervision and consultation</li>
+              </ul>
+              <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.12)">
+                <p style="font-size:0.875rem;color:rgba(255,255,255,0.7);margin:0">We also welcome applications from limited permit holders and practicum students seeking a placement. See below for details.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY JOIN -->
+    <section class="rm-section" style="padding-top:0">
+      <div class="container">
+        <div class="text-center" style="margin-bottom:2.5rem">
+          <span class="rm-label" data-animate="fade">What We Offer</span>
+          <h2 data-animate>Why Join Real Mind?</h2>
+        </div>
+        <div class="rm-why-join__cols">
+          <div class="rm-why-join-col" data-animate data-delay="100">
+            <div class="rm-why-join-col__title">Licensed Therapists</div>
+            <h4>Associate Positions</h4>
+            <ul>
+              <li>Flexible caseload — set your own pace</li>
+              <li>Administrative and billing support</li>
+              <li>Group clinical consultation</li>
+              <li>Marketing and referral pipeline</li>
+              <li>Secure EMR and telehealth platform</li>
+              <li>Community of like-minded clinicians</li>
+            </ul>
+          </div>
+          <div class="rm-why-join-col" data-animate data-delay="200">
+            <div class="rm-why-join-col__title">Limited Permit Holders</div>
+            <h4>Supervised Practice</h4>
+            <ul>
+              <li>Structured individual supervision</li>
+              <li>Clear pathway to full registration</li>
+              <li>Mentorship from senior clinicians</li>
+              <li>Diverse client population</li>
+              <li>Access to training resources</li>
+              <li>Peer learning community</li>
+            </ul>
+          </div>
+          <div class="rm-why-join-col" data-animate data-delay="300">
+            <div class="rm-why-join-col__title">Practicum Students</div>
+            <h4>Placement Opportunities</h4>
+            <ul>
+              <li>Rich clinical learning environment</li>
+              <li>Individual and group supervision</li>
+              <li>Exposure to diverse modalities</li>
+              <li>Faith-integrated &amp; cultural training</li>
+              <li>Mentorship beyond placement hours</li>
+              <li>Potential path to associate role</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rm-culture-statement" data-animate>
+          <p>"We built Real Mind to be the kind of practice we wished had existed when we were starting out — one where clinicians are supported, challenged, and genuinely valued."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="rm-section rm-bg-green" style="padding-bottom:0">
+      <div class="container">
+        <div class="text-center" style="margin-bottom:3rem">
+          <span class="rm-label" data-animate="fade">Application Process</span>
+          <h2 data-animate>How It Works</h2>
+        </div>
+        <div class="rm-process__cards">
+          <div class="rm-process-card" data-animate data-delay="100">
+            <div class="rm-process-card__num">01</div>
+            <h4>Submit Application</h4>
+            <p>Complete the form below. We review every submission personally.</p>
+          </div>
+          <div class="rm-process-card" data-animate data-delay="200">
+            <div class="rm-process-card__num">02</div>
+            <h4>Initial Conversation</h4>
+            <p>If there's a fit, we'll schedule a 30-minute call to learn more about you.</p>
+          </div>
+          <div class="rm-process-card" data-animate data-delay="300">
+            <div class="rm-process-card__num">03</div>
+            <h4>Clinical Interview</h4>
+            <p>A deeper conversation about your approach, experience, and clinical philosophy.</p>
+          </div>
+          <div class="rm-process-card" data-animate data-delay="400">
+            <div class="rm-process-card__num">04</div>
+            <h4>Offer &amp; Onboarding</h4>
+            <p>If it's a match, we'll send a formal offer and get you set up to start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="rm-section rm-bg-green">
+      <div class="container">
+        <div class="rm-application-wrap" data-animate>
+          <h3>Apply to Join the Team</h3>
+          <p>We read every application carefully. You'll hear from us within 5 business days.</p>
+
+          <div id="form-success" class="rm-form-success">
+            <h3>Application Received</h3>
+            <p>Thank you for applying to Real Mind. We'll review your application and be in touch within 5 business days.</p>
+          </div>
+
+          <form id="join-form">
+            <div class="rm-form-row">
+              <div class="rm-form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+              </div>
+              <div class="rm-form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="rm-form-row">
+              <div class="rm-form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Optional">
+              </div>
+              <div class="rm-form-group">
+                <label for="licenseType">License / Registration Type *</label>
+                <select id="licenseType" name="licenseType" required>
+                  <option value="">Select one...</option>
+                  <option>RSW — Registered Social Worker</option>
+                  <option>RP — Registered Psychotherapist</option>
+                  <option>C.Psych — Registered Psychologist</option>
+                  <option>Limited Permit Holder</option>
+                  <option>Practicum Student</option>
+                </select>
+              </div>
+            </div>
+            <div class="rm-form-row">
+              <div class="rm-form-group">
+                <label for="yearsExperience">Years of Clinical Experience</label>
+                <select id="yearsExperience" name="yearsExperience">
+                  <option value="">Select one...</option>
+                  <option>Less than 1 year</option>
+                  <option>1–3 years</option>
+                  <option>3–5 years</option>
+                  <option>5–10 years</option>
+                  <option>10+ years</option>
+                </select>
+              </div>
+              <div class="rm-form-group">
+                <label for="therapyType">Therapy Format</label>
+                <select id="therapyType" name="therapyType">
+                  <option value="">Select one...</option>
+                  <option>Individual Only</option>
+                  <option>Couples Only</option>
+                  <option>Family Only</option>
+                  <option>Individual &amp; Couples</option>
+                  <option>All Modalities</option>
+                </select>
+              </div>
+            </div>
+            <div class="rm-form-group">
+              <label for="specialties">Clinical Specialties</label>
+              <input type="text" id="specialties" name="specialties" placeholder="e.g. Trauma, Anxiety, Couples, Adolescents">
+            </div>
+            <div class="rm-form-row">
+              <div class="rm-form-group">
+                <label for="weeklyAvailability">Weekly Availability</label>
+                <select id="weeklyAvailability" name="weeklyAvailability">
+                  <option value="">Select one...</option>
+                  <option>Part-time (1–10 clients/week)</option>
+                  <option>Part-time (10–15 clients/week)</option>
+                  <option>Full-time (15–25 clients/week)</option>
+                  <option>Flexible / To be discussed</option>
+                </select>
+              </div>
+              <div class="rm-form-group">
+                <label for="faithIntegration">Faith Integration Comfort</label>
+                <select id="faithIntegration" name="faithIntegration">
+                  <option value="">Select one...</option>
+                  <option>Very comfortable — it's central to my practice</option>
+                  <option>Comfortable when client-directed</option>
+                  <option>Neutral — can work with or without</option>
+                  <option>Still learning — open to development</option>
+                </select>
+              </div>
+            </div>
+            <div class="rm-form-group">
+              <label for="clinicalApproach">Describe Your Clinical Approach *</label>
+              <textarea id="clinicalApproach" name="clinicalApproach" placeholder="Tell us about your theoretical orientation, how you work with clients, and what makes your practice distinctive..." required></textarea>
+            </div>
+            <div class="rm-form-group">
+              <label for="linkedin">LinkedIn Profile URL</label>
+              <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourname">
+            </div>
+            <div id="form-error" class="rm-form-error">Something went wrong. Please try again or email us directly at hello@realmindpsychotherapy.com</div>
+            <button type="submit" class="rm-btn rm-btn-primary" style="width:100%">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <script src="/js/main.js" type="module"></script>
+  <script>
+    const form = document.getElementById('join-form');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+
+      const data = Object.fromEntries(new FormData(form));
+
+      try {
+        const res = await fetch('/api/join', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+        } else {
+          throw new Error('Failed');
+        }
+      } catch {
+        errorMsg.style.display = 'block';
+        submitBtn.textContent = 'Submit Application';
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Real Mind Psychotherapy</title>
+  <meta name="description" content="Insights on mental health, relationships, faith, and healing from the clinicians at Real Mind Psychotherapy.">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <style>
+    /* ── BLOG GRID ── */
+    #blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background: var(--rm-white);
+      border-radius: var(--rm-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--rm-shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--rm-transition), box-shadow var(--rm-transition);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--rm-shadow-lg);
+    }
+
+    .blog-card__img-wrap {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+    }
+
+    .blog-card__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover .blog-card__img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .blog-card__category {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--rm-green);
+      color: var(--rm-white);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .blog-card__body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-card__date {
+      font-size: 0.78rem;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .blog-card__title {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .blog-card__title a {
+      color: var(--rm-text);
+      transition: color var(--rm-transition);
+    }
+
+    .blog-card__title a:hover {
+      color: var(--rm-green);
+    }
+
+    .blog-card__excerpt {
+      font-size: 0.875rem;
+      color: var(--rm-text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .blog-card__read-more {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--rm-green);
+      font-family: Arial, sans-serif;
+      transition: opacity var(--rm-transition);
+      letter-spacing: 0.02em;
+    }
+
+    .blog-card__read-more:hover {
+      opacity: 0.7;
+    }
+
+    /* ── LOADING / EMPTY STATES ── */
+    .blog-loading {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 0;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+    }
+
+    @media (max-width: 900px) {
+      #blog-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      #blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-mount"></div>
+  <main>
+
+    <!-- HERO -->
+    <section class="rm-page-hero rm-bg-green">
+      <div class="container">
+        <span class="rm-label hero-content">Real Mind Journal</span>
+        <h1 class="hero-content delay-1">Insights for the Mind,<br>the Heart, and the Home</h1>
+        <p class="hero-content delay-2">Practical wisdom on mental health, relationships, faith, and healing — written by our clinicians for the people we serve.</p>
+      </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="rm-section">
+      <div class="container">
+        <div id="blog-grid">
+          <div class="blog-loading">Loading posts...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rm-bg-green">
+      <div class="container rm-cta-banner">
+        <span class="rm-label" data-animate="fade">Ready to Begin?</span>
+        <h2 data-animate>Reading about healing is the first step.<br>Taking it is the next.</h2>
+        <div class="rm-cta-btn-group" data-animate data-delay="100">
+          <a href="/contact" class="rm-btn rm-btn-primary">Schedule a Consultation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <script src="/js/main.js" type="module"></script>
+  <script src="/js/blog.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees &amp; Insurance — Real Mind Psychotherapy</title>
+  <meta name="description" content="Transparent session fees for individual ($175) and couples/family ($225) therapy at Real Mind Psychotherapy. Direct billing and superbills available.">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <style>
+    /* ── PRICING CARDS ── */
+    .rm-pricing__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .rm-pricing-card {
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius-lg);
+      padding: 3rem 2.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .rm-pricing-card--featured {
+      background: var(--rm-green);
+    }
+    .rm-pricing-card__badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--rm-accent);
+      color: var(--rm-text);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-family: Arial, sans-serif;
+      white-space: nowrap;
+    }
+    .rm-pricing-card__type {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      font-family: Arial, sans-serif;
+      margin-bottom: 0.75rem;
+    }
+    .rm-pricing-card h3 { margin-bottom: 0.5rem; }
+    .rm-pricing-card--featured h3 { color: var(--rm-white); }
+    .rm-pricing-card__price {
+      font-size: clamp(3rem, 6vw, 4rem);
+      font-family: Georgia, serif;
+      color: var(--rm-green);
+      line-height: 1;
+      margin: 1.25rem 0 0.25rem;
+    }
+    .rm-pricing-card--featured .rm-pricing-card__price { color: var(--rm-accent); }
+    .rm-pricing-card__per {
+      font-size: 0.85rem;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+      margin-bottom: 2rem;
+    }
+    .rm-pricing-card--featured .rm-pricing-card__per { color: rgba(255,255,255,0.6); }
+    .rm-pricing-card__features {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .rm-pricing-card__features li {
+      display: flex;
+      gap: 0.6rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.875rem;
+      font-family: Arial, sans-serif;
+      color: var(--rm-text-muted);
+    }
+    .rm-pricing-card--featured .rm-pricing-card__features li {
+      border-color: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.78);
+    }
+    .rm-pricing-card__features li:last-child { border-bottom: none; }
+    .rm-pricing-card__features li::before { content: '✓'; color: var(--rm-accent); font-weight: 700; flex-shrink: 0; }
+
+    /* ── INSURANCE ── */
+    .rm-insurance__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .rm-insurance-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--rm-bg-card);
+    }
+    .rm-insurance-item:last-child { border-bottom: none; }
+    .rm-insurance-item__icon {
+      width: 42px;
+      height: 42px;
+      background: var(--rm-bg-card);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .rm-insurance-item h4 { margin-bottom: 0.25rem; font-size: 1rem; }
+    .rm-insurance-item p { font-size: 0.875rem; margin: 0; }
+    .rm-private-pay-benefit {
+      display: flex;
+      gap: 0.75rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .rm-private-pay-benefit:last-child { border-bottom: none; }
+    .rm-private-pay-benefit h4 { color: var(--rm-white); margin-bottom: 0.25rem; font-size: 1rem; }
+    .rm-private-pay-benefit p { font-size: 0.875rem; margin: 0; color: rgba(255,255,255,0.7); }
+    .rm-private-pay-benefit__icon { color: var(--rm-accent); font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    @media (max-width: 768px) {
+      .rm-pricing__grid { grid-template-columns: 1fr; }
+      .rm-insurance__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-mount"></div>
+  <main>
+
+    <!-- HERO -->
+    <section class="rm-page-hero rm-bg-green">
+      <div class="container">
+        <span class="rm-label hero-content">Fees &amp; Insurance</span>
+        <h1 class="hero-content delay-1">Transparent Pricing,<br>No Surprises</h1>
+        <p class="hero-content delay-2">We believe financial clarity is part of good care. Here's exactly what to expect.</p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="rm-section">
+      <div class="container">
+        <div class="text-center" style="margin-bottom:3rem">
+          <span class="rm-label" data-animate="fade">Session Rates</span>
+          <h2 data-animate>Our Fees</h2>
+        </div>
+        <div class="rm-pricing__grid">
+          <div class="rm-pricing-card" data-animate data-delay="100">
+            <div class="rm-pricing-card__type">Individual</div>
+            <h3>Individual Therapy</h3>
+            <div class="rm-pricing-card__price">$175</div>
+            <p class="rm-pricing-card__per">Per 50-minute session</p>
+            <ul class="rm-pricing-card__features">
+              <li>Licensed therapist (MSW, RSW or C.Psych)</li>
+              <li>Personalized treatment plan</li>
+              <li>Secure video or in-person sessions</li>
+              <li>Session summary &amp; homework available</li>
+              <li>Superbill provided for insurance claims</li>
+            </ul>
+            <a href="/contact" class="rm-btn rm-btn-outline">Book Individual Therapy</a>
+          </div>
+          <div class="rm-pricing-card rm-pricing-card--featured" data-animate data-delay="200">
+            <div class="rm-pricing-card__badge">Most Requested</div>
+            <div class="rm-pricing-card__type">Couples &amp; Family</div>
+            <h3>Couples &amp; Family Therapy</h3>
+            <div class="rm-pricing-card__price">$225</div>
+            <p class="rm-pricing-card__per">Per 75-minute session</p>
+            <ul class="rm-pricing-card__features">
+              <li>Gottman-informed or systems-based approach</li>
+              <li>Joint &amp; individual sessions as needed</li>
+              <li>Secure video or in-person sessions</li>
+              <li>Between-session exercises provided</li>
+              <li>Superbill provided for insurance claims</li>
+            </ul>
+            <a href="/contact" class="rm-btn rm-btn-white">Book Couples / Family Therapy</a>
+          </div>
+        </div>
+
+        <!-- INSURANCE -->
+        <div class="rm-insurance__grid">
+          <div>
+            <span class="rm-label" data-animate="fade">Coverage</span>
+            <h3 data-animate>Insurance &amp; Benefits</h3>
+            <div class="rm-divider" data-animate></div>
+            <div data-animate data-delay="100">
+              <div class="rm-insurance-item">
+                <div class="rm-insurance-item__icon">📋</div>
+                <div>
+                  <h4>Extended Health Benefits</h4>
+                  <p>Many employer benefit plans cover registered social workers (RSW) and registered psychologists (C.Psych). Check your plan for "psychotherapy" or "social work" coverage.</p>
+                </div>
+              </div>
+              <div class="rm-insurance-item">
+                <div class="rm-insurance-item__icon">🧾</div>
+                <div>
+                  <h4>Superbill Receipts</h4>
+                  <p>We provide detailed receipts (superbills) after each session that you can submit to your insurer for reimbursement. We do not direct-bill most plans at this time.</p>
+                </div>
+              </div>
+              <div class="rm-insurance-item">
+                <div class="rm-insurance-item__icon">🏥</div>
+                <div>
+                  <h4>Employee Assistance Programs (EAP)</h4>
+                  <p>Some EAP plans cover sessions with registered clinicians. Contact your EAP provider to confirm coverage before booking.</p>
+                </div>
+              </div>
+              <div class="rm-insurance-item">
+                <div class="rm-insurance-item__icon">💰</div>
+                <div>
+                  <h4>Tax Deductibility</h4>
+                  <p>Psychotherapy fees paid to a registered clinician may qualify as a medical expense for Canadian tax purposes. Consult your accountant for details.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rm-card-green" data-animate="right">
+            <span class="rm-label" style="color:var(--rm-accent)">Why Private Pay?</span>
+            <h3 style="color:var(--rm-white);margin-bottom:1.5rem">The Benefits of Self-Pay</h3>
+            <div class="rm-private-pay-benefit">
+              <span class="rm-private-pay-benefit__icon">🔒</span>
+              <div>
+                <h4>Complete Confidentiality</h4>
+                <p>No diagnostic codes on file with insurers. Your mental health history stays between you and your therapist.</p>
+              </div>
+            </div>
+            <div class="rm-private-pay-benefit">
+              <span class="rm-private-pay-benefit__icon">🎯</span>
+              <div>
+                <h4>Treatment Not Driven by Coverage</h4>
+                <p>Your treatment plan is based on your needs — not what your insurer approves. No arbitrary session limits.</p>
+              </div>
+            </div>
+            <div class="rm-private-pay-benefit">
+              <span class="rm-private-pay-benefit__icon">⚡</span>
+              <div>
+                <h4>No Pre-Authorization Delays</h4>
+                <p>Start therapy when you're ready — no forms, no waiting for approval, no bureaucracy between you and care.</p>
+              </div>
+            </div>
+            <div class="rm-private-pay-benefit">
+              <span class="rm-private-pay-benefit__icon">🌱</span>
+              <div>
+                <h4>Flexible Scheduling</h4>
+                <p>Sessions are booked around your life — evenings, weekends, and virtual options available.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rm-bg-green">
+      <div class="container rm-cta-banner">
+        <span class="rm-label" data-animate="fade">Ready to Start?</span>
+        <h2 data-animate>Investing in your mental health<br>is never wasted.</h2>
+        <p data-animate data-delay="100">Have questions about fees or coverage? We're happy to talk through your options before you book.</p>
+        <div class="rm-cta-btn-group" data-animate data-delay="200">
+          <a href="/contact" class="rm-btn rm-btn-primary">Schedule a Consultation</a>
+          <a href="/contact" class="rm-btn rm-btn-outline-white">Ask a Fee Question</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <script src="/js/main.js" type="module"></script>
+</body>
+</html>

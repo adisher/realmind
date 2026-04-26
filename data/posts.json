@@ -1,0 +1,93 @@
+[
+  {
+    "slug": "understanding-anxiety-in-relationships",
+    "title": "Understanding Anxiety in Relationships",
+    "excerpt": "Anxiety can silently erode the foundation of even the strongest relationships — here's how to recognize it and begin to heal together.",
+    "category": "Relationships",
+    "tags": ["anxiety", "relationships", "couples"],
+    "author": "Glad Uko-Ima",
+    "date": "April 20, 2026",
+    "dateISO": "2026-04-20",
+    "image": "/images/blog-1.jpg",
+    "imageAlt": "Two people sitting together, looking thoughtful",
+    "content": [
+      { "type": "paragraph", "text": "Anxiety is one of the most common yet least recognized forces that shapes how we connect with those we love. It shows up not just as worry or panic, but as avoidance, irritability, over-attachment, or the relentless need for reassurance." },
+      { "type": "h2", "text": "How Anxiety Shows Up in Relationships" },
+      { "type": "paragraph", "text": "When one or both partners are living with anxiety, the relationship often becomes a stage for its symptoms. Common patterns include constant reassurance-seeking, difficulty tolerating uncertainty, withdrawing during conflict, or becoming hyper-vigilant about a partner's moods and responses." },
+      { "type": "blockquote", "text": "Anxiety often masquerades as control, criticism, or emotional distance — making it hard to identify what's really driving the disconnection." },
+      { "type": "h2", "text": "The Cycle of Anxious Attachment" },
+      { "type": "paragraph", "text": "Many people with relationship anxiety developed anxious attachment patterns early in life. This means their nervous system learned to scan for threats in close relationships — even when no real threat exists. Understanding this pattern is the first step toward changing it." },
+      { "type": "list", "items": ["Recognize your anxiety triggers in the relationship", "Communicate your needs without blame or demand", "Practice self-soothing before difficult conversations", "Work with a therapist to explore attachment patterns"] },
+      { "type": "h2", "text": "The Path Forward" },
+      { "type": "paragraph", "text": "The good news is that anxiety is highly treatable, and couples who engage in therapy together often develop deeper insight and resilience than before the struggle began. With the right support, relationships that feel stuck can become a source of genuine safety and joy." }
+    ]
+  },
+  {
+    "slug": "faith-and-mental-health",
+    "title": "Faith and Mental Health: Why Integration Matters",
+    "excerpt": "For many people, faith is not separate from mental health — it is central to it. Here's why faith-integrated therapy can be transformative.",
+    "category": "Faith & Healing",
+    "tags": ["faith", "spirituality", "mental health"],
+    "author": "Glad Uko-Ima",
+    "date": "April 10, 2026",
+    "dateISO": "2026-04-10",
+    "image": "/images/blog-2.jpg",
+    "imageAlt": "Person in quiet contemplation by a window",
+    "content": [
+      { "type": "paragraph", "text": "For many clients who walk through our door, their spiritual life is not an add-on to their mental health — it is the lens through which they understand themselves, their relationships, and their suffering." },
+      { "type": "h2", "text": "What Is Faith-Integrated Therapy?" },
+      { "type": "paragraph", "text": "Faith-integrated therapy honours the role of spirituality in a client's life without imposing it. It means a therapist can work with a client's worldview — their sense of purpose, community, and belief — rather than treating these as irrelevant to the healing process." },
+      { "type": "blockquote", "text": "True healing addresses the whole person: body, mind, and spirit. Leaving one dimension out leaves healing incomplete." },
+      { "type": "h2", "text": "What It Looks Like in Practice" },
+      { "type": "paragraph", "text": "In a faith-integrated session, a therapist might draw on a client's spiritual framework to explore guilt, forgiveness, or purpose. This does not mean the therapist imposes religious doctrine — it means they honour what is sacred to the client as a genuine source of healing." },
+      { "type": "h2", "text": "Is It Right for You?" },
+      { "type": "paragraph", "text": "Faith-integrated therapy is not for everyone, and that's okay. But for clients whose faith is central to their identity, it can make the difference between therapy that feels hollow and therapy that feels like coming home." }
+    ]
+  },
+  {
+    "slug": "signs-you-might-benefit-from-therapy",
+    "title": "5 Signs You Might Benefit from Therapy (Even If Life Looks Fine)",
+    "excerpt": "You don't have to be in crisis to benefit from therapy. Sometimes the signs are quieter — but just as important to heed.",
+    "category": "Mental Health",
+    "tags": ["therapy", "self-awareness", "mental health"],
+    "author": "Glad Uko-Ima",
+    "date": "March 28, 2026",
+    "dateISO": "2026-03-28",
+    "image": "/images/blog-3.jpg",
+    "imageAlt": "Person sitting with a journal in a calm space",
+    "content": [
+      { "type": "paragraph", "text": "One of the biggest myths about therapy is that you have to be falling apart before you deserve help. In reality, some of the most productive therapeutic work happens when life is outwardly stable — but something beneath the surface keeps nagging." },
+      { "type": "h2", "text": "1. You Feel Stuck in the Same Patterns" },
+      { "type": "paragraph", "text": "If you keep finding yourself in the same arguments, the same kinds of relationships, or the same career frustrations — despite your best efforts — there may be deeper patterns worth exploring with a professional." },
+      { "type": "h2", "text": "2. Your Relationships Feel Harder Than They Should" },
+      { "type": "paragraph", "text": "Connection should not feel like constant work. If intimacy, trust, or communication consistently breaks down, therapy can help you understand why — and change it." },
+      { "type": "h2", "text": "3. You Cope More Than You Process" },
+      { "type": "paragraph", "text": "Coping — staying busy, distracting yourself, pushing through — is not the same as healing. If you feel like you're managing emotions rather than experiencing them, therapy creates space to do the deeper work." },
+      { "type": "h2", "text": "4. You've Experienced Loss or Major Transition" },
+      { "type": "paragraph", "text": "Grief doesn't only follow death. Divorce, job loss, a move, a diagnosis — any major transition deserves space for processing, not just adjustment." },
+      { "type": "h2", "text": "5. You're Curious About Yourself" },
+      { "type": "paragraph", "text": "Sometimes the best reason to start therapy is simply that you want to understand yourself better — your motivations, your patterns, your potential. Therapy is an investment in your own growth, not a last resort." }
+    ]
+  },
+  {
+    "slug": "rebuilding-trust-after-betrayal",
+    "title": "Rebuilding Trust After Betrayal: A Couples Therapy Perspective",
+    "excerpt": "Betrayal shatters the invisible architecture of trust — but with the right support, many couples do rebuild, and often more deeply than before.",
+    "category": "Couples",
+    "tags": ["trust", "betrayal", "couples therapy"],
+    "author": "Dr. Uko-Ima",
+    "date": "March 15, 2026",
+    "dateISO": "2026-03-15",
+    "image": "/images/blog-4.jpg",
+    "imageAlt": "Two hands reaching toward each other",
+    "content": [
+      { "type": "paragraph", "text": "Trust is the invisible architecture of a relationship. When it breaks — through infidelity, deception, or any profound breach — the damage can feel irreparable. And yet, in our clinical experience, many couples who do the hard work of repair emerge with a relationship more honest and more intentional than before." },
+      { "type": "h2", "text": "The Phases of Betrayal Recovery" },
+      { "type": "paragraph", "text": "Recovery from betrayal is not linear. It typically moves through phases: crisis, understanding, integration, and eventually a new normal. Each phase has its own demands and its own gifts." },
+      { "type": "blockquote", "text": "The goal after betrayal is not to return to who you were — it's to build something more honest in its place." },
+      { "type": "h2", "text": "What Makes Recovery Possible" },
+      { "type": "list", "items": ["Full accountability from the person who caused harm", "Willingness from both partners to understand contributing dynamics", "A safe therapeutic space for both hurt and healing", "Patience — genuine recovery takes months, not weeks"] },
+      { "type": "paragraph", "text": "If you and your partner are navigating betrayal, please know that what you're facing is one of the hardest things a couple can go through — and that you don't have to go through it alone." }
+    ]
+  }
+]

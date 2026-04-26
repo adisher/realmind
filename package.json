@@ -1,0 +1,15 @@
+{
+  "name": "realmind-psychotherapy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real Mind Psychotherapy website",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}

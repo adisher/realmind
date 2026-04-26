@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team — Real Mind Psychotherapy</title>
+  <meta name="description" content="Meet the licensed therapists at Real Mind Psychotherapy. Evidence-based, faith-integrated care for individuals, couples, and families in Ontario.">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <style>
+    /* ── PROFILE ── */
+    .rm-profile {
+      padding: clamp(4rem, 7vw, 6rem) 0;
+      border-bottom: 1px solid var(--rm-bg-card);
+    }
+    .rm-profile:last-of-type { border-bottom: none; }
+    .rm-profile__grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .rm-profile__grid--reverse {
+      grid-template-columns: 1fr 320px;
+    }
+    .rm-profile__photo-col { position: sticky; top: 100px; }
+    .rm-profile__photo {
+      width: 100%;
+      border-radius: var(--rm-radius-lg);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+    .rm-profile__creds {
+      margin-top: 1.25rem;
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius);
+      padding: 1.25rem;
+    }
+    .rm-profile__creds li {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--rm-text-muted);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-family: Arial, sans-serif;
+    }
+    .rm-profile__creds li:last-child { border-bottom: none; }
+    .rm-profile__creds li::before { content: '◆'; color: var(--rm-accent); font-size: 0.55rem; margin-top: 0.4rem; flex-shrink: 0; }
+    .rm-profile__name { margin-bottom: 0.35rem; }
+    .rm-profile__title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      font-family: Arial, sans-serif;
+      margin-bottom: 1.5rem;
+    }
+    .rm-profile__section { margin-bottom: 2rem; }
+    .rm-profile__section h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rm-bg-card);
+    }
+    .rm-profile__quote {
+      font-family: Georgia, serif;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      font-style: italic;
+      color: var(--rm-green);
+      line-height: 1.55;
+      padding: 1.5rem 0 1.5rem 1.5rem;
+      border-left: 3px solid var(--rm-accent);
+      margin: 2rem 0;
+    }
+    .rm-profile__specialties {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .rm-profile__tag {
+      padding: 0.35rem 0.9rem;
+      background: var(--rm-bg-card);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-family: Arial, sans-serif;
+      color: var(--rm-text-muted);
+    }
+
+    /* ── CLINICAL STANDARDS ── */
+    .rm-standards__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .rm-standard-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--rm-radius-lg);
+      padding: 1.75rem;
+    }
+    .rm-standard-card h4 { color: var(--rm-white); margin-bottom: 0.6rem; }
+    .rm-standard-card p { font-size: 0.875rem; color: rgba(255,255,255,0.7); margin: 0; }
+
+    @media (max-width: 900px) {
+      .rm-profile__grid,
+      .rm-profile__grid--reverse { grid-template-columns: 1fr; gap: 2.5rem; }
+      .rm-profile__photo-col { position: static; }
+      .rm-profile__photo { aspect-ratio: 4/3; }
+      .rm-standards__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .rm-standards__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-mount"></div>
+  <main>
+
+    <!-- HERO -->
+    <section class="rm-page-hero rm-bg-green">
+      <div class="container">
+        <span class="rm-label hero-content">Our Clinicians</span>
+        <h1 class="hero-content delay-1">Meet the Team</h1>
+        <p class="hero-content delay-2">Every therapist at Real Mind is licensed, experienced, and deeply committed to providing care that is both clinically excellent and genuinely human.</p>
+      </div>
+    </section>
+
+    <!-- GLAD UKO-IMA -->
+    <section class="rm-profile">
+      <div class="container">
+        <div class="rm-profile__grid">
+          <div class="rm-profile__photo-col" data-animate="left">
+            <img src="/images/founder.jpg" alt="Glad Uko-Ima, MSW, RSW" class="rm-profile__photo">
+            <ul class="rm-profile__creds">
+              <li>MSW — Master of Social Work</li>
+              <li>RSW — Registered Social Worker (Ontario)</li>
+              <li>Gottman Certified Therapist (Level II)</li>
+              <li>EMDR Trained Clinician</li>
+              <li>Trauma-Focused CBT Certified</li>
+              <li>Member, OASW</li>
+            </ul>
+          </div>
+          <div>
+            <span class="rm-label" data-animate="fade">Founder &amp; Lead Therapist</span>
+            <h2 class="rm-profile__name" data-animate>Glad Uko-Ima</h2>
+            <p class="rm-profile__title">MSW, RSW — Registered Social Worker</p>
+
+            <div class="rm-profile__section" data-animate data-delay="100">
+              <h4>Background</h4>
+              <p>Glad Uko-Ima is a Registered Social Worker with over a decade of experience in community mental health, hospital-based care, and private practice. She founded Real Mind Psychotherapy out of a conviction that every person deserves therapy that is both clinically rigorous and deeply human.</p>
+            </div>
+
+            <div class="rm-profile__section" data-animate data-delay="150">
+              <h4>Clinical Approach</h4>
+              <p>Glad integrates evidence-based modalities — including Gottman Method, EMDR, CBT, and somatic approaches — with a culturally informed, faith-sensitive lens. Her work is particularly shaped by years of supporting Black and racialized communities navigate mental health through a lens that truly understands their lived experience.</p>
+            </div>
+
+            <div class="rm-profile__section" data-animate data-delay="200">
+              <h4>Areas of Focus</h4>
+              <div class="rm-profile__specialties">
+                <span class="rm-profile__tag">Anxiety &amp; Trauma</span>
+                <span class="rm-profile__tag">Couples &amp; Relationships</span>
+                <span class="rm-profile__tag">Faith-Integrated Therapy</span>
+                <span class="rm-profile__tag">Grief &amp; Loss</span>
+                <span class="rm-profile__tag">Black &amp; Racialized Communities</span>
+                <span class="rm-profile__tag">Identity &amp; Self-Worth</span>
+              </div>
+            </div>
+
+            <div class="rm-profile__quote" data-animate data-delay="250">
+              "I chose this work because I believe every person deserves a space where they are truly known — not just managed. My greatest privilege is witnessing clients reclaim their own story."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DR. UKO-IMA -->
+    <section class="rm-profile">
+      <div class="container">
+        <div class="rm-profile__grid rm-profile__grid--reverse">
+          <div>
+            <span class="rm-label" data-animate="fade">Staff Therapist</span>
+            <h2 class="rm-profile__name" data-animate>Dr. Uko-Ima</h2>
+            <p class="rm-profile__title">PhD, C.Psych — Registered Psychologist</p>
+
+            <div class="rm-profile__section" data-animate data-delay="100">
+              <h4>Background</h4>
+              <p>Dr. Uko-Ima holds a doctorate in Clinical Psychology and brings extensive training in evidence-based treatments for trauma, mood disorders, and relationship distress. With experience spanning academic medical centres and private practice, she combines intellectual rigour with genuine warmth in every therapeutic encounter.</p>
+            </div>
+
+            <div class="rm-profile__section" data-animate data-delay="150">
+              <h4>Clinical Approach</h4>
+              <p>Dr. Uko-Ima's approach is grounded in Cognitive Processing Therapy (CPT), Acceptance and Commitment Therapy (ACT), and emotionally focused frameworks. She works with clients to develop insight, build psychological flexibility, and achieve lasting change — not simply symptom reduction.</p>
+            </div>
+
+            <div class="rm-profile__section" data-animate data-delay="200">
+              <h4>Areas of Focus</h4>
+              <div class="rm-profile__specialties">
+                <span class="rm-profile__tag">Trauma &amp; PTSD</span>
+                <span class="rm-profile__tag">Depression &amp; Mood</span>
+                <span class="rm-profile__tag">Couples Therapy</span>
+                <span class="rm-profile__tag">ACT &amp; Mindfulness</span>
+                <span class="rm-profile__tag">Psychological Assessment</span>
+                <span class="rm-profile__tag">Adolescents &amp; Young Adults</span>
+              </div>
+            </div>
+
+            <div class="rm-profile__quote" data-animate data-delay="250">
+              "Good therapy doesn't just help people feel better — it helps them understand themselves well enough that they can navigate whatever comes next."
+            </div>
+          </div>
+          <div class="rm-profile__photo-col" data-animate="right">
+            <img src="/images/dr-uko-ima.jpg" alt="Dr. Uko-Ima, PhD, C.Psych" class="rm-profile__photo">
+            <ul class="rm-profile__creds">
+              <li>PhD — Clinical Psychology</li>
+              <li>C.Psych — Registered Psychologist (Ontario)</li>
+              <li>Cognitive Processing Therapy Certified</li>
+              <li>ACT Trained Clinician</li>
+              <li>Gottman Method (Level I)</li>
+              <li>Member, OPA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLINICAL STANDARDS -->
+    <section class="rm-section rm-bg-green">
+      <div class="container">
+        <div class="text-center" data-animate="fade">
+          <span class="rm-label">Our Standards</span>
+          <h2>What Every Client Can Expect</h2>
+        </div>
+        <div class="rm-standards__grid">
+          <div class="rm-standard-card" data-animate data-delay="100">
+            <h4>Active Licensing</h4>
+            <p>Every clinician holds a current registration with their provincial regulatory college — ensuring accountability and professional standards.</p>
+          </div>
+          <div class="rm-standard-card" data-animate data-delay="200">
+            <h4>Ongoing Training</h4>
+            <p>Our team pursues continuing education in emerging modalities — so your care always reflects current best practices.</p>
+          </div>
+          <div class="rm-standard-card" data-animate data-delay="300">
+            <h4>Clinical Supervision</h4>
+            <p>All therapists participate in regular peer and clinical supervision — ensuring quality, fresh perspective, and ethical practice.</p>
+          </div>
+          <div class="rm-standard-card" data-animate data-delay="400">
+            <h4>Strict Confidentiality</h4>
+            <p>Everything you share is protected by professional confidentiality and complies fully with PHIPA and applicable privacy legislation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <script src="/js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Real Mind Psychotherapy</title>
+  <meta name="description" content="Learn about Real Mind Psychotherapy's evidence-based, faith-integrated approach and meet founder Glad Uko-Ima, MSW, RSW.">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <style>
+    /* ── PHILOSOPHY ── */
+    .rm-philosophy__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .rm-philosophy__left {
+      position: sticky;
+      top: 100px;
+    }
+    .rm-philosophy__pillars {
+      display: flex;
+      gap: 0.75rem;
+      margin: 1.5rem 0 2rem;
+      flex-wrap: wrap;
+    }
+    .rm-philosophy__pillar {
+      padding: 0.5rem 1.1rem;
+      border: 1.5px solid var(--rm-accent);
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--rm-green);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+    }
+    .rm-philosophy__block {
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius-lg);
+      padding: 2rem;
+      margin-bottom: 1.25rem;
+    }
+    .rm-philosophy__block__num {
+      font-size: 2rem;
+      font-family: Georgia, serif;
+      color: var(--rm-accent);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .rm-philosophy__block h4 { margin-bottom: 0.5rem; }
+    .rm-philosophy__block p { font-size: 0.9rem; margin: 0; }
+
+    /* ── FOUNDER ── */
+    .rm-founder__grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .rm-founder__photo-col {
+      position: sticky;
+      top: 100px;
+    }
+    .rm-founder__photo {
+      width: 100%;
+      border-radius: var(--rm-radius-lg);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+    .rm-founder__creds {
+      margin-top: 1.25rem;
+      background: rgba(255,255,255,0.07);
+      border-radius: var(--rm-radius);
+      padding: 1.25rem;
+    }
+    .rm-founder__creds li {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.72);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .rm-founder__creds li:last-child { border-bottom: none; }
+    .rm-founder__creds li::before { content: '◆'; color: var(--rm-accent); font-size: 0.55rem; margin-top: 0.35rem; flex-shrink: 0; }
+    .rm-founder__bio-block { margin-bottom: 2rem; }
+    .rm-founder__bio-block h3 {
+      color: var(--rm-white);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .rm-founder__quote {
+      font-family: Georgia, serif;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-style: italic;
+      color: var(--rm-accent);
+      line-height: 1.55;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      margin: 2rem 0;
+    }
+
+    /* ── CTA STRIP ── */
+    .rm-about-cta {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .rm-about-cta h2 { margin-bottom: 1rem; }
+    .rm-about-cta p { margin-bottom: 2rem; }
+
+    @media (max-width: 900px) {
+      .rm-founder__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .rm-founder__photo-col { position: static; }
+      .rm-founder__photo { aspect-ratio: 4/3; }
+      .rm-philosophy__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .rm-philosophy__left { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-mount"></div>
+  <main>
+
+    <!-- HERO -->
+    <section class="rm-page-hero rm-bg-green">
+      <div class="container">
+        <span class="rm-label hero-content">About Real Mind Psychotherapy</span>
+        <h1 class="hero-content delay-1">High-Level Clinical Care,<br>Deep Human Understanding</h1>
+        <p class="hero-content delay-2">We exist to provide psychotherapy that is rigorous, relational, and rooted — addressing the full complexity of the human experience.</p>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="rm-section">
+      <div class="container">
+        <div class="rm-philosophy__grid">
+          <div class="rm-philosophy__left">
+            <span class="rm-label" data-animate="fade">Our Framework</span>
+            <h2 data-animate>A Philosophy Built on the Whole Person</h2>
+            <div class="rm-divider" data-animate></div>
+            <p data-animate data-delay="100">We reject the idea that healing is purely cognitive or purely spiritual. At Real Mind, we hold that lasting transformation requires attentiveness to every dimension of human experience — the psychological, the relational, the somatic, and the spiritual.</p>
+            <div class="rm-philosophy__pillars" data-animate data-delay="150">
+              <span class="rm-philosophy__pillar">Body</span>
+              <span class="rm-philosophy__pillar">Mind</span>
+              <span class="rm-philosophy__pillar">Spirit</span>
+            </div>
+            <p data-animate data-delay="200">Our clinicians are trained to work with the full spectrum — from acute crisis to long-term growth — and to do so with cultural humility, clinical precision, and genuine warmth.</p>
+          </div>
+          <div>
+            <div class="rm-philosophy__block" data-animate data-delay="100">
+              <div class="rm-philosophy__block__num">01</div>
+              <h4>Psychological Awareness</h4>
+              <p>We use evidence-based modalities — CBT, DBT, EMDR, and trauma-focused approaches — to help clients understand the cognitive and emotional patterns shaping their lives.</p>
+            </div>
+            <div class="rm-philosophy__block" data-animate data-delay="200">
+              <div class="rm-philosophy__block__num">02</div>
+              <h4>Relational Insight</h4>
+              <p>All suffering has a relational dimension. We help clients understand how their earliest attachments and relational experiences continue to influence how they connect — and disconnect — today.</p>
+            </div>
+            <div class="rm-philosophy__block" data-animate data-delay="300">
+              <div class="rm-philosophy__block__num">03</div>
+              <h4>Spiritual Alignment</h4>
+              <p>For clients whose faith is central to their identity, we integrate spiritual values into the therapeutic process — never imposing, always honouring what is sacred to the individual.</p>
+            </div>
+            <div class="rm-philosophy__block" data-animate data-delay="400">
+              <div class="rm-philosophy__block__num">04</div>
+              <h4>Neurocognitive Regulation</h4>
+              <p>We incorporate somatic and neuroscience-informed tools to help clients regulate their nervous systems — because lasting change requires the body's participation, not just the mind's.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER BIO -->
+    <section class="rm-section rm-bg-green">
+      <div class="container">
+        <div class="rm-founder__grid">
+          <div class="rm-founder__photo-col" data-animate="left">
+            <img src="/images/founder.jpg" alt="Glad Uko-Ima, Founder of Real Mind Psychotherapy" class="rm-founder__photo">
+            <ul class="rm-founder__creds">
+              <li>MSW — Master of Social Work</li>
+              <li>RSW — Registered Social Worker (Ontario)</li>
+              <li>Certified Gottman Therapist (Level II)</li>
+              <li>EMDR Trained Clinician</li>
+              <li>Trauma-Focused CBT Certified</li>
+              <li>Member, OASW</li>
+            </ul>
+          </div>
+          <div>
+            <span class="rm-label" data-animate="fade">Meet the Founder</span>
+            <h2 style="color:var(--rm-white)" data-animate>Glad Uko-Ima, MSW, RSW</h2>
+            <div class="rm-divider" data-animate></div>
+            <div class="rm-founder__bio-block" data-animate data-delay="100">
+              <h3>Background &amp; Training</h3>
+              <p>Glad Uko-Ima is a Registered Social Worker and the founder of Real Mind Psychotherapy. With over a decade of clinical experience, she has worked across community mental health, hospital settings, and private practice — supporting individuals, couples, and families through some of the most challenging periods of their lives.</p>
+              <p>She holds a Master of Social Work from a leading Canadian university and has pursued advanced post-graduate training in Gottman Method Couples Therapy, EMDR, Trauma-Focused CBT, and neuroscience-informed approaches to healing.</p>
+            </div>
+            <div class="rm-founder__bio-block" data-animate data-delay="150">
+              <h3>Philosophy &amp; Approach</h3>
+              <p>Glad's clinical philosophy is grounded in the conviction that true healing must be both rigorous and relational. She combines the precision of evidence-based interventions with deep attunement to each client's unique history, culture, and spiritual life.</p>
+              <p>Her work is particularly informed by the experiences of Black and racialized communities — and she is committed to providing therapy that is culturally humble, historically aware, and genuinely affirming.</p>
+            </div>
+            <div class="rm-founder__quote" data-animate data-delay="200">
+              "I started Real Mind because I wanted to build something that treated the whole person — not a diagnosis, not a presenting problem, but a human being with a complex story worthy of full attention."
+            </div>
+            <div class="rm-founder__bio-block" data-animate data-delay="250">
+              <h3>Outside the Office</h3>
+              <p>When she's not in session or supervising her team, Glad is deeply invested in the broader mental health conversation — writing, speaking, and advocating for accessible, culturally informed care across Ontario and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="rm-section">
+      <div class="container">
+        <div class="rm-about-cta">
+          <span class="rm-label" data-animate="fade">Start Today</span>
+          <h2 data-animate>Ready to Gain Clarity<br>and Move Forward?</h2>
+          <p data-animate data-delay="100">Whether you're facing a specific challenge or simply ready to understand yourself more deeply, we're here to walk alongside you.</p>
+          <div class="rm-cta-btn-group" data-animate data-delay="200">
+            <a href="/contact" class="rm-btn rm-btn-primary">Schedule a Consultation</a>
+            <a href="/meet-the-team" class="rm-btn rm-btn-outline">Meet the Full Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <script src="/js/main.js" type="module"></script>
+</body>
+</html>

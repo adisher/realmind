@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Real Mind Psychotherapy</title>
+  <meta name="description" content="Schedule a consultation or ask a question. Real Mind Psychotherapy serves Ontario — virtual and in-person sessions available.">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <style>
+    .rm-contact__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .rm-contact-info__item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--rm-bg-card);
+    }
+    .rm-contact-info__item:last-of-type { border-bottom: none; }
+    .rm-contact-info__icon {
+      width: 44px;
+      height: 44px;
+      background: var(--rm-bg-card);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .rm-contact-info__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+      margin-bottom: 0.2rem;
+    }
+    .rm-contact-info__value {
+      font-size: 0.95rem;
+      color: var(--rm-text);
+      font-family: Arial, sans-serif;
+    }
+    .rm-avail-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+    }
+    .rm-avail-table th {
+      text-align: left;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rm-text-muted);
+      font-family: Arial, sans-serif;
+      padding: 0.5rem 0;
+      border-bottom: 1.5px solid var(--rm-bg-card);
+    }
+    .rm-avail-table td {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--rm-bg-card);
+      font-family: Arial, sans-serif;
+      color: var(--rm-text-muted);
+    }
+    .rm-avail-table td:first-child { color: var(--rm-text); font-weight: 600; }
+    .rm-avail-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--rm-green);
+      margin-right: 0.4rem;
+    }
+    .rm-contact-form-wrap {
+      background: var(--rm-bg-card);
+      border-radius: var(--rm-radius-lg);
+      padding: clamp(2rem, 4vw, 3rem);
+    }
+    .rm-contact-form-wrap h3 { margin-bottom: 0.35rem; }
+    .rm-contact-form-wrap > p { font-size: 0.9rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) {
+      .rm-contact__grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-mount"></div>
+  <main>
+
+    <!-- HERO -->
+    <section class="rm-page-hero rm-bg-green">
+      <div class="container">
+        <span class="rm-label hero-content">Get in Touch</span>
+        <h1 class="hero-content delay-1">Schedule Your Consultation</h1>
+        <p class="hero-content delay-2">We respond to all inquiries within 24 hours. Taking the first step is enough — we'll guide you through the rest.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="rm-section">
+      <div class="container">
+        <div class="rm-contact__grid">
+
+          <!-- INFO -->
+          <div data-animate="left">
+            <span class="rm-label">Contact Information</span>
+            <h3 style="margin-bottom:0.25rem">We're Here for You</h3>
+            <p style="font-size:0.9rem;margin-bottom:0">All sessions are confidential. Reach out anytime.</p>
+
+            <div class="rm-contact-info__item">
+              <div class="rm-contact-info__icon">📍</div>
+              <div>
+                <div class="rm-contact-info__label">Location</div>
+                <div class="rm-contact-info__value">Ontario, Canada<br>Virtual &amp; In-Person Available</div>
+              </div>
+            </div>
+            <div class="rm-contact-info__item">
+              <div class="rm-contact-info__icon">✉️</div>
+              <div>
+                <div class="rm-contact-info__label">Email</div>
+                <div class="rm-contact-info__value">hello@realmindpsychotherapy.com</div>
+              </div>
+            </div>
+            <div class="rm-contact-info__item">
+              <div class="rm-contact-info__icon">📞</div>
+              <div>
+                <div class="rm-contact-info__label">Phone</div>
+                <div class="rm-contact-info__value">Available upon booking confirmation</div>
+              </div>
+            </div>
+            <div class="rm-contact-info__item">
+              <div class="rm-contact-info__icon">⏱️</div>
+              <div>
+                <div class="rm-contact-info__label">Response Time</div>
+                <div class="rm-contact-info__value">Within 24 hours on business days</div>
+              </div>
+            </div>
+
+            <table class="rm-avail-table">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Availability</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Monday – Friday</td><td><span class="rm-avail-dot"></span>9:00 am – 7:00 pm</td></tr>
+                <tr><td>Saturday</td><td><span class="rm-avail-dot"></span>10:00 am – 4:00 pm</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- FORM -->
+          <div data-animate="right">
+            <div class="rm-contact-form-wrap">
+              <h3>Send Us a Message</h3>
+              <p>Tell us a little about what you're looking for and we'll match you with the right therapist.</p>
+
+              <div id="form-success" class="rm-form-success">
+                <h3>Message Received</h3>
+                <p>Thank you for reaching out. We'll be in touch within 24 hours to discuss next steps.</p>
+              </div>
+
+              <form id="contact-form">
+                <div class="rm-form-row">
+                  <div class="rm-form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                  </div>
+                  <div class="rm-form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                  </div>
+                </div>
+                <div class="rm-form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Optional">
+                </div>
+                <div class="rm-form-row">
+                  <div class="rm-form-group">
+                    <label for="therapyType">Type of Therapy</label>
+                    <select id="therapyType" name="therapyType">
+                      <option value="">Select one...</option>
+                      <option>Individual Therapy</option>
+                      <option>Couples Therapy</option>
+                      <option>Family Therapy</option>
+                      <option>Not Sure Yet</option>
+                    </select>
+                  </div>
+                  <div class="rm-form-group">
+                    <label for="preferredTime">Preferred Time</label>
+                    <select id="preferredTime" name="preferredTime">
+                      <option value="">Select one...</option>
+                      <option>Mornings (9am – 12pm)</option>
+                      <option>Afternoons (12pm – 5pm)</option>
+                      <option>Evenings (5pm – 7pm)</option>
+                      <option>Saturdays</option>
+                      <option>Flexible</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="rm-form-group">
+                  <label for="message">What brings you to therapy? *</label>
+                  <textarea id="message" name="message" placeholder="Share as much or as little as you'd like. This helps us match you with the right therapist." required></textarea>
+                </div>
+                <div id="form-error" class="rm-form-error">Something went wrong. Please try again or email us directly.</div>
+                <button type="submit" class="rm-btn rm-btn-primary" style="width:100%">Send Message</button>
+                <p style="font-size:0.78rem;text-align:center;margin-top:1rem;color:var(--rm-text-muted)">🔒 Your information is strictly confidential.</p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <script src="/js/main.js" type="module"></script>
+  <script>
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      const data = Object.fromEntries(new FormData(form));
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+        } else {
+          throw new Error('Failed');
+        }
+      } catch {
+        errorMsg.style.display = 'block';
+        submitBtn.textContent = 'Send Message';
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
