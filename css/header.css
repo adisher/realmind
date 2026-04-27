@@ -20,19 +20,18 @@
   max-width: 100%;
 }
 
-/* Transparent state */
+/* Solid state at top */
 #header.at-top {
-  background-color: transparent;
-}
-
-#header.at-top .header-dropshadow {
-  box-shadow: none;
-}
-
-/* Solid state */
-#header.scrolled {
   background-color: var(--rm-bg);
   box-shadow: 0 1px 0 rgba(61, 90, 71, 0.1);
+}
+
+/* Blurred transparent on scroll */
+#header.scrolled {
+  background-color: rgba(247, 244, 238, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(61, 90, 71, 0.08);
 }
 
 /* Logo */
@@ -63,18 +62,18 @@
   transition: color 0.2s ease;
 }
 
-/* Transparent nav links */
+/* Solid nav links at top */
 #header.at-top .header-nav a,
 #header.at-top .header-nav button {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--rm-text);
 }
 
 #header.at-top .header-nav a:hover,
 #header.at-top .header-nav button:hover {
-  color: var(--rm-accent);
+  color: var(--rm-green);
 }
 
-/* Solid nav links */
+/* Blurred nav links on scroll */
 #header.scrolled .header-nav a,
 #header.scrolled .header-nav button {
   color: var(--rm-text);
@@ -237,7 +236,7 @@
 }
 
 #header.at-top .burger-bar {
-  background-color: #ffffff;
+  background-color: var(--rm-text);
 }
 
 #header.scrolled .burger-bar {

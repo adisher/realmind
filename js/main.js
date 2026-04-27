@@ -162,17 +162,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateHeader() {
     if (!header) return;
     if (window.scrollY <= 10) {
-      header.classList.add('at-top');
       header.classList.remove('scrolled');
+      header.classList.add('at-top');
     } else {
       header.classList.remove('at-top');
       header.classList.add('scrolled');
     }
-  }
-
-  if (header) {
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
   }
 
   // =====================
