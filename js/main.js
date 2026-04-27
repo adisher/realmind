@@ -39,6 +39,7 @@ const HEADER_HTML = `
         </li>
         <li><a href="/about">About</a></li>
         <li><a href="/meet-the-team">Meet the Team</a></li>
+        <li><a href="/join-our-team">Join Our Team</a></li>
         <li><a href="/fees">Fees</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/contact">Contact</a></li>
@@ -66,6 +67,7 @@ const HEADER_HTML = `
     </div>
     <div class="mobile-nav-item"><a href="/about">About</a></div>
     <div class="mobile-nav-item"><a href="/meet-the-team">Meet the Team</a></div>
+    <div class="mobile-nav-item"><a href="/join-our-team">Join Our Team</a></div>
     <div class="mobile-nav-item"><a href="/fees">Fees</a></div>
     <div class="mobile-nav-item"><a href="/blog">Blog</a></div>
     <div class="mobile-nav-item"><a href="/contact">Contact</a></div>
