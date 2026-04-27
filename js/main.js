@@ -161,18 +161,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateHeader() {
     if (!header) {
-      console.log('Header not found');
       return;
     }
     if (window.scrollY <= 10) {
-      console.log('At top');
       header.classList.remove('scrolled');
       header.classList.add('at-top');
     } else {
-      console.log('Scrolled');
       header.classList.remove('at-top');
       header.classList.add('scrolled');
     }
+  }
+  if (header) {
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
   }
 
   // =====================
