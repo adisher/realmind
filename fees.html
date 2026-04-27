@@ -1,280 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fees &amp; Insurance — Real Mind Psychotherapy</title>
-  <meta name="description" content="Transparent session fees for individual ($175) and couples/family ($225) therapy at Real Mind Psychotherapy. Direct billing and superbills available.">
+  <title>Fees & Insurance — Real Mind Psychotherapy</title>
+  <meta name="description"
+    content="Transparent pricing for individual, couples, and family therapy at Real Mind Psychotherapy. $175 individual sessions, $225 couples and family sessions.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    /* ── PRICING CARDS ── */
-    .rm-pricing__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-    .rm-pricing-card {
-      background: var(--rm-bg-card);
-      border-radius: var(--rm-radius-lg);
-      padding: 3rem 2.5rem;
-      text-align: center;
-      position: relative;
-    }
-    .rm-pricing-card--featured {
+    .rm-fees-hero {
       background: var(--rm-green);
+      padding: 100px 40px 80px;
+      text-align: center;
     }
-    .rm-pricing-card__badge {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--rm-accent);
-      color: var(--rm-text);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 1rem;
-      border-radius: 30px;
+
+    .rm-fees-hero-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .rm-fees-hero-label {
       font-family: Arial, sans-serif;
-      white-space: nowrap;
-    }
-    .rm-pricing-card__type {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
+      font-size: 11px;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--rm-accent);
-      font-family: Arial, sans-serif;
-      margin-bottom: 0.75rem;
+      margin-bottom: 20px;
+      display: block;
     }
-    .rm-pricing-card h3 { margin-bottom: 0.5rem; }
-    .rm-pricing-card--featured h3 { color: var(--rm-white); }
-    .rm-pricing-card__price {
-      font-size: clamp(3rem, 6vw, 4rem);
-      font-family: Georgia, serif;
-      color: var(--rm-green);
-      line-height: 1;
-      margin: 1.25rem 0 0.25rem;
-    }
-    .rm-pricing-card--featured .rm-pricing-card__price { color: var(--rm-accent); }
-    .rm-pricing-card__per {
-      font-size: 0.85rem;
-      color: var(--rm-text-muted);
-      font-family: Arial, sans-serif;
-      margin-bottom: 2rem;
-    }
-    .rm-pricing-card--featured .rm-pricing-card__per { color: rgba(255,255,255,0.6); }
-    .rm-pricing-card__features {
-      text-align: left;
-      margin-bottom: 2rem;
-    }
-    .rm-pricing-card__features li {
-      display: flex;
-      gap: 0.6rem;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      font-size: 0.875rem;
-      font-family: Arial, sans-serif;
-      color: var(--rm-text-muted);
-    }
-    .rm-pricing-card--featured .rm-pricing-card__features li {
-      border-color: rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.78);
-    }
-    .rm-pricing-card__features li:last-child { border-bottom: none; }
-    .rm-pricing-card__features li::before { content: '✓'; color: var(--rm-accent); font-weight: 700; flex-shrink: 0; }
 
-    /* ── INSURANCE ── */
-    .rm-insurance__grid {
+    .rm-fees-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .rm-fees-hero-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.75);
+    }
+
+    .rm-fees-main {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-fees-main-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .rm-fees-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
+      gap: 24px;
+      margin-bottom: 80px;
     }
-    .rm-insurance-item {
+
+    .rm-fees-card {
+      border-radius: 16px;
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--rm-bg-card);
+      transition: transform 0.3s ease;
+    }
+
+    .rm-fees-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .rm-fees-card.featured {
+      background: var(--rm-green);
+      border-color: var(--rm-green);
+    }
+
+    .rm-fees-card.standard {
+      background: var(--rm-bg);
+    }
+
+    .rm-fees-card-badge {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--rm-accent);
+      color: var(--rm-green);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .rm-fees-card-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .featured .rm-fees-card-label {
+      color: var(--rm-accent);
+    }
+
+    .standard .rm-fees-card-label {
+      color: var(--rm-accent);
+    }
+
+    .rm-fees-card-title {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .featured .rm-fees-card-title {
+      color: var(--rm-bg);
+    }
+
+    .standard .rm-fees-card-title {
+      color: var(--rm-green);
+    }
+
+    .rm-fees-card-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .featured .rm-fees-card-body {
+      color: rgba(247, 244, 238, 0.7);
+    }
+
+    .standard .rm-fees-card-body {
+      color: var(--rm-text-muted);
+    }
+
+    .rm-fees-price {
+      margin-bottom: 32px;
+    }
+
+    .rm-fees-price-amount {
+      font-family: Georgia, serif;
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .featured .rm-fees-price-amount {
+      color: var(--rm-bg);
+    }
+
+    .standard .rm-fees-price-amount {
+      color: var(--rm-green);
+    }
+
+    .rm-fees-price-label {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+
+    .featured .rm-fees-price-label {
+      color: rgba(247, 244, 238, 0.5);
+    }
+
+    .standard .rm-fees-price-label {
+      color: var(--rm-text-muted);
+    }
+
+    .rm-fees-card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px;
       display: flex;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--rm-bg-card);
+      flex-direction: column;
+      gap: 12px;
     }
-    .rm-insurance-item:last-child { border-bottom: none; }
-    .rm-insurance-item__icon {
-      width: 42px;
-      height: 42px;
-      background: var(--rm-bg-card);
-      border-radius: 50%;
+
+    .rm-fees-card-list li {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 12px;
+    }
+
+    .featured .rm-fees-card-list li {
+      color: rgba(247, 244, 238, 0.8);
+    }
+
+    .standard .rm-fees-card-list li {
+      color: var(--rm-text-muted);
+    }
+
+    .rm-fees-card-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--rm-accent);
+      border-radius: 50%;
       flex-shrink: 0;
-      font-size: 1.1rem;
     }
-    .rm-insurance-item h4 { margin-bottom: 0.25rem; font-size: 1rem; }
-    .rm-insurance-item p { font-size: 0.875rem; margin: 0; }
-    .rm-private-pay-benefit {
+
+    .rm-fees-insurance {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 80px;
+      padding: 60px;
+      background: var(--rm-bg-card);
+      border-radius: 16px;
+    }
+
+    .rm-fees-insurance-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .rm-fees-insurance-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .rm-fees-insurance-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 16px;
+    }
+
+    .rm-fees-insurance-items {
       display: flex;
-      gap: 0.75rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
     }
-    .rm-private-pay-benefit:last-child { border-bottom: none; }
-    .rm-private-pay-benefit h4 { color: var(--rm-white); margin-bottom: 0.25rem; font-size: 1rem; }
-    .rm-private-pay-benefit p { font-size: 0.875rem; margin: 0; color: rgba(255,255,255,0.7); }
-    .rm-private-pay-benefit__icon { color: var(--rm-accent); font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    .rm-fees-insurance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      background: var(--rm-bg);
+      border-radius: 8px;
+    }
+
+    .rm-fees-insurance-item-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .rm-fees-insurance-item-title {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--rm-green);
+      margin-bottom: 4px;
+    }
+
+    .rm-fees-insurance-item-body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: var(--rm-text-muted);
+      line-height: 1.5;
+    }
+
+    .rm-fees-private-pay {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .rm-fees-private-pay-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 400;
+      color: var(--rm-green);
+      margin-bottom: 8px;
+    }
+
+    .rm-fees-private-pay-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+    }
+
+    .rm-fees-private-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background: var(--rm-bg);
+      border-radius: 10px;
+    }
+
+    .rm-fees-private-benefit-number {
+      font-family: Georgia, serif;
+      font-size: 13px;
+      color: var(--rm-accent);
+      flex-shrink: 0;
+      padding-top: 1px;
+      min-width: 24px;
+    }
+
+    .rm-fees-private-benefit-title {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--rm-green);
+      margin-bottom: 4px;
+    }
+
+    .rm-fees-private-benefit-body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: var(--rm-text-muted);
+      line-height: 1.5;
+    }
+
+    .rm-fees-cta {
+      background: var(--rm-green);
+      border-radius: 16px;
+      padding: 64px 48px;
+      text-align: center;
+    }
+
+    .rm-fees-cta-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .rm-fees-cta-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rm-fees-cta-body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.7);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rm-fees-cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
     @media (max-width: 768px) {
-      .rm-pricing__grid { grid-template-columns: 1fr; }
-      .rm-insurance__grid { grid-template-columns: 1fr; }
+
+      .rm-fees-grid,
+      .rm-fees-insurance {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .rm-fees-insurance {
+        padding: 40px 24px;
+      }
+
+      .rm-fees-cta {
+        padding: 48px 24px;
+      }
+
+      .rm-fees-card {
+        padding: 40px 28px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-page-hero rm-bg-green">
-      <div class="container">
-        <span class="rm-label hero-content">Fees &amp; Insurance</span>
-        <h1 class="hero-content delay-1">Transparent Pricing,<br>No Surprises</h1>
-        <p class="hero-content delay-2">We believe financial clarity is part of good care. Here's exactly what to expect.</p>
+    <section class="rm-fees-hero">
+      <div class="rm-fees-hero-inner">
+        <span class="rm-fees-hero-label">Fees & Insurance</span>
+        <h1 class="rm-fees-hero-heading">Transparent, straightforward pricing</h1>
+        <p class="rm-fees-hero-body">
+          We believe access to quality mental health care should be clear and straightforward. Below you will find our
+          current session fees and information about insurance and payment options.
+        </p>
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="text-center" style="margin-bottom:3rem">
-          <span class="rm-label" data-animate="fade">Session Rates</span>
-          <h2 data-animate>Our Fees</h2>
-        </div>
-        <div class="rm-pricing__grid">
-          <div class="rm-pricing-card" data-animate data-delay="100">
-            <div class="rm-pricing-card__type">Individual</div>
-            <h3>Individual Therapy</h3>
-            <div class="rm-pricing-card__price">$175</div>
-            <p class="rm-pricing-card__per">Per 50-minute session</p>
-            <ul class="rm-pricing-card__features">
-              <li>Licensed therapist (MSW, RSW or C.Psych)</li>
-              <li>Personalized treatment plan</li>
-              <li>Secure video or in-person sessions</li>
-              <li>Session summary &amp; homework available</li>
-              <li>Superbill provided for insurance claims</li>
+    <!-- MAIN -->
+    <section class="rm-fees-main">
+      <div class="rm-fees-main-inner">
+
+        <!-- PRICING CARDS -->
+        <div class="rm-fees-grid">
+          <div class="rm-fees-card standard" data-animate data-delay="0">
+            <span class="rm-fees-card-label">01 — Individual</span>
+            <h2 class="rm-fees-card-title">Individual Therapy</h2>
+            <p class="rm-fees-card-body">Structured, insight-driven sessions focused on emotional clarity, regulation,
+              and personal growth.</p>
+            <div class="rm-fees-price">
+              <div class="rm-fees-price-amount">$175</div>
+              <div class="rm-fees-price-label">Per 50-minute session</div>
+            </div>
+            <ul class="rm-fees-card-list">
+              <li>50-minute individual session</li>
+              <li>Structured, goal-oriented approach</li>
+              <li>Faith integration available</li>
+              <li>Telehealth across New York State</li>
+              <li>Flexible scheduling</li>
             </ul>
-            <a href="/contact" class="rm-btn rm-btn-outline">Book Individual Therapy</a>
+            <a href="/contact" class="btn-primary">Schedule Individual Session</a>
           </div>
-          <div class="rm-pricing-card rm-pricing-card--featured" data-animate data-delay="200">
-            <div class="rm-pricing-card__badge">Most Requested</div>
-            <div class="rm-pricing-card__type">Couples &amp; Family</div>
-            <h3>Couples &amp; Family Therapy</h3>
-            <div class="rm-pricing-card__price">$225</div>
-            <p class="rm-pricing-card__per">Per 75-minute session</p>
-            <ul class="rm-pricing-card__features">
-              <li>Gottman-informed or systems-based approach</li>
-              <li>Joint &amp; individual sessions as needed</li>
-              <li>Secure video or in-person sessions</li>
-              <li>Between-session exercises provided</li>
-              <li>Superbill provided for insurance claims</li>
+          <div class="rm-fees-card featured" data-animate data-delay="150">
+            <span class="rm-fees-card-badge">Couples & Family</span>
+            <span class="rm-fees-card-label">02 — Couples & Family</span>
+            <h2 class="rm-fees-card-title">Couples & Family Therapy</h2>
+            <p class="rm-fees-card-body">Evidence-based relational therapy designed to rebuild trust, improve
+              communication, and restore connection.</p>
+            <div class="rm-fees-price">
+              <div class="rm-fees-price-amount">$225</div>
+              <div class="rm-fees-price-label">Per 60-minute session</div>
+            </div>
+            <ul class="rm-fees-card-list">
+              <li>60-minute couples or family session</li>
+              <li>Structured, outcome-focused approach</li>
+              <li>Faith-based relationship guidance</li>
+              <li>Telehealth across New York State</li>
+              <li>Premarital counseling available</li>
             </ul>
-            <a href="/contact" class="rm-btn rm-btn-white">Book Couples / Family Therapy</a>
+            <a href="/contact" class="btn-accent">Book a Couples Consultation</a>
           </div>
         </div>
 
         <!-- INSURANCE -->
-        <div class="rm-insurance__grid">
+        <div class="rm-fees-insurance" data-animate data-delay="0">
           <div>
-            <span class="rm-label" data-animate="fade">Coverage</span>
-            <h3 data-animate>Insurance &amp; Benefits</h3>
-            <div class="rm-divider" data-animate></div>
-            <div data-animate data-delay="100">
-              <div class="rm-insurance-item">
-                <div class="rm-insurance-item__icon">📋</div>
+            <span class="rm-fees-insurance-label">Insurance & Payment</span>
+            <h2 class="rm-fees-insurance-heading">Out-of-network provider</h2>
+            <p class="rm-fees-insurance-body">Real Mind Psychotherapy is currently an out-of-network provider. This
+              means we do not bill insurance directly — however, many clients are able to receive partial reimbursement
+              through their out-of-network benefits.</p>
+            <p class="rm-fees-insurance-body">We provide a monthly superbill (detailed receipt) that you can submit to
+              your insurance company for potential reimbursement.</p>
+            <div class="rm-fees-insurance-items">
+              <div class="rm-fees-insurance-item">
+                <div class="rm-fees-insurance-item-dot"></div>
                 <div>
-                  <h4>Extended Health Benefits</h4>
-                  <p>Many employer benefit plans cover registered social workers (RSW) and registered psychologists (C.Psych). Check your plan for "psychotherapy" or "social work" coverage.</p>
+                  <div class="rm-fees-insurance-item-title">Superbill provided</div>
+                  <div class="rm-fees-insurance-item-body">We provide a detailed monthly receipt for insurance
+                    reimbursement submissions</div>
                 </div>
               </div>
-              <div class="rm-insurance-item">
-                <div class="rm-insurance-item__icon">🧾</div>
+              <div class="rm-fees-insurance-item">
+                <div class="rm-fees-insurance-item-dot"></div>
                 <div>
-                  <h4>Superbill Receipts</h4>
-                  <p>We provide detailed receipts (superbills) after each session that you can submit to your insurer for reimbursement. We do not direct-bill most plans at this time.</p>
+                  <div class="rm-fees-insurance-item-title">Check your benefits</div>
+                  <div class="rm-fees-insurance-item-body">Contact your insurance provider and ask about out-of-network
+                    mental health benefits</div>
                 </div>
               </div>
-              <div class="rm-insurance-item">
-                <div class="rm-insurance-item__icon">🏥</div>
+              <div class="rm-fees-insurance-item">
+                <div class="rm-fees-insurance-item-dot"></div>
                 <div>
-                  <h4>Employee Assistance Programs (EAP)</h4>
-                  <p>Some EAP plans cover sessions with registered clinicians. Contact your EAP provider to confirm coverage before booking.</p>
-                </div>
-              </div>
-              <div class="rm-insurance-item">
-                <div class="rm-insurance-item__icon">💰</div>
-                <div>
-                  <h4>Tax Deductibility</h4>
-                  <p>Psychotherapy fees paid to a registered clinician may qualify as a medical expense for Canadian tax purposes. Consult your accountant for details.</p>
+                  <div class="rm-fees-insurance-item-title">HSA & FSA accepted</div>
+                  <div class="rm-fees-insurance-item-body">Health Savings Account and Flexible Spending Account cards
+                    are accepted for payment</div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="rm-card-green" data-animate="right">
-            <span class="rm-label" style="color:var(--rm-accent)">Why Private Pay?</span>
-            <h3 style="color:var(--rm-white);margin-bottom:1.5rem">The Benefits of Self-Pay</h3>
-            <div class="rm-private-pay-benefit">
-              <span class="rm-private-pay-benefit__icon">🔒</span>
+          <div class="rm-fees-private-pay">
+            <h3 class="rm-fees-private-pay-heading">Why private pay?</h3>
+            <p class="rm-fees-private-pay-body">Choosing private pay gives you and your therapist full control over your
+              care — without insurance limitations on session frequency, duration, or diagnosis requirements.</p>
+            <div class="rm-fees-private-benefit">
+              <div class="rm-fees-private-benefit-number">01</div>
               <div>
-                <h4>Complete Confidentiality</h4>
-                <p>No diagnostic codes on file with insurers. Your mental health history stays between you and your therapist.</p>
+                <div class="rm-fees-private-benefit-title">Complete confidentiality</div>
+                <div class="rm-fees-private-benefit-body">No diagnosis required for insurance records — your privacy is
+                  fully protected</div>
               </div>
             </div>
-            <div class="rm-private-pay-benefit">
-              <span class="rm-private-pay-benefit__icon">🎯</span>
+            <div class="rm-fees-private-benefit">
+              <div class="rm-fees-private-benefit-number">02</div>
               <div>
-                <h4>Treatment Not Driven by Coverage</h4>
-                <p>Your treatment plan is based on your needs — not what your insurer approves. No arbitrary session limits.</p>
+                <div class="rm-fees-private-benefit-title">No session limits</div>
+                <div class="rm-fees-private-benefit-body">Continue therapy as long as you need without insurance
+                  approval or session caps</div>
               </div>
             </div>
-            <div class="rm-private-pay-benefit">
-              <span class="rm-private-pay-benefit__icon">⚡</span>
+            <div class="rm-fees-private-benefit">
+              <div class="rm-fees-private-benefit-number">03</div>
               <div>
-                <h4>No Pre-Authorization Delays</h4>
-                <p>Start therapy when you're ready — no forms, no waiting for approval, no bureaucracy between you and care.</p>
+                <div class="rm-fees-private-benefit-title">Clinician-led treatment</div>
+                <div class="rm-fees-private-benefit-body">Your therapist determines your treatment plan — not insurance
+                  guidelines</div>
               </div>
             </div>
-            <div class="rm-private-pay-benefit">
-              <span class="rm-private-pay-benefit__icon">🌱</span>
+            <div class="rm-fees-private-benefit">
+              <div class="rm-fees-private-benefit-number">04</div>
               <div>
-                <h4>Flexible Scheduling</h4>
-                <p>Sessions are booked around your life — evenings, weekends, and virtual options available.</p>
+                <div class="rm-fees-private-benefit-title">Investment in real change</div>
+                <div class="rm-fees-private-benefit-body">Clients who invest in their mental health privately are often
+                  more committed to the process and see faster results</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="rm-bg-green">
-      <div class="container rm-cta-banner">
-        <span class="rm-label" data-animate="fade">Ready to Start?</span>
-        <h2 data-animate>Investing in your mental health<br>is never wasted.</h2>
-        <p data-animate data-delay="100">Have questions about fees or coverage? We're happy to talk through your options before you book.</p>
-        <div class="rm-cta-btn-group" data-animate data-delay="200">
-          <a href="/contact" class="rm-btn rm-btn-primary">Schedule a Consultation</a>
-          <a href="/contact" class="rm-btn rm-btn-outline-white">Ask a Fee Question</a>
+        <!-- CTA -->
+        <div class="rm-fees-cta" data-animate="scale" data-delay="0">
+          <span class="rm-fees-cta-label">Ready to Begin</span>
+          <h2 class="rm-fees-cta-heading">
+            Take the first step toward clarity and lasting change
+          </h2>
+          <p class="rm-fees-cta-body">
+            Schedule a consultation today. We will discuss your needs, answer your questions, and help you determine the
+            right path forward.
+          </p>
+          <div class="rm-fees-cta-buttons">
+            <a href="/contact" class="btn-accent">Schedule Consultation</a>
+            <a href="/contact" class="btn-white-outline">Verify Insurance</a>
+          </div>
         </div>
+
       </div>
     </section>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
+
 </body>
+
 </html>

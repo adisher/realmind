@@ -1,198 +1,298 @@
-/* ===========================
-   HEADER TEMPLATE
-   =========================== */
+// =====================
+// HEADER HTML
+// =====================
 const HEADER_HTML = `
-<header class="rm-header" id="rm-header">
-  <div class="rm-header__inner">
-    <a href="/" class="rm-header__logo">
+<header id="header">
+  <div class="header-inner">
+    <a href="/" class="header-logo">
       <img src="/images/logo.png" alt="Real Mind Psychotherapy">
     </a>
-    <nav class="rm-nav" id="rm-nav">
-      <div class="rm-nav__item">
-        <a href="/about" class="rm-nav__link">About</a>
-      </div>
-      <div class="rm-nav__item rm-nav__item--dropdown">
-        <a href="#" class="rm-nav__link">Services</a>
-        <div class="rm-dropdown">
-          <a href="/individual-therapy" class="rm-dropdown__link">Individual Therapy</a>
-          <a href="/couples-therapy" class="rm-dropdown__link">Couples Therapy</a>
-          <a href="/family-therapy" class="rm-dropdown__link">Family Therapy</a>
-        </div>
-      </div>
-      <div class="rm-nav__item">
-        <a href="/meet-the-team" class="rm-nav__link">Our Team</a>
-      </div>
-      <div class="rm-nav__item">
-        <a href="/fees" class="rm-nav__link">Fees</a>
-      </div>
-      <div class="rm-nav__item">
-        <a href="/blog" class="rm-nav__link">Blog</a>
-      </div>
-      <div class="rm-nav__item">
-        <a href="/join-our-team" class="rm-nav__link">Join Us</a>
-      </div>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="/">Home</a></li>
+        <li class="header-nav-folder">
+          <button class="services-btn">Services</button>
+          <div class="rm-custom-dropdown">
+            <a href="/individual-therapy" class="rm-dropdown-item">
+              <span class="rm-dropdown-item-label">01</span>
+              <span class="rm-dropdown-item-title">Individual Therapy</span>
+              <span class="rm-dropdown-item-desc">Clarity, emotional regulation, and lasting personal change</span>
+            </a>
+            <div class="rm-dropdown-divider"></div>
+            <a href="/couples-therapy" class="rm-dropdown-item">
+              <span class="rm-dropdown-item-label">02</span>
+              <span class="rm-dropdown-item-title">Couples Therapy</span>
+              <span class="rm-dropdown-item-desc">Rebuild trust, improve communication, restore connection</span>
+            </a>
+            <div class="rm-dropdown-divider"></div>
+            <a href="/family-therapy" class="rm-dropdown-item">
+              <span class="rm-dropdown-item-label">03</span>
+              <span class="rm-dropdown-item-title">Family Therapy</span>
+              <span class="rm-dropdown-item-desc">Stronger families start with better understanding</span>
+            </a>
+            <div class="rm-dropdown-divider"></div>
+            <div class="rm-dropdown-footer">
+              <span class="rm-dropdown-footer-text">Faith-Integrated · Evidence-Based</span>
+              <a href="/about" class="rm-dropdown-footer-link">Our approach →</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/meet-the-team">Meet the Team</a></li>
+        <li><a href="/fees">Fees</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </nav>
-    <a href="/contact" class="rm-btn rm-btn-primary rm-header__cta">Schedule Consultation</a>
-    <button class="rm-hamburger" id="rm-hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+    <button class="header-burger" aria-label="Open menu">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
     </button>
   </div>
 </header>
-<div class="rm-mobile-menu" id="rm-mobile-menu">
-  <a href="/" class="rm-mobile-menu__link">Home</a>
-  <a href="/about" class="rm-mobile-menu__link">About</a>
-  <div class="rm-mobile-menu__group">
-    <span class="rm-mobile-menu__group-title">Services</span>
-    <a href="/individual-therapy" class="rm-mobile-menu__sub-link">Individual Therapy</a>
-    <a href="/couples-therapy" class="rm-mobile-menu__sub-link">Couples Therapy</a>
-    <a href="/family-therapy" class="rm-mobile-menu__sub-link">Family Therapy</a>
-  </div>
-  <a href="/meet-the-team" class="rm-mobile-menu__link">Our Team</a>
-  <a href="/fees" class="rm-mobile-menu__link">Fees</a>
-  <a href="/blog" class="rm-mobile-menu__link">Blog</a>
-  <a href="/join-our-team" class="rm-mobile-menu__link">Join Our Team</a>
-  <a href="/contact" class="rm-btn rm-btn-primary rm-mobile-menu__cta">Schedule Consultation</a>
+
+<div class="mobile-menu">
+  <button class="mobile-menu-close" aria-label="Close menu">×</button>
+  <nav>
+    <div class="mobile-nav-item"><a href="/">Home</a></div>
+    <div class="mobile-nav-item">
+      <button class="mobile-services-btn">Services</button>
+      <div class="mobile-nav-sub mobile-services-sub">
+        <a href="/individual-therapy">Individual Therapy</a>
+        <a href="/couples-therapy">Couples Therapy</a>
+        <a href="/family-therapy">Family Therapy</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item"><a href="/about">About</a></div>
+    <div class="mobile-nav-item"><a href="/meet-the-team">Meet the Team</a></div>
+    <div class="mobile-nav-item"><a href="/fees">Fees</a></div>
+    <div class="mobile-nav-item"><a href="/blog">Blog</a></div>
+    <div class="mobile-nav-item"><a href="/contact">Contact</a></div>
+  </nav>
 </div>
 `;
 
-/* ===========================
-   FOOTER TEMPLATE
-   =========================== */
+// =====================
+// FOOTER HTML
+// =====================
 const FOOTER_HTML = `
-<footer class="rm-footer">
-  <div class="container">
-    <div class="rm-footer__grid">
-      <div>
-        <img src="/images/logo-white.png" alt="Real Mind Psychotherapy" class="rm-footer__logo">
-        <p class="rm-footer__tagline">Evidence-based, faith-integrated psychotherapy for individuals, couples, and families in Ontario, Canada.</p>
-        <div class="rm-footer__social">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="LinkedIn">LI</a>
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-img">
+          <img src="/images/logo-white.png" alt="Real Mind Psychotherapy">
+        </div>
+        <p class="footer-tagline">"Real change starts with a clear mind."</p>
+        <div class="footer-badges">
+          <div class="footer-badge"><span class="footer-badge-dot"></span>NY State Licensed Mental Health Counselor</div>
+          <div class="footer-badge"><span class="footer-badge-dot"></span>Faith-Integrated Clinical Care</div>
+          <div class="footer-badge"><span class="footer-badge-dot"></span>Telehealth across New York</div>
         </div>
       </div>
       <div>
-        <h4 class="rm-footer__col-title">Services</h4>
-        <div class="rm-footer__links">
-          <a href="/individual-therapy">Individual Therapy</a>
-          <a href="/couples-therapy">Couples Therapy</a>
-          <a href="/family-therapy">Family Therapy</a>
-          <a href="/fees">Fees &amp; Insurance</a>
-        </div>
+        <div class="footer-col-heading">Services</div>
+        <div class="footer-divider"></div>
+        <ul class="footer-links">
+          <li><a href="/individual-therapy">Individual Therapy</a></li>
+          <li><a href="/couples-therapy">Couples Therapy</a></li>
+          <li><a href="/family-therapy">Family Therapy</a></li>
+          <li><a href="/fees">Fees & Insurance</a></li>
+        </ul>
       </div>
       <div>
-        <h4 class="rm-footer__col-title">Company</h4>
-        <div class="rm-footer__links">
-          <a href="/about">About Us</a>
-          <a href="/meet-the-team">Meet the Team</a>
-          <a href="/blog">Blog</a>
-          <a href="/join-our-team">Join Our Team</a>
-        </div>
+        <div class="footer-col-heading">Company</div>
+        <div class="footer-divider"></div>
+        <ul class="footer-links">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/meet-the-team">Meet the Team</a></li>
+          <li><a href="/join-our-team">Join Our Team</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </div>
       <div>
-        <h4 class="rm-footer__col-title">Contact</h4>
-        <div class="rm-footer__contact-item">
-          <strong>Email</strong>
-          <span>hello@realmindpsychotherapy.com</span>
+        <div class="footer-col-heading">Contact</div>
+        <div class="footer-divider"></div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-label">Location</div>
+          <div class="footer-contact-value">New York<br>Telehealth Available</div>
         </div>
-        <div class="rm-footer__contact-item">
-          <strong>Location</strong>
-          <span>Ontario, Canada — virtual &amp; in-person</span>
+        <div class="footer-contact-item">
+          <div class="footer-contact-label">Email</div>
+          <div class="footer-contact-value"><a href="mailto:info@realmindpsychotherapy.com">info@realmindpsychotherapy.com</a></div>
         </div>
-        <div class="rm-footer__contact-item">
-          <strong>Hours</strong>
-          <span>Mon–Fri: 9am–7pm · Sat: 10am–4pm</span>
+        <div class="footer-contact-item">
+          <div class="footer-contact-label">Schedule</div>
+          <div class="footer-contact-value"><a href="/contact">Book a Consultation →</a></div>
         </div>
       </div>
     </div>
-    <div class="rm-footer__bottom">
-      <p class="rm-footer__copy">&copy; ${new Date().getFullYear()} Real Mind Psychotherapy. All rights reserved.</p>
-      <div class="rm-footer__legal">
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        © 2026 Real Mind Psychotherapy. All rights reserved.<br>
+        Licensed Mental Health Counselor · New York State
+      </div>
+      <div class="footer-bottom-links">
         <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="/contact">Contact</a>
       </div>
     </div>
   </div>
 </footer>
 `;
 
-/* ===========================
-   INJECT HEADER & FOOTER
-   =========================== */
-const headerMount = document.getElementById('header-mount');
-const footerMount = document.getElementById('footer-mount');
+// Inject header and footer
+document.addEventListener('DOMContentLoaded', function () {
+  const headerMount = document.getElementById('header-mount');
+  const footerMount = document.getElementById('footer-mount');
+  if (headerMount) headerMount.innerHTML = HEADER_HTML;
+  if (footerMount) footerMount.innerHTML = FOOTER_HTML;
+});
 
-if (headerMount) headerMount.innerHTML = HEADER_HTML;
-if (footerMount) footerMount.innerHTML = FOOTER_HTML;
+document.addEventListener('DOMContentLoaded', function () {
 
-/* ===========================
-   ACTIVE NAV LINK
-   =========================== */
-const currentPath = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+  // =====================
+  // HEADER SCROLL
+  // =====================
+  var header = document.getElementById('header');
 
-document.querySelectorAll('.rm-nav__link, .rm-dropdown__link, .rm-mobile-menu__link, .rm-mobile-menu__sub-link').forEach(link => {
-  try {
-    const linkPath = new URL(link.href, window.location.origin).pathname
-      .replace(/\.html$/, '')
-      .replace(/\/$/, '') || '/';
-    if (linkPath === currentPath) {
+  function updateHeader() {
+    if (!header) return;
+    if (window.scrollY <= 10) {
+      header.classList.add('at-top');
+      header.classList.remove('scrolled');
+    } else {
+      header.classList.remove('at-top');
+      header.classList.add('scrolled');
+    }
+  }
+
+  if (header) {
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+  }
+
+  // =====================
+  // ACTIVE NAV LINK
+  // =====================
+  var currentPath = window.location.pathname;
+  document.querySelectorAll('.header-nav a').forEach(function (link) {
+    if (link.getAttribute('href') === currentPath) {
       link.classList.add('active');
     }
-  } catch { /* skip invalid hrefs */ }
-});
-
-/* ===========================
-   HEADER SCROLL STATE
-   =========================== */
-const header = document.getElementById('rm-header');
-
-window.addEventListener('scroll', () => {
-  if (header) {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  }
-}, { passive: true });
-
-/* ===========================
-   MOBILE MENU TOGGLE
-   =========================== */
-const hamburger = document.getElementById('rm-hamburger');
-const mobileMenu = document.getElementById('rm-mobile-menu');
-
-hamburger?.addEventListener('click', () => {
-  const isOpen = mobileMenu?.classList.toggle('open');
-  hamburger.classList.toggle('open', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
-});
-
-mobileMenu?.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger?.classList.remove('open');
-    document.body.style.overflow = '';
   });
-});
 
-/* ===========================
-   SCROLL ANIMATIONS
-   =========================== */
-const animObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const delay = parseInt(el.dataset.delay) || 0;
-      setTimeout(() => el.classList.add('animated'), delay);
-      animObserver.unobserve(el);
+  // =====================
+  // CUSTOM DROPDOWN
+  // =====================
+  var servicesBtn = document.querySelector('.services-btn');
+  var dropdown = document.querySelector('.rm-custom-dropdown');
+  var servicesFolder = document.querySelector('.header-nav-folder');
+  var closeTimer;
+
+  if (servicesFolder && dropdown) {
+    servicesFolder.addEventListener('mouseenter', function () {
+      clearTimeout(closeTimer);
+      dropdown.classList.add('is-open');
+    });
+
+    servicesFolder.addEventListener('mouseleave', function () {
+      closeTimer = setTimeout(function () {
+        dropdown.classList.remove('is-open');
+      }, 150);
+    });
+
+    dropdown.addEventListener('mouseenter', function () {
+      clearTimeout(closeTimer);
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+      closeTimer = setTimeout(function () {
+        dropdown.classList.remove('is-open');
+      }, 150);
+    });
+
+    if (servicesBtn) {
+      servicesBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        dropdown.classList.toggle('is-open');
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      if (!servicesFolder.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+      }
+    });
+  }
+
+  // =====================
+  // MOBILE MENU
+  // =====================
+  var burger = document.querySelector('.header-burger');
+  var mobileMenu = document.querySelector('.mobile-menu');
+  var mobileClose = document.querySelector('.mobile-menu-close');
+  var mobileServicesBtn = document.querySelector('.mobile-services-btn');
+  var mobileServicesSub = document.querySelector('.mobile-services-sub');
+
+  if (burger && mobileMenu) {
+    burger.addEventListener('click', function () {
+      mobileMenu.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  if (mobileClose && mobileMenu) {
+    mobileClose.addEventListener('click', function () {
+      mobileMenu.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+  }
+
+  if (mobileServicesBtn && mobileServicesSub) {
+    mobileServicesBtn.addEventListener('click', function () {
+      mobileServicesSub.classList.toggle('is-open');
+    });
+  }
+
+  // =====================
+  // SCROLL ANIMATIONS
+  // =====================
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var delay = parseInt(el.getAttribute('data-delay')) || 0;
+        setTimeout(function () {
+          el.classList.add('is-visible');
+        }, delay);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('[data-animate]').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  // Hero animations
+  var heroElements = [
+    { selector: '.rm-hero-tag', delay: 200 },
+    { selector: '.rm-hero-heading', delay: 400 },
+    { selector: '.rm-hero-body', delay: 600 },
+    { selector: '.rm-hero-buttons', delay: 750 },
+    { selector: '.rm-hero-trust', delay: 900 }
+  ];
+
+  heroElements.forEach(function (item) {
+    var el = document.querySelector(item.selector);
+    if (el) {
+      setTimeout(function () {
+        el.classList.add('hero-visible');
+      }, item.delay);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('[data-animate]').forEach(el => animObserver.observe(el));
-
-/* ===========================
-   HERO ANIMATION
-   =========================== */
-document.querySelectorAll('.rm-hero').forEach(hero => {
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => hero.classList.add('hero-visible'));
-  });
 });

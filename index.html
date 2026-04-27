@@ -1,469 +1,1090 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real Mind Psychotherapy — Renew Your Mind. Restore Your Life.</title>
-  <meta name="description" content="Evidence-based, faith-integrated psychotherapy for individuals, couples, and families in Ontario, Canada. Schedule your consultation today.">
+  <meta name="description"
+    content="Real Mind Psychotherapy offers evidence-based individual, couples, and family therapy integrated with Biblical principles of mind renewal. Serving New York via telehealth.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    /* ── HERO ── */
-    .rm-hero {
+    /* Hero */
+    .hero-section {
       position: relative;
-      min-height: calc(100vh - 72px);
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      background: var(--rm-green);
+      justify-content: center;
       overflow: hidden;
+      padding-top: 72px;
     }
-    .rm-hero__bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('/images/hero-bg.jpg');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.28;
-    }
-    .rm-hero__overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(61,90,71,0.85) 0%, rgba(61,90,71,0.5) 100%);
-    }
-    .rm-hero__content {
-      position: relative;
-      z-index: 1;
-      max-width: 740px;
-    }
-    .rm-hero__headline {
-      color: var(--rm-white);
-      margin-bottom: 1.25rem;
-    }
-    .rm-hero__sub {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      margin-bottom: 2.25rem;
-      max-width: 560px;
-    }
-    .rm-hero__trust {
-      margin-top: 3rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .rm-hero__trust span { color: var(--rm-accent); }
 
-    /* ── MISSION ── */
-    .rm-mission {
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('/images/hero-bg.jpg') center/cover no-repeat;
+      z-index: 0;
+    }
+
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
       text-align: center;
-      max-width: 760px;
+      max-width: 800px;
+      padding: 60px 40px;
+      width: 100%;
+    }
+
+    .rm-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 28px;
+    }
+
+    .rm-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4.5vw, 58px);
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+
+    .rm-hero-heading em {
+      font-style: italic;
+      color: var(--rm-accent);
+    }
+
+    .rm-hero-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.85);
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .rm-hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .rm-hero-trust {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .rm-hero-trust-item {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: rgba(247, 244, 238, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rm-hero-trust-item::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        min-height: 90vh;
+      }
+
+      .hero-content {
+        padding: 40px 24px;
+      }
+    }
+
+    /* Mission */
+    .rm-mission {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .rm-mission-tag {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 24px;
+    }
+
+    .rm-mission-tag span {
+      margin: 0 12px;
+      color: var(--rm-green);
+    }
+
+    .rm-mission-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      max-width: 800px;
+      margin: 0 auto 24px;
+    }
+
+    .rm-mission-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--rm-text-muted);
+      max-width: 720px;
       margin: 0 auto;
     }
-    .rm-mission h2 { margin-bottom: 1rem; }
-    .rm-mission p { font-size: clamp(1rem, 1.8vw, 1.1rem); }
 
-    /* ── SERVICES ── */
-    .rm-service-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--rm-radius-lg);
-      padding: 2.25rem;
+    /* Services */
+    .rm-services {
+      background: var(--rm-green);
+      padding: 80px 40px;
+      text-align: center;
     }
-    .rm-service-card__num {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      color: var(--rm-accent);
+
+    .rm-services-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      margin-bottom: 1rem;
-      font-family: Arial, sans-serif;
-    }
-    .rm-service-card h3 {
-      color: var(--rm-white);
-      margin-bottom: 1.25rem;
-    }
-    .rm-service-card__list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 1.75rem;
-    }
-    .rm-service-card__list li {
-      display: flex;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.78);
-      font-family: Arial, sans-serif;
-    }
-    .rm-service-card__list li::before {
-      content: '—';
       color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .rm-services-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rm-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto 60px;
+    }
+
+    .rm-service-card {
+      background: rgba(247, 244, 238, 0.08);
+      border: 1px solid rgba(196, 180, 154, 0.3);
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: left;
+      transition: background 0.3s ease;
+    }
+
+    .rm-service-card:hover {
+      background: rgba(247, 244, 238, 0.14);
+    }
+
+    .rm-service-number {
+      font-family: Georgia, serif;
+      font-size: 13px;
+      color: var(--rm-accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .rm-service-title {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--rm-bg);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .rm-service-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(247, 244, 238, 0.75);
+      margin-bottom: 28px;
+    }
+
+    .rm-service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+    }
+
+    .rm-service-list li {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: rgba(247, 244, 238, 0.65);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(196, 180, 154, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rm-service-list li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--rm-accent);
+      border-radius: 50%;
       flex-shrink: 0;
     }
-    .rm-service-card__link {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--rm-accent);
-      letter-spacing: 0.04em;
-      font-family: Arial, sans-serif;
-      transition: opacity var(--rm-transition);
-    }
-    .rm-service-card__link:hover { opacity: 0.75; }
 
-    /* ── APPROACH ── */
-    .rm-approach__grid {
+    .rm-service-link {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196, 180, 154, 0.4);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
+    }
+
+    .rm-service-link:hover {
+      border-color: var(--rm-accent);
+    }
+
+    /* Approach */
+    .rm-approach {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-approach-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .rm-approach-top {
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 4rem;
-      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 80px;
     }
-    .rm-approach__img-wrap {
-      position: relative;
-      border-radius: var(--rm-radius-lg);
-      overflow: hidden;
-    }
-    .rm-approach__img-wrap img {
+
+    .rm-approach-image {
       width: 100%;
-      height: 520px;
-      object-fit: cover;
+      aspect-ratio: 3/4;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
     }
-    .rm-approach__img-caption {
+
+    .rm-approach-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .rm-approach-image-caption {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 1.5rem;
-      background: linear-gradient(to top, rgba(61,90,71,0.9), transparent);
-      color: var(--rm-white);
-      font-size: 0.875rem;
-      font-style: italic;
+      padding: 32px 28px 28px;
+      background: linear-gradient(to top, rgba(30, 30, 30, 0.7) 0%, transparent 100%);
+      border-radius: 0 0 16px 16px;
+    }
+
+    .rm-approach-image-caption-text {
       font-family: Georgia, serif;
+      font-size: 15px;
+      font-style: italic;
+      color: rgba(247, 244, 238, 0.9);
+      line-height: 1.5;
     }
-    .rm-approach__pillars {
-      display: flex;
-      gap: 1rem;
-      margin: 1.75rem 0 2rem;
-      flex-wrap: wrap;
-    }
-    .rm-approach__pillar {
-      padding: 0.5rem 1.1rem;
-      border: 1.5px solid var(--rm-accent);
-      border-radius: 30px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--rm-green);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+
+    .rm-approach-label {
       font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
     }
-    .rm-transform-grid {
+
+    .rm-approach-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+
+    .rm-approach-body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--rm-text-muted);
+      margin-bottom: 16px;
+    }
+
+    .rm-approach-pillars {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 4rem;
-      padding-top: 4rem;
-      border-top: 1px solid var(--rm-bg-card);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--rm-bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 32px;
     }
-    .rm-transform-item {
+
+    .rm-pillar {
+      background: var(--rm-bg);
+      padding: 28px 24px;
       text-align: center;
     }
-    .rm-transform-item__icon {
-      width: 52px;
-      height: 52px;
-      background: var(--rm-bg-card);
+
+    .rm-pillar-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--rm-green);
       border-radius: 50%;
+      margin: 0 auto 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1rem;
-      font-size: 1.4rem;
     }
-    .rm-transform-item h4 { margin-bottom: 0.5rem; }
-    .rm-transform-item p { font-size: 0.875rem; }
 
-    /* ── WHO WE HELP ── */
-    .rm-help__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
+    .rm-pillar-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--rm-bg);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
-    .rm-help__list li {
-      display: flex;
-      gap: 0.75rem;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.82);
+
+    .rm-pillar-title {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--rm-green);
+      margin-bottom: 8px;
+    }
+
+    .rm-pillar-body {
       font-family: Arial, sans-serif;
-      align-items: center;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--rm-text-muted);
     }
-    .rm-help__list li::before {
-      content: '✓';
-      color: var(--rm-accent);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .rm-help__specialty {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--rm-radius);
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .rm-help__specialty h4 { color: var(--rm-white); margin-bottom: 0.35rem; }
-    .rm-help__specialty p { font-size: 0.875rem; color: rgba(255,255,255,0.65); margin: 0; }
 
-    /* ── WHY CHOOSE ── */
-    .rm-why__cards {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-bottom: 4rem;
-    }
-    .rm-why__card {
+    .rm-transformation {
       background: var(--rm-bg-card);
-      border-radius: var(--rm-radius-lg);
-      padding: 1.75rem 1.5rem;
+      border-radius: 12px;
+      padding: 48px;
+    }
+
+    .rm-transformation-heading {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--rm-green);
+      margin-bottom: 32px;
       text-align: center;
     }
-    .rm-why__card__icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+
+    .rm-transformation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
     }
-    .rm-why__card h4 { margin-bottom: 0.5rem; font-size: 0.95rem; }
-    .rm-why__card p { font-size: 0.85rem; margin: 0; }
-    .rm-why__split {
+
+    .rm-transformation-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--rm-bg);
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+
+    .rm-transformation-arrow {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      color: var(--rm-accent);
+      flex-shrink: 0;
+    }
+
+    .rm-transformation-text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--rm-text-muted);
+    }
+
+    .rm-transformation-text strong {
+      display: block;
+      color: var(--rm-green);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    /* Who We Help */
+    .rm-who {
+      background: var(--rm-green);
+      padding: 80px 40px;
+    }
+
+    .rm-who-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .rm-who-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      text-align: center;
+      display: block;
+    }
+
+    .rm-who-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      text-align: center;
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rm-who-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border-radius: var(--rm-radius-lg);
+      gap: 48px;
+      align-items: start;
+    }
+
+    .rm-who-conditions-heading {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--rm-bg);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(196, 180, 154, 0.3);
+    }
+
+    .rm-conditions-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rm-conditions-list li {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: rgba(247, 244, 238, 0.75);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(196, 180, 154, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rm-conditions-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rm-specialty-heading {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--rm-bg);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(196, 180, 154, 0.3);
+    }
+
+    .rm-specialty-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .rm-specialty-item {
+      background: rgba(247, 244, 238, 0.06);
+      border: 1px solid rgba(196, 180, 154, 0.2);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .rm-specialty-item-title {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--rm-bg);
+      margin-bottom: 6px;
+    }
+
+    .rm-specialty-item-body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: rgba(247, 244, 238, 0.6);
+      line-height: 1.5;
+    }
+
+    /* Why Choose Us */
+    .rm-why {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .rm-why-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      text-align: center;
+      display: block;
+    }
+
+    .rm-why-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 400;
+      color: var(--rm-green);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .rm-why-subheading {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      color: var(--rm-text-muted);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      line-height: 1.7;
+    }
+
+    .rm-why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .rm-why-card {
+      background: var(--rm-bg);
+      border: 1px solid var(--rm-bg-card);
+      border-radius: 12px;
+      padding: 36px 32px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .rm-why-card:hover {
+      border-color: var(--rm-accent);
+      transform: translateY(-4px);
+    }
+
+    .rm-why-card-number {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--rm-bg-card);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .rm-why-card-title {
+      font-family: Georgia, serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--rm-green);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .rm-why-card-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--rm-text-muted);
+    }
+
+    .rm-why-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 16px;
       overflow: hidden;
     }
-    .rm-why__img { height: 100%; min-height: 380px; object-fit: cover; width: 100%; }
-    .rm-why__panel {
+
+    .rm-why-bottom-image {
+      width: 100%;
+      min-height: 400px;
+      overflow: hidden;
+    }
+
+    .rm-why-bottom-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .rm-why-bottom-content {
       background: var(--rm-green);
-      padding: clamp(2rem, 4vw, 3.5rem);
+      padding: 56px 48px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-    .rm-why__quote {
-      font-family: Georgia, serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      color: var(--rm-white);
-      font-style: italic;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-    }
-    .rm-why__creds {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 2rem;
-      font-family: Arial, sans-serif;
+      gap: 32px;
     }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .rm-why__cards { grid-template-columns: 1fr 1fr; }
-      .rm-transform-grid { grid-template-columns: 1fr 1fr; }
+    .rm-why-quote {
+      font-family: Georgia, serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.5;
+      font-style: italic;
     }
+
+    .rm-why-quote-attr {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-top: 16px;
+    }
+
+    .rm-why-credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(196, 180, 154, 0.2);
+    }
+
+    .rm-why-credential {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: rgba(247, 244, 238, 0.7);
+    }
+
+    .rm-why-credential-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* CTA Banner */
+    .rm-cta {
+      background: var(--rm-green);
+      padding: 100px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rm-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 180, 154, 0.15);
+      pointer-events: none;
+    }
+
+    .rm-cta::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 180, 154, 0.1);
+      pointer-events: none;
+    }
+
+    .rm-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .rm-cta-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .rm-cta-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .rm-cta-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.75);
+      margin-bottom: 40px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rm-cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .rm-cta-reassurance {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: rgba(247, 244, 238, 0.5);
+      letter-spacing: 0.05em;
+    }
+
+    .rm-cta-reassurance span {
+      margin: 0 12px;
+      color: rgba(196, 180, 154, 0.6);
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      .rm-approach__grid { grid-template-columns: 1fr; gap: 2rem; }
-      .rm-help__grid { grid-template-columns: 1fr; }
-      .rm-why__split { grid-template-columns: 1fr; }
-      .rm-why__img { min-height: 280px; }
-    }
-    @media (max-width: 480px) {
-      .rm-why__cards { grid-template-columns: 1fr; }
-      .rm-transform-grid { grid-template-columns: 1fr; }
+
+      .rm-approach-top,
+      .rm-who-grid,
+      .rm-why-bottom {
+        grid-template-columns: 1fr;
+      }
+
+      .rm-specialty-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rm-why-bottom-image {
+        min-height: 300px;
+      }
+
+      .rm-why-bottom-content {
+        padding: 40px 32px;
+      }
+
+      .rm-transformation {
+        padding: 32px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-hero">
-      <div class="rm-hero__bg"></div>
-      <div class="rm-hero__overlay"></div>
-      <div class="container">
-        <div class="rm-hero__content">
-          <span class="rm-label hero-content">Ontario, Canada · Virtual &amp; In-Person</span>
-          <h1 class="rm-hero__headline hero-content delay-1">Renew Your Mind.<br>Restore Your Life.<br>Transform Your Relationships.</h1>
-          <p class="rm-hero__sub hero-content delay-2">Evidence-based, faith-integrated psychotherapy that helps individuals, couples, and families break free from the patterns holding them back.</p>
-          <div class="rm-cta-btn-group hero-content delay-3" style="justify-content:flex-start">
-            <a href="/contact" class="rm-btn rm-btn-primary">Schedule Consultation</a>
-            <a href="/about" class="rm-btn rm-btn-outline-white">Our Approach</a>
-          </div>
-          <div class="rm-hero__trust hero-content delay-3">
-            <span>Licensed Therapists</span> · <span>Evidence-Based</span> · <span>Faith-Integrated</span> · <span>Confidential</span>
-          </div>
+    <section class="hero-section">
+      <div class="hero-content">
+        <span class="rm-hero-tag">Real Mind Psychotherapy · New York</span>
+        <h1 class="rm-hero-heading">
+          Renew Your Mind.<br>
+          Restore Your <em>Life.</em><br>
+          Transform Your Relationships.
+        </h1>
+        <p class="rm-hero-body">
+          Evidence-based clinical practice integrated with Biblical principles of mind renewal — helping
+          individuals, couples, and families achieve emotional clarity and lasting transformation.
+        </p>
+        <div class="rm-hero-buttons">
+          <a href="/contact" class="btn-accent">Schedule Consultation</a>
+          <a href="/about" class="btn-white-outline">Our Approach</a>
+        </div>
+        <div class="rm-hero-trust">
+          <span class="rm-hero-trust-item">Telehealth · New York</span>
+          <span class="rm-hero-trust-item">LMHC Licensed</span>
+          <span class="rm-hero-trust-item">Faith-Integrated</span>
         </div>
       </div>
     </section>
 
     <!-- MISSION -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="rm-mission">
-          <span class="rm-label" data-animate="fade">Evidence-Based · Faith-Integrated · Results-Driven</span>
-          <h2 data-animate>Guiding Individuals, Couples &amp; Families Toward Lasting Change</h2>
-          <div class="rm-divider" style="margin:1.25rem auto 1.5rem"></div>
-          <p data-animate data-delay="100">At Real Mind Psychotherapy, we believe that healing is not just the absence of pain — it is the presence of clarity, connection, and purpose. Our clinicians bring together evidence-based modalities and faith-integrated frameworks to create a therapeutic experience that honours the whole person: body, mind, and spirit.</p>
-        </div>
+    <section class="rm-mission">
+      <div class="rm-mission-tag" data-animate="fade" data-delay="0">
+        Evidence-Based <span>·</span> Faith-Integrated <span>·</span> Results-Driven
       </div>
+      <h2 class="rm-mission-heading" data-animate data-delay="150">
+        Guiding individuals, couples, and families toward authentic self-awareness, emotional healing, and
+        relational restoration.
+      </h2>
+      <p class="rm-mission-body" data-animate data-delay="300">
+        We integrate evidence-based therapeutic approaches with principles of mind renewal to correct
+        maladaptive thought patterns rooted in the brain and nervous system. Through a compassionate,
+        client-centered framework, we empower clients to transform internal experiences, strengthen
+        relationships, and cultivate resilience, purpose, and lasting well-being.
+      </p>
     </section>
 
     <!-- SERVICES -->
-    <section class="rm-section rm-bg-green">
-      <div class="container">
-        <div class="text-center" style="margin-bottom:3rem">
-          <span class="rm-label" data-animate="fade">What We Offer</span>
-          <h2 data-animate>Our Therapy Services</h2>
+    <section class="rm-services">
+      <span class="rm-services-label" data-animate="fade" data-delay="0">Our Services</span>
+      <h2 class="rm-services-heading" data-animate data-delay="150">Therapy tailored to your unique journey</h2>
+      <div class="rm-services-grid">
+        <div class="rm-service-card" data-animate data-delay="0">
+          <div class="rm-service-number">01</div>
+          <h3 class="rm-service-title">Individual Therapy</h3>
+          <p class="rm-service-body">Gain clarity, regulate your emotions, and take control of your life
+            through structured, insight-driven sessions.</p>
+          <ul class="rm-service-list">
+            <li>Anxiety and overthinking</li>
+            <li>Depression and low motivation</li>
+            <li>Trauma and past experiences</li>
+            <li>Identity and life direction</li>
+            <li>Emotional regulation</li>
+          </ul>
+          <a href="/individual-therapy" class="rm-service-link">Learn more →</a>
         </div>
-        <div class="rm-grid-3">
-          <div class="rm-service-card" data-animate data-delay="100">
-            <div class="rm-service-card__num">01</div>
-            <h3>Individual Therapy</h3>
-            <ul class="rm-service-card__list">
-              <li>Anxiety &amp; panic disorders</li>
-              <li>Depression &amp; mood disorders</li>
-              <li>Trauma &amp; PTSD</li>
-              <li>Grief &amp; loss</li>
-              <li>Life transitions &amp; burnout</li>
-              <li>Identity &amp; self-worth</li>
-            </ul>
-            <a href="/individual-therapy" class="rm-service-card__link">Learn More →</a>
-          </div>
-          <div class="rm-service-card" data-animate data-delay="200">
-            <div class="rm-service-card__num">02</div>
-            <h3>Couples Therapy</h3>
-            <ul class="rm-service-card__list">
-              <li>Communication breakdown</li>
-              <li>Rebuilding trust after betrayal</li>
-              <li>Intimacy &amp; emotional connection</li>
-              <li>Pre-marital counselling</li>
-              <li>Conflict resolution</li>
-              <li>Blended family dynamics</li>
-            </ul>
-            <a href="/couples-therapy" class="rm-service-card__link">Learn More →</a>
-          </div>
-          <div class="rm-service-card" data-animate data-delay="300">
-            <div class="rm-service-card__num">03</div>
-            <h3>Family Therapy</h3>
-            <ul class="rm-service-card__list">
-              <li>Parent-child conflict</li>
-              <li>Adolescent &amp; teen issues</li>
-              <li>Sibling relationships</li>
-              <li>Family grief &amp; loss</li>
-              <li>Communication patterns</li>
-              <li>Major life transitions</li>
-            </ul>
-            <a href="/family-therapy" class="rm-service-card__link">Learn More →</a>
-          </div>
+        <div class="rm-service-card" data-animate data-delay="150">
+          <div class="rm-service-number">02</div>
+          <h3 class="rm-service-title">Couples Therapy</h3>
+          <p class="rm-service-body">Rebuild trust, improve communication, and restore connection through
+            evidence-based couples work.</p>
+          <ul class="rm-service-list">
+            <li>Communication breakdown</li>
+            <li>Trust issues and betrayal</li>
+            <li>Emotional disconnection</li>
+            <li>Premarital counseling</li>
+            <li>Faith-based relationship guidance</li>
+          </ul>
+          <a href="/couples-therapy" class="rm-service-link">Learn more →</a>
+        </div>
+        <div class="rm-service-card" data-animate data-delay="300">
+          <div class="rm-service-number">03</div>
+          <h3 class="rm-service-title">Family Therapy</h3>
+          <p class="rm-service-body">Stronger families start with better understanding. We help families
+            improve communication and resolve conflict.</p>
+          <ul class="rm-service-list">
+            <li>Family communication</li>
+            <li>Conflict resolution</li>
+            <li>Parenting challenges</li>
+            <li>Strengthening relationships</li>
+            <li>Faith-based family values</li>
+          </ul>
+          <a href="/family-therapy" class="rm-service-link">Learn more →</a>
         </div>
       </div>
     </section>
 
-    <!-- APPROACH -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="rm-approach__grid">
-          <div data-animate="left">
-            <div class="rm-approach__img-wrap">
-              <img src="/images/approach-img.jpg" alt="Woman in quiet contemplation in a therapy space">
-              <p class="rm-approach__img-caption">"Healing begins when you feel truly seen."</p>
+    <!-- REAL MIND APPROACH -->
+    <section class="rm-approach">
+      <div class="rm-approach-inner">
+        <div class="rm-approach-top">
+          <div class="rm-approach-image" data-animate="left" data-delay="0">
+            <img src="/images/approach-img.jpg" alt="Client in a therapy session at Real Mind Psychotherapy">
+            <div class="rm-approach-image-caption">
+              <div class="rm-approach-image-caption-text">"A space to slow down, look inward, and begin
+                the process of real change."</div>
             </div>
           </div>
-          <div>
-            <span class="rm-label" data-animate="fade">The REAL MIND Method</span>
-            <h2 data-animate>A Whole-Person Approach to Healing</h2>
-            <div class="rm-divider" data-animate></div>
-            <p data-animate data-delay="100">We don't treat symptoms in isolation. Our approach integrates psychological science, relational insight, and — for those who choose it — spiritual alignment. The result is therapy that reaches the root, not just the surface.</p>
-            <div class="rm-approach__pillars" data-animate data-delay="150">
-              <span class="rm-approach__pillar">Body</span>
-              <span class="rm-approach__pillar">Mind</span>
-              <span class="rm-approach__pillar">Spirit</span>
+          <div data-animate="right" data-delay="200">
+            <span class="rm-approach-label">What Is REAL MIND Therapy</span>
+            <h2 class="rm-approach-heading">A structured approach addressing mental health through Body,
+              Mind, and Spirit</h2>
+            <p class="rm-approach-body">REAL MIND Therapy is a structured, integrative approach that
+              addresses mental health and relationships through the interconnected framework of Body,
+              Mind, and Spirit — with a central focus on renewing the mind to transform internal and
+              relational outcomes.</p>
+            <p class="rm-approach-body">We help you move beyond surface-level coping into deep, sustainable
+              change by targeting the root of distress — often found in dysregulated cognitive and
+              emotional patterns driven by the nervous system.</p>
+            <div class="rm-approach-pillars">
+              <div class="rm-pillar" data-animate data-delay="0">
+                <div class="rm-pillar-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8 2 5 5 5 9c0 2.5 1.5 4.5 3 6l1 5h6l1-5c1.5-1.5 3-3.5 3-6 0-4-3-7-7-7z" />
+                  </svg>
+                </div>
+                <div class="rm-pillar-title">Body</div>
+                <div class="rm-pillar-body">Physiological and nervous system responses that shape how we
+                  feel and react</div>
+              </div>
+              <div class="rm-pillar" data-animate data-delay="100">
+                <div class="rm-pillar-icon">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M12 2v3M12 19v3M2 12h3M19 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" />
+                  </svg>
+                </div>
+                <div class="rm-pillar-title">Mind</div>
+                <div class="rm-pillar-body">Thought patterns, beliefs, and emotional processing that
+                  drive behavior</div>
+              </div>
+              <div class="rm-pillar" data-animate data-delay="200">
+                <div class="rm-pillar-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z" />
+                  </svg>
+                </div>
+                <div class="rm-pillar-title">Spirit</div>
+                <div class="rm-pillar-body">Meaning, identity, and alignment with truth through
+                  faith-centered principles</div>
+              </div>
             </div>
-            <p data-animate data-delay="200">Our clinicians are trained in CBT, DBT, EMDR, Gottman Method, and trauma-focused modalities. Every treatment plan is tailored — because no two people, and no two struggles, are the same.</p>
-            <a href="/about" class="rm-btn rm-btn-outline" data-animate data-delay="250">Learn More About Our Approach</a>
           </div>
         </div>
-        <div class="rm-transform-grid">
-          <div class="rm-transform-item" data-animate data-delay="100">
-            <div class="rm-transform-item__icon">🧠</div>
-            <h4>Psychological Clarity</h4>
-            <p>Understand the patterns, beliefs, and histories driving your behaviour.</p>
-          </div>
-          <div class="rm-transform-item" data-animate data-delay="200">
-            <div class="rm-transform-item__icon">💬</div>
-            <h4>Relational Depth</h4>
-            <p>Build connection, repair ruptures, and communicate from a place of safety.</p>
-          </div>
-          <div class="rm-transform-item" data-animate data-delay="300">
-            <div class="rm-transform-item__icon">🌿</div>
-            <h4>Spiritual Integration</h4>
-            <p>Honour your faith and values as powerful resources in your healing journey.</p>
-          </div>
-          <div class="rm-transform-item" data-animate data-delay="400">
-            <div class="rm-transform-item__icon">⚡</div>
-            <h4>Lasting Change</h4>
-            <p>Leave therapy with skills, insight, and resilience that last beyond the sessions.</p>
+        <div class="rm-transformation" data-animate="scale" data-delay="0">
+          <div class="rm-transformation-heading">The REAL MIND Transformation</div>
+          <div class="rm-transformation-grid">
+            <div class="rm-transformation-item" data-animate data-delay="0">
+              <div class="rm-transformation-arrow">→</div>
+              <div class="rm-transformation-text"><strong>Confusion</strong>Toward clarity</div>
+            </div>
+            <div class="rm-transformation-item" data-animate data-delay="100">
+              <div class="rm-transformation-arrow">→</div>
+              <div class="rm-transformation-text"><strong>Emotional reactivity</strong>Toward nervous
+                system regulation</div>
+            </div>
+            <div class="rm-transformation-item" data-animate data-delay="200">
+              <div class="rm-transformation-arrow">→</div>
+              <div class="rm-transformation-text"><strong>Relationship conflict</strong>Toward healthy,
+                secure connection</div>
+            </div>
+            <div class="rm-transformation-item" data-animate data-delay="300">
+              <div class="rm-transformation-arrow">→</div>
+              <div class="rm-transformation-text"><strong>Negative thinking</strong>Toward renewed,
+                truth-centered thinking</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- WHO WE HELP -->
-    <section class="rm-section rm-bg-green">
-      <div class="container">
-        <div class="text-center" style="margin-bottom:3rem">
-          <span class="rm-label" data-animate="fade">Who We Serve</span>
-          <h2 data-animate>You Don't Have to Face This Alone</h2>
-        </div>
-        <div class="rm-help__grid">
-          <div>
-            <h3 style="color:var(--rm-white);margin-bottom:1.25rem" data-animate="left">Conditions We Treat</h3>
-            <ul class="rm-help__list" data-animate="left" data-delay="100">
-              <li>Anxiety &amp; Panic Disorders</li>
-              <li>Depression &amp; Mood Disorders</li>
-              <li>Trauma &amp; Post-Traumatic Stress</li>
-              <li>Grief, Loss &amp; Bereavement</li>
-              <li>OCD &amp; Intrusive Thoughts</li>
-              <li>Burnout &amp; Chronic Stress</li>
-              <li>Relationship &amp; Attachment Issues</li>
-              <li>Life Transitions &amp; Identity Challenges</li>
-              <li>Anger Management</li>
-              <li>Faith &amp; Spiritual Crisis</li>
+    <section class="rm-who">
+      <div class="rm-who-inner">
+        <span class="rm-who-label" data-animate="fade" data-delay="0">Who We Help</span>
+        <h2 class="rm-who-heading" data-animate data-delay="150">Real support for real challenges</h2>
+        <div class="rm-who-grid">
+          <div data-animate="left" data-delay="300">
+            <div class="rm-who-conditions-heading">We provide therapy for</div>
+            <ul class="rm-conditions-list">
+              <li>Anxiety and overthinking</li>
+              <li>Depression and emotional distress</li>
+              <li>Trauma and unresolved past experiences</li>
+              <li>Relationship and couples conflict</li>
+              <li>Marriage challenges and communication breakdown</li>
+              <li>Family stress and parenting challenges</li>
+              <li>Life transitions, identity, and purpose</li>
             </ul>
           </div>
-          <div>
-            <h3 style="color:var(--rm-white);margin-bottom:1.25rem" data-animate="right">We Specialize In</h3>
-            <div data-animate="right" data-delay="100">
-              <div class="rm-help__specialty">
-                <h4>Black &amp; Racialized Communities</h4>
-                <p>Culturally informed care that understands the intersection of race, identity, and mental health.</p>
+          <div data-animate="right" data-delay="300">
+            <div class="rm-specialty-heading">Specialty Focus</div>
+            <div class="rm-specialty-grid">
+              <div class="rm-specialty-item">
+                <div class="rm-specialty-item-title">Faith-Based Therapy</div>
+                <div class="rm-specialty-item-body">Clinically excellent care integrated with Biblical
+                  principles</div>
               </div>
-              <div class="rm-help__specialty">
-                <h4>Faith-Based Clients</h4>
-                <p>Therapy that honours spiritual values without compromising clinical rigour.</p>
+              <div class="rm-specialty-item">
+                <div class="rm-specialty-item-title">Couples Therapy</div>
+                <div class="rm-specialty-item-body">Relationship repair and communication restoration
+                </div>
               </div>
-              <div class="rm-help__specialty">
-                <h4>Couples in Crisis</h4>
-                <p>Intensive work for couples facing betrayal, disconnection, or repeated conflict cycles.</p>
+              <div class="rm-specialty-item">
+                <div class="rm-specialty-item-title">High-Functioning Anxiety</div>
+                <div class="rm-specialty-item-body">Overthinking, perfectionism, and internal pressure
+                </div>
               </div>
-              <div class="rm-help__specialty">
-                <h4>Adolescents &amp; Young Adults</h4>
-                <p>Specialized support for ages 14–25 navigating identity, pressure, and emerging adulthood.</p>
+              <div class="rm-specialty-item">
+                <div class="rm-specialty-item-title">Emotional Regulation</div>
+                <div class="rm-specialty-item-body">Anger management and nervous system regulation</div>
               </div>
             </div>
           </div>
@@ -472,66 +1093,95 @@
     </section>
 
     <!-- WHY CHOOSE US -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="text-center" style="margin-bottom:3rem">
-          <span class="rm-label" data-animate="fade">Why Real Mind</span>
-          <h2 data-animate>What Sets Us Apart</h2>
+    <section class="rm-why">
+      <div class="rm-why-inner">
+        <span class="rm-why-label" data-animate="fade" data-delay="0">Why Choose Real Mind</span>
+        <h2 class="rm-why-heading" data-animate data-delay="150">Therapy that goes beyond the surface</h2>
+        <p class="rm-why-subheading" data-animate data-delay="250">You don't have to stay stuck in the same
+          patterns. Real Mind Therapy is intentionally different — structured, goal-oriented, and designed to
+          produce meaningful outcomes.</p>
+        <div class="rm-why-grid">
+          <div class="rm-why-card" data-animate data-delay="0">
+            <div class="rm-why-card-number">01</div>
+            <div class="rm-why-card-title">Faith-integrated without compromising clinical excellence</div>
+            <div class="rm-why-card-body">Biblical principles of mind renewal integrated with evidence-based
+              therapeutic approaches — both held to the highest standard.</div>
+          </div>
+          <div class="rm-why-card" data-animate data-delay="100">
+            <div class="rm-why-card-number">02</div>
+            <div class="rm-why-card-title">Structured, insight-driven sessions</div>
+            <div class="rm-why-card-body">Not just venting. Every session is purposeful, goal-oriented, and
+              designed to produce measurable progress toward lasting change.</div>
+          </div>
+          <div class="rm-why-card" data-animate data-delay="200">
+            <div class="rm-why-card-number">03</div>
+            <div class="rm-why-card-title">Clear tools and strategies for real-life change</div>
+            <div class="rm-why-card-body">Clients leave each session with practical tools that can be
+              applied immediately — not just insight, but actionable change.</div>
+          </div>
+          <div class="rm-why-card" data-animate data-delay="300">
+            <div class="rm-why-card-number">04</div>
+            <div class="rm-why-card-title">Strong focus on relationships and communication</div>
+            <div class="rm-why-card-body">Whether individual or couples work, relational healing is central
+              to the REAL MIND approach and every treatment plan.</div>
+          </div>
+          <div class="rm-why-card" data-animate data-delay="400">
+            <div class="rm-why-card-number">05</div>
+            <div class="rm-why-card-title">Director-level clinical leadership and oversight</div>
+            <div class="rm-why-card-body">Every client experience reflects the highest standard of care —
+              marked by professionalism, discretion, and a commitment to excellence.</div>
+          </div>
         </div>
-        <div class="rm-why__cards">
-          <div class="rm-why__card" data-animate data-delay="100">
-            <div class="rm-why__card__icon">🎓</div>
-            <h4>Licensed Clinicians</h4>
-            <p>Every therapist holds active registration with their respective college.</p>
+        <div class="rm-why-bottom">
+          <div class="rm-why-bottom-image" data-animate="left" data-delay="0">
+            <img src="/images/why-choose-img.jpg" alt="Therapy session at Real Mind Psychotherapy">
           </div>
-          <div class="rm-why__card" data-animate data-delay="150">
-            <div class="rm-why__card__icon">🔬</div>
-            <h4>Evidence-Based</h4>
-            <p>CBT, DBT, EMDR, Gottman, and trauma-focused modalities guide our work.</p>
-          </div>
-          <div class="rm-why__card" data-animate data-delay="200">
-            <div class="rm-why__card__icon">🙏</div>
-            <h4>Faith-Integrated</h4>
-            <p>We honour spiritual values as a resource, not a barrier, in the healing process.</p>
-          </div>
-          <div class="rm-why__card" data-animate data-delay="250">
-            <div class="rm-why__card__icon">🌍</div>
-            <h4>Culturally Affirming</h4>
-            <p>Informed by the lived experiences of diverse communities, especially Black and racialized clients.</p>
-          </div>
-          <div class="rm-why__card" data-animate data-delay="300">
-            <div class="rm-why__card__icon">💻</div>
-            <h4>Virtual &amp; In-Person</h4>
-            <p>Flexible scheduling with secure video sessions or in-office appointments across Ontario.</p>
-          </div>
-        </div>
-        <div class="rm-why__split" data-animate>
-          <img src="/images/why-choose-img.jpg" alt="Therapist and client in a warm session" class="rm-why__img">
-          <div class="rm-why__panel">
-            <p class="rm-why__quote">"I chose this work because I believe every person deserves a space where they are truly known — not just managed."</p>
-            <p class="rm-why__creds">Glad Uko-Ima, MSW, RSW<br>Founder, Real Mind Psychotherapy</p>
-            <a href="/contact" class="rm-btn rm-btn-white">Book a Consultation</a>
+          <div class="rm-why-bottom-content" data-animate="right" data-delay="200">
+            <div>
+              <div class="rm-why-quote">"Real change starts with a clear mind."</div>
+              <div class="rm-why-quote-attr">— Glad Uko-Ima, LMHC-D, Founder</div>
+            </div>
+            <div class="rm-why-credentials">
+              <div class="rm-why-credential"><span class="rm-why-credential-dot"></span>NY State Licensed
+                Mental Health Counselor</div>
+              <div class="rm-why-credential"><span class="rm-why-credential-dot"></span>MA — New York
+                University</div>
+              <div class="rm-why-credential"><span class="rm-why-credential-dot"></span>Faith-Integrated
+                Clinical Practice</div>
+              <div class="rm-why-credential"><span class="rm-why-credential-dot"></span>Telehealth across
+                New York State</div>
+            </div>
+            <a href="/contact" class="btn-accent">Schedule Consultation</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA BANNER -->
-    <section class="rm-bg-green">
-      <div class="container rm-cta-banner">
-        <span class="rm-label" data-animate="fade">Take the First Step</span>
-        <h2 data-animate>You don't have to stay stuck<br>in the same patterns.</h2>
-        <p data-animate data-delay="100">Real change is possible — and it starts with a single conversation. We're here when you're ready.</p>
-        <div class="rm-cta-btn-group" data-animate data-delay="200">
-          <a href="/contact" class="rm-btn rm-btn-primary">Schedule a Consultation</a>
-          <a href="/about" class="rm-btn rm-btn-outline-white">Learn About Our Approach</a>
+    <section class="rm-cta">
+      <div class="rm-cta-inner">
+        <span class="rm-cta-label" data-animate="fade" data-delay="0">Begin Your Journey</span>
+        <h2 class="rm-cta-heading" data-animate data-delay="200">You don't have to stay stuck in the same
+          patterns.</h2>
+        <p class="rm-cta-body" data-animate data-delay="350">Start your journey toward clarity, healing, and
+          transformation today. Taking the first step toward therapy is one of the most important decisions
+          you can make.</p>
+        <div class="rm-cta-buttons" data-animate data-delay="500">
+          <a href="/contact" class="btn-accent">Schedule Your Consultation</a>
+          <a href="/about" class="btn-white-outline">Learn About Our Approach</a>
         </div>
-        <p class="rm-trust-strip" data-animate data-delay="300">Confidential · No obligation · Response within 24 hours</p>
+        <div class="rm-cta-reassurance" data-animate="fade" data-delay="650">
+          Telehealth across New York <span>·</span> Confidential & Professional <span>·</span>
+          Faith-Integrated Care
+        </div>
       </div>
     </section>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
+
 </body>
+
 </html>

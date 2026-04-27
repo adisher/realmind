@@ -1,52 +1,68 @@
-const { Resend } = require('resend');
+import { Resend } from 'resend';
 
-module.exports = async function handler(req, res) {
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const {
-    name, email, phone, licenseType, yearsExperience,
-    specialties, therapyType, weeklyAvailability,
-    faithIntegration, clinicalApproach, linkedin
+    firstName,
+    lastName,
+    email,
+    phone,
+    licenseType,
+    yearsExperience,
+    specialties,
+    therapyType,
+    weeklyAvailability,
+    faithIntegration,
+    clinicalApproach,
+    linkedIn
   } = req.body;
 
-  if (!name || !email || !licenseType) {
-    return res.status(400).json({ error: 'Name, email, and license type are required.' });
+  if (!firstName || !email) {
+    return res.status(400).json({ error: 'Name and email are required' });
   }
-
-  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     await resend.emails.send({
-      from: 'Real Mind Website <noreply@realmindpsychotherapy.com>',
+      from: 'Real Mind Psychotherapy <noreply@realmindpsychotherapy.com>',
       to: process.env.CLIENT_EMAIL,
-      replyTo: email,
-      subject: `New Team Application — ${name} (${licenseType})`,
+      subject: `New Clinician Application — ${firstName} ${lastName}`,
       html: `
-        <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
-          <h2 style="color:#3D5A47">New Team Application</h2>
-          <table style="width:100%;border-collapse:collapse">
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold;width:180px">Name</td><td style="padding:8px 0;border-bottom:1px solid #eee">${name}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">Email</td><td style="padding:8px 0;border-bottom:1px solid #eee"><a href="mailto:${email}">${email}</a></td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">Phone</td><td style="padding:8px 0;border-bottom:1px solid #eee">${phone || 'Not provided'}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">License Type</td><td style="padding:8px 0;border-bottom:1px solid #eee">${licenseType}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">Years of Experience</td><td style="padding:8px 0;border-bottom:1px solid #eee">${yearsExperience || 'Not specified'}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">Specialties</td><td style="padding:8px 0;border-bottom:1px solid #eee">${specialties || 'Not specified'}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">Therapy Type</td><td style="padding:8px 0;border-bottom:1px solid #eee">${therapyType || 'Not specified'}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">Weekly Availability</td><td style="padding:8px 0;border-bottom:1px solid #eee">${weeklyAvailability || 'Not specified'}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">Faith Integration</td><td style="padding:8px 0;border-bottom:1px solid #eee">${faithIntegration || 'Not specified'}</td></tr>
-            <tr><td style="padding:8px 0;border-bottom:1px solid #eee;font-weight:bold">LinkedIn</td><td style="padding:8px 0;border-bottom:1px solid #eee">${linkedin ? `<a href="${linkedin}">${linkedin}</a>` : 'Not provided'}</td></tr>
-          </table>
-          <h3 style="color:#3D5A47;margin-top:24px">Clinical Approach</h3>
-          <p style="background:#f5f5f5;padding:16px;border-radius:6px;line-height:1.6">${clinicalApproach ? clinicalApproach.replace(/\n/g, '<br>') : 'Not provided'}</p>
+        <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+          <div style="background:#3D5A47;padding:32px;border-radius:8px 8px 0 0;">
+            <h1 style="color:#F7F4EE;font-family:Georgia,serif;font-weight:400;margin:0;font-size:24px;">
+              New Clinician Application
+            </h1>
+          </div>
+          <div style="background:#F7F4EE;padding:32px;border-radius:0 0 8px 8px;border:1px solid #E8E0D0;">
+            <table style="width:100%;border-collapse:collapse;">
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;width:40%;">Name</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${firstName} ${lastName}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">Email</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;"><a href="mailto:${email}" style="color:#3D5A47;">${email}</a></td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">Phone</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${phone || 'Not provided'}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">License Type</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${licenseType || 'Not specified'}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">Years of Experience</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${yearsExperience || 'Not specified'}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">Specialties</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${specialties || 'Not specified'}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">Therapy Type</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${therapyType || 'Not specified'}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">Weekly Availability</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${weeklyAvailability || 'Not specified'}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">Faith Integration</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${faithIntegration || 'Not specified'}</td></tr>
+              <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;">LinkedIn</td><td style="padding:10px 0;border-bottom:1px solid #E8E0D0;font-size:15px;color:#1E1E1E;">${linkedIn || 'Not provided'}</td></tr>
+              <tr><td style="padding:10px 0;font-size:13px;color:#5C6B5E;text-transform:uppercase;letter-spacing:0.05em;vertical-align:top;">Clinical Approach</td><td style="padding:10px 0;font-size:15px;color:#1E1E1E;line-height:1.6;">${clinicalApproach || 'Not provided'}</td></tr>
+            </table>
+            <div style="margin-top:24px;padding:16px;background:#E8E0D0;border-radius:6px;font-size:13px;color:#5C6B5E;">
+              Received: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} EST
+            </div>
+          </div>
         </div>
-      `,
+      `
     });
 
-    return res.status(200).json({ success: true });
+    res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Join email error:', error);
-    return res.status(500).json({ error: 'Failed to submit application. Please try again.' });
+    console.error('Email error:', error);
+    res.status(500).json({ error: 'Failed to send email' });
   }
-};
+}

@@ -1,147 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Couples Therapy — Real Mind Psychotherapy</title>
-  <meta name="description" content="Evidence-based couples therapy in Ontario. Rebuild trust, improve communication, and restore intimacy with Gottman-trained therapists.">
+  <meta name="description"
+    content="Rebuild trust, improve communication, and restore connection through evidence-based couples therapy at Real Mind Psychotherapy.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    .rm-service-hero { padding: clamp(4rem, 8vw, 7rem) 0; }
-    .rm-service-hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .rm-service-hero h1 { color: var(--rm-white); margin-bottom: 1.25rem; }
-    .rm-service-hero p { color: rgba(255,255,255,0.82); margin-bottom: 2rem; font-size: clamp(1rem, 1.8vw, 1.1rem); }
-    .rm-issue-cards { display: flex; flex-direction: column; gap: 0.6rem; }
-    .rm-issue-card { display: flex; gap: 0.75rem; align-items: flex-start; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--rm-radius); padding: 0.9rem 1.1rem; }
-    .rm-issue-card__check { color: var(--rm-accent); font-weight: 700; flex-shrink: 0; }
-    .rm-issue-card span { font-size: 0.9rem; color: rgba(255,255,255,0.82); font-family: Arial, sans-serif; }
-    .rm-detail__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-    .rm-detail__step { display: flex; gap: 1.25rem; margin-bottom: 2rem; align-items: flex-start; }
-    .rm-detail__step__num { width: 40px; height: 40px; background: var(--rm-green); color: var(--rm-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; flex-shrink: 0; font-family: Arial, sans-serif; }
-    .rm-detail__step h4 { margin-bottom: 0.4rem; }
-    .rm-detail__step p { font-size: 0.9rem; margin: 0; }
-    .rm-outcomes-panel { background: var(--rm-green); border-radius: var(--rm-radius-lg); padding: 2.5rem; height: 100%; }
-    .rm-outcomes-panel h3 { color: var(--rm-white); margin-bottom: 1.25rem; }
-    .rm-outcomes-panel li { display: flex; gap: 0.6rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; color: rgba(255,255,255,0.82); font-family: Arial, sans-serif; }
-    .rm-outcomes-panel li:last-child { border-bottom: none; }
-    .rm-outcomes-panel li::before { content: '→'; color: var(--rm-accent); flex-shrink: 0; }
-    .rm-bottom-split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
-    .rm-faith-block { padding: 2.5rem; background: var(--rm-bg-card); border-radius: var(--rm-radius-lg); }
-    .rm-faith-block h3 { margin-bottom: 1rem; }
-    .rm-price-block { padding: 2.5rem; background: var(--rm-green); border-radius: var(--rm-radius-lg); display: flex; flex-direction: column; justify-content: center; }
-    .rm-price-block h3 { color: var(--rm-white); margin-bottom: 0.5rem; }
-    .rm-price-block .rm-price { font-size: clamp(2.5rem, 5vw, 3.5rem); font-family: Georgia, serif; color: var(--rm-accent); line-height: 1; margin: 0.75rem 0; }
-    .rm-price-block .rm-price-note { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; font-family: Arial, sans-serif; }
+    .rm-service-hero {
+      background: var(--rm-green);
+      padding: 100px 40px 80px;
+    }
+
+    .rm-service-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .rm-service-hero-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .rm-service-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .rm-service-hero-heading em {
+      font-style: italic;
+      color: var(--rm-accent);
+    }
+
+    .rm-service-hero-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.75);
+      margin-bottom: 36px;
+    }
+
+    .rm-service-hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .rm-service-hero-card {
+      background: rgba(247, 244, 238, 0.07);
+      border: 1px solid rgba(196, 180, 154, 0.2);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .rm-service-hero-card-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rm-service-hero-card-text {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: rgba(247, 244, 238, 0.85);
+    }
+
+    .rm-couples-detail {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-couples-detail-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .rm-couples-approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+
+    .rm-couples-detail-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .rm-couples-detail-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+
+    .rm-couples-detail-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .rm-couples-approach-list {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .rm-couples-approach-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      background: var(--rm-bg-card);
+      border-radius: 10px;
+    }
+
+    .rm-couples-approach-item-number {
+      font-family: Georgia, serif;
+      font-size: 13px;
+      color: var(--rm-accent);
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .rm-couples-approach-item-title {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      color: var(--rm-green);
+      margin-bottom: 6px;
+    }
+
+    .rm-couples-approach-item-body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--rm-text-muted);
+    }
+
+    .rm-couples-outcomes {
+      background: var(--rm-green);
+      border-radius: 16px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .rm-couples-outcomes-heading {
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--rm-bg);
+      margin-bottom: 8px;
+    }
+
+    .rm-couples-outcomes-sub {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: rgba(247, 244, 238, 0.55);
+      margin-bottom: 8px;
+    }
+
+    .rm-couples-outcome-item {
+      background: rgba(247, 244, 238, 0.07);
+      border: 1px solid rgba(196, 180, 154, 0.2);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .rm-couples-outcome-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .rm-couples-outcome-title {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--rm-bg);
+      margin-bottom: 4px;
+    }
+
+    .rm-couples-outcome-body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: rgba(247, 244, 238, 0.55);
+      line-height: 1.5;
+    }
+
+    .rm-couples-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 48px;
+      background: var(--rm-bg-card);
+      border-radius: 16px;
+    }
+
+    .rm-couples-bottom-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .rm-couples-bottom-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .rm-couples-bottom-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rm-couples-bottom-list li {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rm-couples-bottom-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rm-couples-cta {
+      text-align: center;
+      padding: 48px 32px;
+      border: 1px solid rgba(61, 90, 71, 0.15);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .rm-couples-cta-heading {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+    }
+
+    .rm-couples-cta-body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+
+    .rm-couples-cta-price {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      color: var(--rm-green);
+      line-height: 1;
+    }
+
+    .rm-couples-cta-price-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--rm-text-muted);
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
     @media (max-width: 768px) {
-      .rm-service-hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .rm-detail__grid { grid-template-columns: 1fr; }
-      .rm-bottom-split { grid-template-columns: 1fr; }
+
+      .rm-service-hero-inner,
+      .rm-couples-approach-grid,
+      .rm-couples-bottom {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .rm-couples-outcomes,
+      .rm-couples-bottom {
+        padding: 32px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-service-hero rm-bg-green">
-      <div class="container">
-        <div class="rm-service-hero__grid">
-          <div>
-            <span class="rm-label hero-content">Couples Therapy</span>
-            <h1 class="hero-content delay-1">Reconnect. Repair. Rebuild.</h1>
-            <p class="hero-content delay-2">Couples therapy at Real Mind gives you and your partner a structured, safe space to understand the dynamics driving disconnection — and to build something more honest and enduring in its place.</p>
-            <a href="/contact" class="rm-btn rm-btn-primary hero-content delay-3">Book a Consultation</a>
+    <section class="rm-service-hero">
+      <div class="rm-service-hero-inner">
+        <div data-animate="left" data-delay="0">
+          <span class="rm-service-hero-label">Couples Therapy</span>
+          <h1 class="rm-service-hero-heading">
+            Rebuild Trust.<br>
+            Improve Communication.<br>
+            <em>Restore Connection.</em>
+          </h1>
+          <p class="rm-service-hero-body">
+            Relationships don't fail overnight — they break down through unresolved patterns, miscommunication, and
+            emotional disconnection. We help couples move beyond cycles of conflict into understanding, accountability,
+            and reconnection.
+          </p>
+          <a href="/contact" class="btn-accent">Book a Couples Consultation</a>
+        </div>
+        <div class="rm-service-hero-right" data-animate="right" data-delay="200">
+          <div class="rm-service-hero-card" data-animate data-delay="0">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Constant arguments or communication breakdown</div>
           </div>
-          <div class="rm-issue-cards" data-animate="right">
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Communication Breakdown</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Rebuilding Trust After Betrayal</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Intimacy &amp; Emotional Distance</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Pre-Marital Counselling</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Recurring Conflict Cycles</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Blended Family Challenges</span></div>
+          <div class="rm-service-hero-card" data-animate data-delay="100">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Emotional distance or disconnection</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="200">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Trust issues and betrayal</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="300">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Premarital counseling</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="400">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Faith-based relationship guidance</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="500">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Difficulty resolving conflict</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- DETAIL -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="rm-detail__grid">
-          <div>
-            <span class="rm-label" data-animate="fade">Gottman-Informed Approach</span>
-            <h2 data-animate>How We Work With Couples</h2>
-            <div class="rm-divider" data-animate></div>
-            <div class="rm-detail__step" data-animate data-delay="100">
-              <div class="rm-detail__step__num">01</div>
-              <div>
-                <h4>Couples Assessment</h4>
-                <p>We begin with both a joint session and individual sessions, creating a complete picture of each partner's perspective, history, and goals — without triangulation.</p>
+    <section class="rm-couples-detail">
+      <div class="rm-couples-detail-inner">
+        <div class="rm-couples-approach-grid">
+          <div data-animate="left" data-delay="0">
+            <span class="rm-couples-detail-label">Our Approach</span>
+            <h2 class="rm-couples-detail-heading">Evidence-based couples work combined with faith and emotional
+              awareness</h2>
+            <p class="rm-couples-detail-body">We combine evidence-based couples therapy with emotional awareness and
+              attachment-focused work — and for clients who value faith, Biblical principles of forgiveness, grace, and
+              renewal.</p>
+            <p class="rm-couples-detail-body">Sessions are structured and strategic — focused on outcomes, not just
+              conversation.</p>
+            <div class="rm-couples-approach-list">
+              <div class="rm-couples-approach-item">
+                <div class="rm-couples-approach-item-number">01</div>
+                <div>
+                  <div class="rm-couples-approach-item-title">Communicate without escalation</div>
+                  <div class="rm-couples-approach-item-body">Learn to express needs clearly and hear your partner
+                    without defensiveness or shutdown.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="200">
-              <div class="rm-detail__step__num">02</div>
-              <div>
-                <h4>Understanding the Dynamic</h4>
-                <p>Using Gottman's Sound Relationship House model, we identify the specific patterns — criticism, contempt, defensiveness, stonewalling — that are eroding connection.</p>
+              <div class="rm-couples-approach-item">
+                <div class="rm-couples-approach-item-number">02</div>
+                <div>
+                  <div class="rm-couples-approach-item-title">Understand each other's emotional needs</div>
+                  <div class="rm-couples-approach-item-body">Develop insight into attachment patterns and what drives
+                    emotional disconnection.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="300">
-              <div class="rm-detail__step__num">03</div>
-              <div>
-                <h4>Skill Building &amp; Repair</h4>
-                <p>We equip both partners with concrete communication tools, emotional regulation strategies, and repair techniques that work in real-life conflict.</p>
+              <div class="rm-couples-approach-item">
+                <div class="rm-couples-approach-item-number">03</div>
+                <div>
+                  <div class="rm-couples-approach-item-title">Rebuild trust and emotional safety</div>
+                  <div class="rm-couples-approach-item-body">Address betrayal, broken trust, and emotional wounds with a
+                    structured path toward repair.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="400">
-              <div class="rm-detail__step__num">04</div>
-              <div>
-                <h4>Deepening Connection</h4>
-                <p>Beyond crisis management, we help couples rebuild friendship, shared meaning, and the kind of deep knowing that makes a relationship truly secure.</p>
+              <div class="rm-couples-approach-item">
+                <div class="rm-couples-approach-item-number">04</div>
+                <div>
+                  <div class="rm-couples-approach-item-title">Develop a stronger partnership</div>
+                  <div class="rm-couples-approach-item-body">Create a shared vision and renewed sense of alignment,
+                    purpose, and connection.</div>
+                </div>
               </div>
             </div>
           </div>
-          <div data-animate="right" data-delay="100">
-            <div class="rm-outcomes-panel">
-              <h3>What Couples Achieve</h3>
-              <ul>
-                <li>Breaking the cycle of recurring arguments</li>
-                <li>Restored emotional and physical intimacy</li>
-                <li>Clearer, safer communication patterns</li>
-                <li>Processed betrayal and rebuilt trust</li>
-                <li>Deeper understanding of each partner's world</li>
-                <li>Tools for navigating conflict constructively</li>
-                <li>A shared vision for the relationship's future</li>
-                <li>Greater sense of team and partnership</li>
-              </ul>
+          <div class="rm-couples-outcomes" data-animate="right" data-delay="200">
+            <div class="rm-couples-outcomes-heading">Couples leave therapy with</div>
+            <div class="rm-couples-outcomes-sub">Measurable outcomes from structured couples work</div>
+            <div class="rm-couples-outcome-item">
+              <div class="rm-couples-outcome-dot"></div>
+              <div>
+                <div class="rm-couples-outcome-title">Clear communication tools</div>
+                <div class="rm-couples-outcome-body">Practical frameworks for expressing needs and resolving conflict
+                  without escalation</div>
+              </div>
+            </div>
+            <div class="rm-couples-outcome-item">
+              <div class="rm-couples-outcome-dot"></div>
+              <div>
+                <div class="rm-couples-outcome-title">Reduced conflict and reactivity</div>
+                <div class="rm-couples-outcome-body">Regulated responses and de-escalation strategies that work in
+                  real-life situations</div>
+              </div>
+            </div>
+            <div class="rm-couples-outcome-item">
+              <div class="rm-couples-outcome-dot"></div>
+              <div>
+                <div class="rm-couples-outcome-title">Stronger emotional connection</div>
+                <div class="rm-couples-outcome-body">Renewed intimacy, trust, and spiritual alignment between partners
+                </div>
+              </div>
+            </div>
+            <div class="rm-couples-outcome-item">
+              <div class="rm-couples-outcome-dot"></div>
+              <div>
+                <div class="rm-couples-outcome-title">Renewed sense of partnership</div>
+                <div class="rm-couples-outcome-body">A shared vision and intentional, secure, emotionally attuned
+                  relationship</div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="rm-bottom-split">
-          <div class="rm-faith-block" data-animate="left">
-            <span class="rm-label">Faith &amp; Values</span>
-            <h3>Therapy That Respects Your Shared Values</h3>
-            <p>Many couples come to us with faith commitments that shape how they understand marriage, forgiveness, and reconciliation. We honour these values as strengths — not obstacles — in the therapeutic process.</p>
-            <p>Whether you are navigating faith differences within the relationship or seeking a therapist who understands your spiritual framework, we meet you where you are.</p>
+        <div class="rm-couples-bottom" data-animate data-delay="0">
+          <div>
+            <h3 class="rm-couples-bottom-heading">Your relationship can improve — with the right support</h3>
+            <p class="rm-couples-bottom-body">Dr. Uko-Ima provides a structured and strategic approach to resolving
+              communication breakdown, emotional disconnection, and trust-related concerns.</p>
+            <p class="rm-couples-bottom-body">Sessions are focused, outcome-oriented, and tailored to the unique
+              dynamics of each couple.</p>
+            <ul class="rm-couples-bottom-list">
+              <li>Evidence-based communication frameworks</li>
+              <li>Emotional awareness and attachment work</li>
+              <li>Biblical principles of forgiveness and grace</li>
+              <li>Premarital preparation and strengthening</li>
+            </ul>
           </div>
-          <div class="rm-price-block" data-animate="right">
-            <h3>Session Fee</h3>
-            <div class="rm-price">$225</div>
-            <p class="rm-price-note">Per 75-minute couples session<br>Direct billing available for some insurers</p>
-            <a href="/contact" class="rm-btn rm-btn-white">Book a Consultation</a>
+          <div class="rm-couples-cta">
+            <div class="rm-couples-cta-heading">Ready to rebuild?</div>
+            <div class="rm-couples-cta-body">Take the first step toward a stronger, more connected relationship.</div>
+            <div>
+              <div class="rm-couples-cta-price">$225</div>
+              <div class="rm-couples-cta-price-label">Per couples session</div>
+            </div>
+            <a href="/contact" class="btn-primary" style="width:100%;text-align:center;box-sizing:border-box;">Book a
+              Couples Consultation</a>
           </div>
         </div>
       </div>
     </section>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
+
 </body>
+
 </html>

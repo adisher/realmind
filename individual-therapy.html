@@ -1,218 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Individual Therapy — Real Mind Psychotherapy</title>
-  <meta name="description" content="Evidence-based individual therapy for anxiety, depression, trauma, grief, and life transitions. Serving Ontario, Canada — virtual and in-person.">
+  <meta name="description"
+    content="Gain clarity, regulate your emotions, and take control of your life through structured, insight-driven individual therapy sessions at Real Mind Psychotherapy.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    /* ── SERVICE HERO ── */
     .rm-service-hero {
-      padding: clamp(4rem, 8vw, 7rem) 0;
-    }
-    .rm-service-hero__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    .rm-service-hero h1 { color: var(--rm-white); margin-bottom: 1.25rem; }
-    .rm-service-hero p { color: rgba(255,255,255,0.82); margin-bottom: 2rem; font-size: clamp(1rem, 1.8vw, 1.1rem); }
-    .rm-issue-cards { display: flex; flex-direction: column; gap: 0.6rem; }
-    .rm-issue-card {
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--rm-radius);
-      padding: 0.9rem 1.1rem;
-    }
-    .rm-issue-card__check {
-      color: var(--rm-accent);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-    .rm-issue-card span {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.82);
-      font-family: Arial, sans-serif;
+      background: var(--rm-green);
+      padding: 100px 40px 80px;
     }
 
-    /* ── DETAIL SECTION ── */
-    .rm-detail__grid {
+    .rm-service-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
+      gap: 80px;
+      align-items: center;
     }
-    .rm-detail__step {
+
+    .rm-service-hero-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .rm-service-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .rm-service-hero-heading em {
+      font-style: italic;
+      color: var(--rm-accent);
+    }
+
+    .rm-service-hero-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.75);
+      margin-bottom: 36px;
+    }
+
+    .rm-service-hero-right {
       display: flex;
-      gap: 1.25rem;
-      margin-bottom: 2rem;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .rm-service-hero-card {
+      background: rgba(247, 244, 238, 0.07);
+      border: 1px solid rgba(196, 180, 154, 0.2);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .rm-service-hero-card-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rm-service-hero-card-text {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: rgba(247, 244, 238, 0.85);
+    }
+
+    .rm-service-detail {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-service-detail-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .rm-service-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+
+    .rm-service-detail-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .rm-service-detail-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+
+    .rm-service-detail-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .rm-service-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .rm-service-step {
+      display: flex;
+      gap: 20px;
       align-items: flex-start;
     }
-    .rm-detail__step__num {
-      width: 40px;
-      height: 40px;
+
+    .rm-service-step-number {
+      font-family: Georgia, serif;
+      font-size: 13px;
+      color: var(--rm-accent);
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+      padding-top: 2px;
+      width: 24px;
+    }
+
+    .rm-service-step-title {
+      font-family: Georgia, serif;
+      font-size: 17px;
+      color: var(--rm-green);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .rm-service-step-body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--rm-text-muted);
+    }
+
+    .rm-service-outcomes {
       background: var(--rm-green);
-      color: var(--rm-white);
+      border-radius: 16px;
+      padding: 48px;
+    }
+
+    .rm-service-outcomes-heading {
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--rm-bg);
+      margin-bottom: 8px;
+    }
+
+    .rm-service-outcomes-sub {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: rgba(247, 244, 238, 0.55);
+      margin-bottom: 40px;
+    }
+
+    .rm-service-outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .rm-service-outcome-item {
+      background: rgba(247, 244, 238, 0.07);
+      border: 1px solid rgba(196, 180, 154, 0.2);
+      border-radius: 10px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .rm-service-outcome-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(196, 180, 154, 0.15);
       border-radius: 50%;
+      margin: 0 auto 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-      flex-shrink: 0;
-      font-family: Arial, sans-serif;
     }
-    .rm-detail__step h4 { margin-bottom: 0.4rem; }
-    .rm-detail__step p { font-size: 0.9rem; margin: 0; }
-    .rm-outcomes-panel {
-      background: var(--rm-green);
-      border-radius: var(--rm-radius-lg);
-      padding: 2.5rem;
-      height: 100%;
-    }
-    .rm-outcomes-panel h3 { color: var(--rm-white); margin-bottom: 1.25rem; }
-    .rm-outcomes-panel li {
-      display: flex;
-      gap: 0.6rem;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.82);
-      font-family: Arial, sans-serif;
-    }
-    .rm-outcomes-panel li:last-child { border-bottom: none; }
-    .rm-outcomes-panel li::before { content: '→'; color: var(--rm-accent); flex-shrink: 0; }
 
-    /* ── FAITH + PRICING SPLIT ── */
-    .rm-bottom-split {
+    .rm-service-outcome-icon-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+    }
+
+    .rm-service-outcome-title {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--rm-bg);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .rm-service-outcome-body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: rgba(247, 244, 238, 0.5);
+      line-height: 1.5;
+    }
+
+    .rm-service-faith {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 3rem;
+      gap: 48px;
+      align-items: center;
+      padding: 48px;
+      background: var(--rm-bg-card);
+      border-radius: 16px;
     }
-    .rm-faith-block { padding: 2.5rem; background: var(--rm-bg-card); border-radius: var(--rm-radius-lg); }
-    .rm-faith-block h3 { margin-bottom: 1rem; }
-    .rm-price-block { padding: 2.5rem; background: var(--rm-green); border-radius: var(--rm-radius-lg); display: flex; flex-direction: column; justify-content: center; }
-    .rm-price-block h3 { color: var(--rm-white); margin-bottom: 0.5rem; }
-    .rm-price-block .rm-price { font-size: clamp(2.5rem, 5vw, 3.5rem); font-family: Georgia, serif; color: var(--rm-accent); line-height: 1; margin: 0.75rem 0; }
-    .rm-price-block .rm-price-note { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; font-family: Arial, sans-serif; }
+
+    .rm-service-faith-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .rm-service-faith-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .rm-service-faith-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rm-service-faith-list li {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rm-service-faith-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rm-service-faith-cta {
+      text-align: center;
+      padding: 48px 32px;
+      border: 1px solid rgba(61, 90, 71, 0.15);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .rm-service-faith-cta-heading {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+    }
+
+    .rm-service-faith-cta-body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+
+    .rm-service-faith-cta-price {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      color: var(--rm-green);
+      line-height: 1;
+    }
+
+    .rm-service-faith-cta-price-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--rm-text-muted);
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
 
     @media (max-width: 768px) {
-      .rm-service-hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .rm-detail__grid { grid-template-columns: 1fr; }
-      .rm-bottom-split { grid-template-columns: 1fr; }
+
+      .rm-service-hero-inner,
+      .rm-service-detail-grid,
+      .rm-service-faith {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .rm-service-outcomes {
+        padding: 32px;
+      }
+
+      .rm-service-faith {
+        padding: 32px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-service-hero rm-bg-green">
-      <div class="container">
-        <div class="rm-service-hero__grid">
-          <div>
-            <span class="rm-label hero-content">Individual Therapy</span>
-            <h1 class="hero-content delay-1">Therapy Tailored to Who You Are</h1>
-            <p class="hero-content delay-2">Whether you're navigating anxiety, recovering from trauma, or simply feeling stuck — individual therapy gives you a private, evidence-based space to understand yourself and create real change.</p>
-            <a href="/contact" class="rm-btn rm-btn-primary hero-content delay-3">Book a Consultation</a>
+    <section class="rm-service-hero">
+      <div class="rm-service-hero-inner">
+        <div data-animate="left" data-delay="0">
+          <span class="rm-service-hero-label">Individual Therapy</span>
+          <h1 class="rm-service-hero-heading">
+            Gain Clarity.<br>
+            Regulate Your Emotions.<br>
+            <em>Take Control of Your Life.</em>
+          </h1>
+          <p class="rm-service-hero-body">
+            If you feel overwhelmed, stuck, or constantly overthinking, therapy can help you develop clarity, control,
+            and confidence through structured, insight-driven sessions.
+          </p>
+          <a href="/contact" class="btn-accent">Start Individual Therapy</a>
+        </div>
+        <div class="rm-service-hero-right" data-animate="right" data-delay="200">
+          <div class="rm-service-hero-card" data-animate data-delay="0">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Anxiety and racing thoughts</div>
           </div>
-          <div class="rm-issue-cards" data-animate="right">
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Anxiety &amp; Panic Disorders</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Depression &amp; Low Mood</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Trauma &amp; PTSD</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Grief &amp; Bereavement</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Burnout &amp; Chronic Stress</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Identity &amp; Self-Worth</span></div>
+          <div class="rm-service-hero-card" data-animate data-delay="100">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Depression and low motivation</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="200">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Emotional overwhelm and reactivity</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="300">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Trauma and past experiences</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="400">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Identity and life direction</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="500">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Anger and emotional regulation</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- DETAIL -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="rm-detail__grid">
-          <div>
-            <span class="rm-label" data-animate="fade">Our Approach</span>
-            <h2 data-animate>How We Work</h2>
-            <div class="rm-divider" data-animate></div>
-            <div class="rm-detail__step" data-animate data-delay="100">
-              <div class="rm-detail__step__num">01</div>
-              <div>
-                <h4>Initial Assessment</h4>
-                <p>We begin with a thorough assessment of your history, current concerns, and goals — creating a clear picture of what you're carrying and where you want to go.</p>
+    <section class="rm-service-detail">
+      <div class="rm-service-detail-inner">
+        <div class="rm-service-detail-grid">
+          <div data-animate="left" data-delay="0">
+            <span class="rm-service-detail-label">The REAL MIND Approach</span>
+            <h2 class="rm-service-detail-heading">How individual therapy works at Real Mind</h2>
+            <p class="rm-service-detail-body">We help you identify patterns in your thinking and emotions, understand
+              how your past influences your present, and replace negative thought cycles with truth-based thinking.</p>
+            <p class="rm-service-detail-body">Sessions are structured, goal-oriented, and designed to produce measurable
+              progress — not just temporary relief.</p>
+            <div class="rm-service-steps">
+              <div class="rm-service-step">
+                <div class="rm-service-step-number">01</div>
+                <div>
+                  <div class="rm-service-step-title">Identify your patterns</div>
+                  <div class="rm-service-step-body">Understand the thinking and emotional patterns that are driving your
+                    distress and keeping you stuck.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="200">
-              <div class="rm-detail__step__num">02</div>
-              <div>
-                <h4>Personalized Treatment Plan</h4>
-                <p>Your therapist designs an individualized plan drawing from CBT, DBT, EMDR, and trauma-informed approaches — matched to your specific needs and pace.</p>
+              <div class="rm-service-step">
+                <div class="rm-service-step-number">02</div>
+                <div>
+                  <div class="rm-service-step-title">Understand the root</div>
+                  <div class="rm-service-step-body">Explore how your past experiences and nervous system responses shape
+                    your present-day behavior.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="300">
-              <div class="rm-detail__step__num">03</div>
-              <div>
-                <h4>Active Therapeutic Work</h4>
-                <p>Sessions are collaborative and structured. We work through the patterns, beliefs, and emotional blocks that keep you stuck — with tools you can use between sessions.</p>
+              <div class="rm-service-step">
+                <div class="rm-service-step-number">03</div>
+                <div>
+                  <div class="rm-service-step-title">Develop practical tools</div>
+                  <div class="rm-service-step-body">Leave each session with concrete strategies you can apply
+                    immediately in your daily life.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="400">
-              <div class="rm-detail__step__num">04</div>
-              <div>
-                <h4>Integration &amp; Maintenance</h4>
-                <p>As you grow, we shift to consolidating your gains, building long-term resilience, and preparing you to sustain change beyond the therapy room.</p>
+              <div class="rm-service-step">
+                <div class="rm-service-step-number">04</div>
+                <div>
+                  <div class="rm-service-step-title">Renew your mind</div>
+                  <div class="rm-service-step-body">Replace negative, automatic thinking with renewed, truth-centered
+                    thinking that supports lasting change.</div>
+                </div>
               </div>
             </div>
           </div>
-          <div data-animate="right" data-delay="100">
-            <div class="rm-outcomes-panel">
-              <h3>What You Can Expect</h3>
-              <ul>
-                <li>Reduced anxiety and emotional overwhelm</li>
-                <li>Greater clarity about your patterns and needs</li>
-                <li>Improved ability to regulate difficult emotions</li>
-                <li>Processing and integration of traumatic experiences</li>
-                <li>Stronger sense of identity and self-worth</li>
-                <li>Practical tools for daily life and relationships</li>
-                <li>Renewed sense of purpose and direction</li>
-                <li>A safe space to be fully honest</li>
-              </ul>
+          <div class="rm-service-outcomes" data-animate="right" data-delay="200">
+            <div class="rm-service-outcomes-heading">What you can expect</div>
+            <div class="rm-service-outcomes-sub">Outcomes clients experience through individual therapy</div>
+            <div class="rm-service-outcomes-grid">
+              <div class="rm-service-outcome-item">
+                <div class="rm-service-outcome-icon">
+                  <div class="rm-service-outcome-icon-dot"></div>
+                </div>
+                <div class="rm-service-outcome-title">Emotional stability</div>
+                <div class="rm-service-outcome-body">Regulated responses and reduced reactivity</div>
+              </div>
+              <div class="rm-service-outcome-item">
+                <div class="rm-service-outcome-icon">
+                  <div class="rm-service-outcome-icon-dot"></div>
+                </div>
+                <div class="rm-service-outcome-title">Clear thinking</div>
+                <div class="rm-service-outcome-body">Improved decision-making and mental clarity</div>
+              </div>
+              <div class="rm-service-outcome-item">
+                <div class="rm-service-outcome-icon">
+                  <div class="rm-service-outcome-icon-dot"></div>
+                </div>
+                <div class="rm-service-outcome-title">Self-awareness</div>
+                <div class="rm-service-outcome-body">Deeper understanding of your patterns and triggers</div>
+              </div>
+              <div class="rm-service-outcome-item">
+                <div class="rm-service-outcome-icon">
+                  <div class="rm-service-outcome-icon-dot"></div>
+                </div>
+                <div class="rm-service-outcome-title">Sense of purpose</div>
+                <div class="rm-service-outcome-body">Stronger identity, direction, and confidence</div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="rm-bottom-split">
-          <div class="rm-faith-block" data-animate="left">
-            <span class="rm-label">Faith Integration</span>
-            <h3>Therapy That Honours What You Believe</h3>
-            <p>For clients whose faith is a central part of their identity, we offer the option to integrate spiritual values into the therapeutic process. This is always optional and client-directed — never imposed.</p>
-            <p>Our clinicians understand how faith, culture, and mental health intersect, and are equipped to work within diverse spiritual frameworks with genuine respect and clinical skill.</p>
+        <div class="rm-service-faith" data-animate data-delay="0">
+          <div>
+            <h3 class="rm-service-faith-heading">Faith-based reflection and spiritual coping tools</h3>
+            <p class="rm-service-faith-body">For clients who value faith, we offer the option of integrating Biblical
+              principles of mind renewal into the therapeutic process — implemented with clinical precision and respect.
+            </p>
+            <p class="rm-service-faith-body">This approach supports alignment between thought patterns, personal values,
+              and relational life — without compromising clinical excellence.</p>
+            <ul class="rm-service-faith-list">
+              <li>Faith-based reflection exercises</li>
+              <li>Spiritual coping tools and mind renewal principles</li>
+              <li>Biblical framework for identity and purpose</li>
+              <li>Integration of values into therapeutic goals</li>
+            </ul>
           </div>
-          <div class="rm-price-block" data-animate="right">
-            <h3>Session Fee</h3>
-            <div class="rm-price">$175</div>
-            <p class="rm-price-note">Per 50-minute individual session<br>Direct billing available for some insurers</p>
-            <a href="/contact" class="rm-btn rm-btn-white">Book a Consultation</a>
+          <div class="rm-service-faith-cta">
+            <div class="rm-service-faith-cta-heading">Ready to start?</div>
+            <div class="rm-service-faith-cta-body">Take the first step toward clarity, healing, and transformation.
+            </div>
+            <div>
+              <div class="rm-service-faith-cta-price">$175</div>
+              <div class="rm-service-faith-cta-price-label">Per individual session</div>
+            </div>
+            <a href="/contact" class="btn-primary" style="width:100%;text-align:center;box-sizing:border-box;">Schedule
+              Your Consultation</a>
           </div>
         </div>
       </div>
     </section>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
+
 </body>
+
 </html>

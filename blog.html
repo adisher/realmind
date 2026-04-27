@@ -1,175 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Real Mind Psychotherapy</title>
-  <meta name="description" content="Insights on mental health, relationships, faith, and healing from the clinicians at Real Mind Psychotherapy.">
+  <meta name="description"
+    content="Insights on mental health, faith, and relationships from Real Mind Psychotherapy. Evidence-based perspectives and practical guidance for your journey.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    /* ── BLOG GRID ── */
-    #blog-grid {
+    .rm-blog-hero {
+      background: var(--rm-green);
+      padding: 100px 40px 80px;
+      text-align: center;
+    }
+
+    .rm-blog-hero-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .rm-blog-hero-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .rm-blog-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .rm-blog-hero-heading em {
+      font-style: italic;
+      color: var(--rm-accent);
+    }
+
+    .rm-blog-hero-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.75);
+    }
+
+    .rm-blog-main {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-blog-main-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      gap: 32px;
     }
 
     .blog-card {
-      background: var(--rm-white);
-      border-radius: var(--rm-radius-lg);
+      background: var(--rm-bg);
+      border: 1px solid var(--rm-bg-card);
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: var(--rm-shadow);
-      display: flex;
-      flex-direction: column;
-      transition: transform var(--rm-transition), box-shadow var(--rm-transition);
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .blog-card:hover {
       transform: translateY(-4px);
-      box-shadow: var(--rm-shadow-lg);
+      border-color: var(--rm-accent);
     }
 
-    .blog-card__img-wrap {
-      position: relative;
+    .blog-card-link {
       display: block;
-      overflow: hidden;
-      aspect-ratio: 16/10;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .blog-card__img-wrap img {
+    .blog-card-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: var(--rm-bg-card);
+    }
+
+    .blog-card-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      display: block;
+      transition: transform 0.4s ease;
     }
 
-    .blog-card:hover .blog-card__img-wrap img {
+    .blog-card:hover .blog-card-image img {
       transform: scale(1.04);
     }
 
-    .blog-card__category {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      background: var(--rm-green);
-      color: var(--rm-white);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      border-radius: 30px;
-      font-family: Arial, sans-serif;
+    .blog-card-content {
+      padding: 28px 28px 32px;
     }
 
-    .blog-card__body {
-      padding: 1.75rem;
+    .blog-card-meta {
       display: flex;
-      flex-direction: column;
-      flex: 1;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
     }
 
-    .blog-card__date {
-      font-size: 0.78rem;
-      color: var(--rm-text-muted);
+    .blog-card-category {
       font-family: Arial, sans-serif;
-      margin-bottom: 0.6rem;
-      display: block;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
     }
 
-    .blog-card__title {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      margin-bottom: 0.75rem;
+    .blog-card-meta-dot {
+      width: 3px;
+      height: 3px;
+      background: var(--rm-bg-card);
+      border-radius: 50%;
+    }
+
+    .blog-card-date {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--rm-text-muted);
+      opacity: 0.6;
+    }
+
+    .blog-card-title {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--rm-green);
       line-height: 1.35;
+      margin-bottom: 12px;
+      transition: color 0.2s ease;
     }
 
-    .blog-card__title a {
-      color: var(--rm-text);
-      transition: color var(--rm-transition);
+    .blog-card:hover .blog-card-title {
+      color: var(--rm-accent);
     }
 
-    .blog-card__title a:hover {
-      color: var(--rm-green);
-    }
-
-    .blog-card__excerpt {
-      font-size: 0.875rem;
-      color: var(--rm-text-muted);
-      line-height: 1.65;
-      margin-bottom: 1.25rem;
-      flex: 1;
-    }
-
-    .blog-card__read-more {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--rm-green);
+    .blog-card-excerpt {
       font-family: Arial, sans-serif;
-      transition: opacity var(--rm-transition);
-      letter-spacing: 0.02em;
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--rm-text-muted);
+      margin-bottom: 20px;
     }
 
-    .blog-card__read-more:hover {
-      opacity: 0.7;
+    .blog-card-read-more {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      color: var(--rm-green);
+      border-bottom: 1px solid rgba(61, 90, 71, 0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
     }
 
-    /* ── LOADING / EMPTY STATES ── */
+    .blog-card:hover .blog-card-read-more {
+      border-color: var(--rm-green);
+    }
+
     .blog-loading {
-      grid-column: 1 / -1;
       text-align: center;
-      padding: 3rem 0;
-      color: var(--rm-text-muted);
+      padding: 80px 40px;
       font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: var(--rm-text-muted);
+    }
+
+    .blog-empty {
+      text-align: center;
+      padding: 80px 40px;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: var(--rm-text-muted);
     }
 
     @media (max-width: 900px) {
-      #blog-grid { grid-template-columns: 1fr 1fr; }
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
     }
-    @media (max-width: 480px) {
-      #blog-grid { grid-template-columns: 1fr; }
+
+    @media (max-width: 560px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rm-blog-main {
+        padding: 48px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-page-hero rm-bg-green">
-      <div class="container">
-        <span class="rm-label hero-content">Real Mind Journal</span>
-        <h1 class="hero-content delay-1">Insights for the Mind,<br>the Heart, and the Home</h1>
-        <p class="hero-content delay-2">Practical wisdom on mental health, relationships, faith, and healing — written by our clinicians for the people we serve.</p>
+    <section class="rm-blog-hero">
+      <div class="rm-blog-hero-inner">
+        <span class="rm-blog-hero-label">Real Mind Journal</span>
+        <h1 class="rm-blog-hero-heading">
+          Insights on mental health,<br>
+          <em>faith, and relationships</em>
+        </h1>
+        <p class="rm-blog-hero-body">
+          Evidence-based perspectives and practical guidance for your journey toward clarity, healing, and
+          transformation.
+        </p>
       </div>
     </section>
 
     <!-- BLOG GRID -->
-    <section class="rm-section">
-      <div class="container">
-        <div id="blog-grid">
-          <div class="blog-loading">Loading posts...</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="rm-bg-green">
-      <div class="container rm-cta-banner">
-        <span class="rm-label" data-animate="fade">Ready to Begin?</span>
-        <h2 data-animate>Reading about healing is the first step.<br>Taking it is the next.</h2>
-        <div class="rm-cta-btn-group" data-animate data-delay="100">
-          <a href="/contact" class="rm-btn rm-btn-primary">Schedule a Consultation</a>
-        </div>
+    <section class="rm-blog-main">
+      <div class="rm-blog-main-inner">
+        <div class="blog-loading" id="blog-loading">Loading posts...</div>
+        <div class="blog-grid" id="blog-grid"></div>
       </div>
     </section>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
   <script src="/js/blog.js" type="module"></script>
+
 </body>
+
 </html>

@@ -1,147 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Family Therapy — Real Mind Psychotherapy</title>
-  <meta name="description" content="Family therapy in Ontario for parent-child conflict, adolescent challenges, grief, and communication. Virtual and in-person sessions available.">
+  <meta name="description"
+    content="Stronger families start with better understanding. Family therapy at Real Mind Psychotherapy helps families improve communication and resolve conflict.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    .rm-service-hero { padding: clamp(4rem, 8vw, 7rem) 0; }
-    .rm-service-hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .rm-service-hero h1 { color: var(--rm-white); margin-bottom: 1.25rem; }
-    .rm-service-hero p { color: rgba(255,255,255,0.82); margin-bottom: 2rem; font-size: clamp(1rem, 1.8vw, 1.1rem); }
-    .rm-issue-cards { display: flex; flex-direction: column; gap: 0.6rem; }
-    .rm-issue-card { display: flex; gap: 0.75rem; align-items: flex-start; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--rm-radius); padding: 0.9rem 1.1rem; }
-    .rm-issue-card__check { color: var(--rm-accent); font-weight: 700; flex-shrink: 0; }
-    .rm-issue-card span { font-size: 0.9rem; color: rgba(255,255,255,0.82); font-family: Arial, sans-serif; }
-    .rm-detail__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-    .rm-detail__step { display: flex; gap: 1.25rem; margin-bottom: 2rem; align-items: flex-start; }
-    .rm-detail__step__num { width: 40px; height: 40px; background: var(--rm-green); color: var(--rm-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; flex-shrink: 0; font-family: Arial, sans-serif; }
-    .rm-detail__step h4 { margin-bottom: 0.4rem; }
-    .rm-detail__step p { font-size: 0.9rem; margin: 0; }
-    .rm-outcomes-panel { background: var(--rm-green); border-radius: var(--rm-radius-lg); padding: 2.5rem; height: 100%; }
-    .rm-outcomes-panel h3 { color: var(--rm-white); margin-bottom: 1.25rem; }
-    .rm-outcomes-panel li { display: flex; gap: 0.6rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; color: rgba(255,255,255,0.82); font-family: Arial, sans-serif; }
-    .rm-outcomes-panel li:last-child { border-bottom: none; }
-    .rm-outcomes-panel li::before { content: '→'; color: var(--rm-accent); flex-shrink: 0; }
-    .rm-bottom-split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
-    .rm-faith-block { padding: 2.5rem; background: var(--rm-bg-card); border-radius: var(--rm-radius-lg); }
-    .rm-faith-block h3 { margin-bottom: 1rem; }
-    .rm-price-block { padding: 2.5rem; background: var(--rm-green); border-radius: var(--rm-radius-lg); display: flex; flex-direction: column; justify-content: center; }
-    .rm-price-block h3 { color: var(--rm-white); margin-bottom: 0.5rem; }
-    .rm-price-block .rm-price { font-size: clamp(2.5rem, 5vw, 3.5rem); font-family: Georgia, serif; color: var(--rm-accent); line-height: 1; margin: 0.75rem 0; }
-    .rm-price-block .rm-price-note { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; font-family: Arial, sans-serif; }
+    .rm-service-hero {
+      background: var(--rm-green);
+      padding: 100px 40px 80px;
+    }
+
+    .rm-service-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .rm-service-hero-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .rm-service-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .rm-service-hero-heading em {
+      font-style: italic;
+      color: var(--rm-accent);
+    }
+
+    .rm-service-hero-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.75);
+      margin-bottom: 36px;
+    }
+
+    .rm-service-hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .rm-service-hero-card {
+      background: rgba(247, 244, 238, 0.07);
+      border: 1px solid rgba(196, 180, 154, 0.2);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .rm-service-hero-card-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rm-service-hero-card-text {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: rgba(247, 244, 238, 0.85);
+    }
+
+    .rm-family-detail {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-family-detail-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .rm-family-approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+
+    .rm-family-detail-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .rm-family-detail-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+
+    .rm-family-detail-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .rm-family-approach-list {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .rm-family-approach-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      background: var(--rm-bg-card);
+      border-radius: 10px;
+    }
+
+    .rm-family-approach-item-number {
+      font-family: Georgia, serif;
+      font-size: 13px;
+      color: var(--rm-accent);
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .rm-family-approach-item-title {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      color: var(--rm-green);
+      margin-bottom: 6px;
+    }
+
+    .rm-family-approach-item-body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--rm-text-muted);
+    }
+
+    .rm-family-outcomes {
+      background: var(--rm-green);
+      border-radius: 16px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .rm-family-outcomes-heading {
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--rm-bg);
+      margin-bottom: 8px;
+    }
+
+    .rm-family-outcomes-sub {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: rgba(247, 244, 238, 0.55);
+      margin-bottom: 8px;
+    }
+
+    .rm-family-outcome-item {
+      background: rgba(247, 244, 238, 0.07);
+      border: 1px solid rgba(196, 180, 154, 0.2);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .rm-family-outcome-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .rm-family-outcome-title {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--rm-bg);
+      margin-bottom: 4px;
+    }
+
+    .rm-family-outcome-body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: rgba(247, 244, 238, 0.55);
+      line-height: 1.5;
+    }
+
+    .rm-family-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 48px;
+      background: var(--rm-bg-card);
+      border-radius: 16px;
+    }
+
+    .rm-family-bottom-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .rm-family-bottom-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .rm-family-bottom-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rm-family-bottom-list li {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rm-family-bottom-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rm-family-cta {
+      text-align: center;
+      padding: 48px 32px;
+      border: 1px solid rgba(61, 90, 71, 0.15);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .rm-family-cta-heading {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+    }
+
+    .rm-family-cta-body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+
+    .rm-family-cta-price {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      color: var(--rm-green);
+      line-height: 1;
+    }
+
+    .rm-family-cta-price-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--rm-text-muted);
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
     @media (max-width: 768px) {
-      .rm-service-hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .rm-detail__grid { grid-template-columns: 1fr; }
-      .rm-bottom-split { grid-template-columns: 1fr; }
+
+      .rm-service-hero-inner,
+      .rm-family-approach-grid,
+      .rm-family-bottom {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .rm-family-outcomes,
+      .rm-family-bottom {
+        padding: 32px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-service-hero rm-bg-green">
-      <div class="container">
-        <div class="rm-service-hero__grid">
-          <div>
-            <span class="rm-label hero-content">Family Therapy</span>
-            <h1 class="hero-content delay-1">Heal the System, Strengthen Every Member</h1>
-            <p class="hero-content delay-2">Families are systems — and when one part struggles, the whole is affected. Family therapy helps everyone involved understand each other better, communicate more safely, and find a way forward together.</p>
-            <a href="/contact" class="rm-btn rm-btn-primary hero-content delay-3">Book a Consultation</a>
+    <section class="rm-service-hero">
+      <div class="rm-service-hero-inner">
+        <div data-animate="left" data-delay="0">
+          <span class="rm-service-hero-label">Family Therapy</span>
+          <h1 class="rm-service-hero-heading">
+            Stronger Families Start<br>
+            with <em>Better Understanding</em>
+          </h1>
+          <p class="rm-service-hero-body">
+            Family challenges rarely exist in isolation — they emerge from patterns of communication, unmet needs, and
+            relational disconnection. We help families improve understanding, resolve conflict, and build stronger
+            bonds.
+          </p>
+          <a href="/contact" class="btn-accent">Schedule Family Therapy</a>
+        </div>
+        <div class="rm-service-hero-right" data-animate="right" data-delay="200">
+          <div class="rm-service-hero-card" data-animate data-delay="0">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Communication breakdown between family members</div>
           </div>
-          <div class="rm-issue-cards" data-animate="right">
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Parent-Child Conflict</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Adolescent &amp; Teen Challenges</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Sibling Conflict &amp; Rivalry</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Family Grief &amp; Loss</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Blended &amp; Stepfamily Dynamics</span></div>
-            <div class="rm-issue-card"><span class="rm-issue-card__check">✓</span><span>Major Life Transitions</span></div>
+          <div class="rm-service-hero-card" data-animate data-delay="100">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Unresolved conflict and ongoing tension</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="200">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Parenting challenges and disagreements</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="300">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Blended family dynamics and adjustment</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="400">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Strengthening family relationships</div>
+          </div>
+          <div class="rm-service-hero-card" data-animate data-delay="500">
+            <div class="rm-service-hero-card-dot"></div>
+            <div class="rm-service-hero-card-text">Faith-based family values and alignment</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- DETAIL -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="rm-detail__grid">
-          <div>
-            <span class="rm-label" data-animate="fade">Systems-Based Approach</span>
-            <h2 data-animate>How We Work With Families</h2>
-            <div class="rm-divider" data-animate></div>
-            <div class="rm-detail__step" data-animate data-delay="100">
-              <div class="rm-detail__step__num">01</div>
-              <div>
-                <h4>Family Systems Assessment</h4>
-                <p>We map the family's patterns, roles, rules, and communication styles — understanding how each member's behaviour makes sense within the broader family system.</p>
+    <section class="rm-family-detail">
+      <div class="rm-family-detail-inner">
+        <div class="rm-family-approach-grid">
+          <div data-animate="left" data-delay="0">
+            <span class="rm-family-detail-label">Our Approach</span>
+            <h2 class="rm-family-detail-heading">Family systems therapy combined with communication restructuring</h2>
+            <p class="rm-family-detail-body">We use family systems therapy to understand how each member's behavior
+              affects the whole — and communication restructuring to build healthier patterns of interaction.</p>
+            <p class="rm-family-detail-body">Sessions are structured around the family's unique dynamics, with clear
+              goals and practical tools every family member can apply.</p>
+            <div class="rm-family-approach-list">
+              <div class="rm-family-approach-item">
+                <div class="rm-family-approach-item-number">01</div>
+                <div>
+                  <div class="rm-family-approach-item-title">Family systems therapy</div>
+                  <div class="rm-family-approach-item-body">Understanding how each member's patterns affect the whole
+                    family system and identifying where change is needed.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="200">
-              <div class="rm-detail__step__num">02</div>
-              <div>
-                <h4>Individual &amp; Joint Sessions</h4>
-                <p>Depending on the presenting concern, we may meet with the full family, subsystems (parents only, siblings only), or individuals — creating a flexible structure that serves the work.</p>
+              <div class="rm-family-approach-item">
+                <div class="rm-family-approach-item-number">02</div>
+                <div>
+                  <div class="rm-family-approach-item-title">Communication restructuring</div>
+                  <div class="rm-family-approach-item-body">Rebuilding how family members express needs, listen, and
+                    respond — reducing conflict and increasing understanding.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="300">
-              <div class="rm-detail__step__num">03</div>
-              <div>
-                <h4>Communication &amp; Boundary Work</h4>
-                <p>We help families establish clearer communication norms, healthier boundaries, and more effective ways to repair ruptures when they occur.</p>
+              <div class="rm-family-approach-item">
+                <div class="rm-family-approach-item-number">03</div>
+                <div>
+                  <div class="rm-family-approach-item-title">Emotional awareness training</div>
+                  <div class="rm-family-approach-item-body">Helping each family member identify and regulate their
+                    emotional responses for healthier interactions.</div>
+                </div>
               </div>
-            </div>
-            <div class="rm-detail__step" data-animate data-delay="400">
-              <div class="rm-detail__step__num">04</div>
-              <div>
-                <h4>Strengthening the Family Unit</h4>
-                <p>We move beyond crisis resolution to help families build genuine cohesion — a shared identity, resilient rituals, and the capacity to navigate future challenges together.</p>
+              <div class="rm-family-approach-item">
+                <div class="rm-family-approach-item-number">04</div>
+                <div>
+                  <div class="rm-family-approach-item-title">Faith-based family values</div>
+                  <div class="rm-family-approach-item-body">For families who value faith, integrating Biblical
+                    principles of grace, forgiveness, and relational renewal.</div>
+                </div>
               </div>
             </div>
           </div>
-          <div data-animate="right" data-delay="100">
-            <div class="rm-outcomes-panel">
-              <h3>What Families Gain</h3>
-              <ul>
-                <li>Reduced conflict and tension at home</li>
-                <li>Parents and children feeling heard and understood</li>
-                <li>Clearer roles and healthier boundaries</li>
-                <li>Support through grief, loss, or major transitions</li>
-                <li>Adolescents with stronger emotional regulation</li>
-                <li>Improved co-parenting after separation or divorce</li>
-                <li>A shared language for navigating hard moments</li>
-                <li>A stronger, more connected family unit</li>
-              </ul>
+          <div class="rm-family-outcomes" data-animate="right" data-delay="200">
+            <div class="rm-family-outcomes-heading">What families experience</div>
+            <div class="rm-family-outcomes-sub">Outcomes from structured family therapy</div>
+            <div class="rm-family-outcome-item">
+              <div class="rm-family-outcome-dot"></div>
+              <div>
+                <div class="rm-family-outcome-title">Healthier family dynamics</div>
+                <div class="rm-family-outcome-body">Clearer roles, boundaries, and patterns of interaction that support
+                  everyone</div>
+              </div>
+            </div>
+            <div class="rm-family-outcome-item">
+              <div class="rm-family-outcome-dot"></div>
+              <div>
+                <div class="rm-family-outcome-title">Reduced tension and conflict</div>
+                <div class="rm-family-outcome-body">De-escalation tools and communication frameworks that work in real
+                  situations</div>
+              </div>
+            </div>
+            <div class="rm-family-outcome-item">
+              <div class="rm-family-outcome-dot"></div>
+              <div>
+                <div class="rm-family-outcome-title">Increased respect and connection</div>
+                <div class="rm-family-outcome-body">Stronger bonds built on mutual understanding, empathy, and shared
+                  values</div>
+              </div>
+            </div>
+            <div class="rm-family-outcome-item">
+              <div class="rm-family-outcome-dot"></div>
+              <div>
+                <div class="rm-family-outcome-title">Stronger parenting alignment</div>
+                <div class="rm-family-outcome-body">Parents equipped with consistent strategies and a unified approach
+                  to family challenges</div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="rm-bottom-split">
-          <div class="rm-faith-block" data-animate="left">
-            <span class="rm-label">Faith &amp; Culture</span>
-            <h3>Honouring Your Family's Values &amp; Heritage</h3>
-            <p>Family life is deeply shaped by culture, tradition, and faith. Our therapists approach every family with genuine curiosity about what values and beliefs hold them together — and how those can become a resource in therapy.</p>
-            <p>We are particularly experienced in supporting immigrant families navigating generational and cultural tensions, and families where faith plays a central role in daily life.</p>
+        <div class="rm-family-bottom" data-animate data-delay="0">
+          <div>
+            <h3 class="rm-family-bottom-heading">Every family deserves a space to heal and grow</h3>
+            <p class="rm-family-bottom-body">Family therapy at Real Mind is not about assigning blame — it's about
+              understanding the patterns that keep families stuck and building new ones that bring everyone closer.</p>
+            <p class="rm-family-bottom-body">We work with the whole family system, helping each member feel heard,
+              understood, and equipped for lasting change.</p>
+            <ul class="rm-family-bottom-list">
+              <li>Family systems approach</li>
+              <li>Communication restructuring tools</li>
+              <li>Emotional awareness for all ages</li>
+              <li>Faith-based family values integration</li>
+              <li>Parenting strategy alignment</li>
+            </ul>
           </div>
-          <div class="rm-price-block" data-animate="right">
-            <h3>Session Fee</h3>
-            <div class="rm-price">$225</div>
-            <p class="rm-price-note">Per 75-minute family session<br>Direct billing available for some insurers</p>
-            <a href="/contact" class="rm-btn rm-btn-white">Book a Consultation</a>
+          <div class="rm-family-cta">
+            <div class="rm-family-cta-heading">Ready to strengthen your family?</div>
+            <div class="rm-family-cta-body">Take the first step toward healthier dynamics and stronger connection.</div>
+            <div>
+              <div class="rm-family-cta-price">$225</div>
+              <div class="rm-family-cta-price-label">Per family session</div>
+            </div>
+            <a href="/contact" class="btn-primary" style="width:100%;text-align:center;box-sizing:border-box;">Schedule
+              Family Therapy</a>
           </div>
         </div>
       </div>
     </section>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
+
 </body>
+
 </html>

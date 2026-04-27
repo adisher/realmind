@@ -1,243 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us — Real Mind Psychotherapy</title>
-  <meta name="description" content="Schedule a consultation or ask a question. Real Mind Psychotherapy serves Ontario — virtual and in-person sessions available.">
+  <title>Contact — Real Mind Psychotherapy</title>
+  <meta name="description"
+    content="Schedule a consultation with Real Mind Psychotherapy. Reach out to begin your journey toward clarity, healing, and transformation.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    .rm-contact__grid {
+    .rm-contact-hero {
+      background: var(--rm-green);
+      padding: 100px 40px 80px;
+      text-align: center;
+    }
+
+    .rm-contact-hero-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .rm-contact-hero-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .rm-contact-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .rm-contact-hero-body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.75);
+    }
+
+    .rm-contact-main {
+      background: var(--rm-bg);
+      padding: 80px 40px;
+    }
+
+    .rm-contact-main-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 5rem;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
       align-items: start;
     }
-    .rm-contact-info__item {
-      display: flex;
-      gap: 1rem;
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--rm-bg-card);
+
+    .rm-contact-info-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
     }
-    .rm-contact-info__item:last-of-type { border-bottom: none; }
-    .rm-contact-info__icon {
-      width: 44px;
-      height: 44px;
+
+    .rm-contact-info-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 400;
+      color: var(--rm-green);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .rm-contact-info-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 36px;
+    }
+
+    .rm-contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .rm-contact-detail {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .rm-contact-detail-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(61, 90, 71, 0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .rm-contact-detail-icon-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--rm-green);
+      border-radius: 50%;
+    }
+
+    .rm-contact-detail-label {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 3px;
+    }
+
+    .rm-contact-detail-value {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      line-height: 1.5;
+    }
+
+    .rm-contact-detail-value a {
+      color: var(--rm-green);
+      text-decoration: none;
+    }
+
+    .rm-contact-detail-value a:hover {
+      text-decoration: underline;
+    }
+
+    .rm-contact-availability {
       background: var(--rm-bg-card);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .rm-contact-availability-heading {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      color: var(--rm-green);
+      margin-bottom: 16px;
+    }
+
+    .rm-contact-availability-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(61, 90, 71, 0.08);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: var(--rm-text-muted);
+    }
+
+    .rm-contact-availability-item:last-child {
+      border-bottom: none;
+    }
+
+    .rm-contact-availability-status {
+      font-size: 11px;
+      color: var(--rm-green);
+      background: rgba(61, 90, 71, 0.08);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .rm-contact-form-wrapper {
+      background: var(--rm-bg);
+      border: 1px solid var(--rm-bg-card);
+      border-radius: 16px;
+      padding: 48px;
+    }
+
+    .rm-contact-form-heading {
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--rm-green);
+      margin-bottom: 8px;
+    }
+
+    .rm-contact-form-sub {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .rm-contact-form-notice {
+      background: rgba(61, 90, 71, 0.06);
+      border-left: 3px solid var(--rm-green);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-bottom: 32px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: var(--rm-text-muted);
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--rm-text-muted);
+      margin-bottom: 8px;
+    }
+
+    .form-label span {
+      color: var(--rm-accent);
+      margin-left: 2px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--rm-bg-card);
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: var(--rm-text);
+      background: var(--rm-bg);
+      transition: border-color 0.2s ease;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--rm-green);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(61, 90, 71, 0.08);
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-select-wrapper {
+      position: relative;
+    }
+
+    .form-select-wrapper::after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--rm-text-muted);
+      pointer-events: none;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--rm-green);
+      color: var(--rm-bg);
+      border: none;
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: #2D4535;
+    }
+
+    .form-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 32px;
+    }
+
+    .form-success-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(61, 90, 71, 0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
+      margin: 0 auto 20px;
     }
-    .rm-contact-info__label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--rm-text-muted);
-      font-family: Arial, sans-serif;
-      margin-bottom: 0.2rem;
-    }
-    .rm-contact-info__value {
-      font-size: 0.95rem;
-      color: var(--rm-text);
-      font-family: Arial, sans-serif;
-    }
-    .rm-avail-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-      font-size: 0.875rem;
-    }
-    .rm-avail-table th {
-      text-align: left;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--rm-text-muted);
-      font-family: Arial, sans-serif;
-      padding: 0.5rem 0;
-      border-bottom: 1.5px solid var(--rm-bg-card);
-    }
-    .rm-avail-table td {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--rm-bg-card);
-      font-family: Arial, sans-serif;
-      color: var(--rm-text-muted);
-    }
-    .rm-avail-table td:first-child { color: var(--rm-text); font-weight: 600; }
-    .rm-avail-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+
+    .form-success-icon-dot {
+      width: 20px;
+      height: 20px;
       background: var(--rm-green);
-      margin-right: 0.4rem;
+      border-radius: 50%;
     }
-    .rm-contact-form-wrap {
-      background: var(--rm-bg-card);
-      border-radius: var(--rm-radius-lg);
-      padding: clamp(2rem, 4vw, 3rem);
+
+    .form-success-heading {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      color: var(--rm-green);
+      margin-bottom: 12px;
     }
-    .rm-contact-form-wrap h3 { margin-bottom: 0.35rem; }
-    .rm-contact-form-wrap > p { font-size: 0.9rem; margin-bottom: 2rem; }
-    @media (max-width: 900px) {
-      .rm-contact__grid { grid-template-columns: 1fr; gap: 3rem; }
+
+    .form-success-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: var(--rm-text-muted);
+      line-height: 1.7;
+    }
+
+    .form-error {
+      display: none;
+      background: rgba(180, 60, 60, 0.08);
+      border: 1px solid rgba(180, 60, 60, 0.2);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #8B3030;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .rm-contact-main-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .rm-contact-form-wrapper {
+        padding: 32px 24px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-page-hero rm-bg-green">
-      <div class="container">
-        <span class="rm-label hero-content">Get in Touch</span>
-        <h1 class="hero-content delay-1">Schedule Your Consultation</h1>
-        <p class="hero-content delay-2">We respond to all inquiries within 24 hours. Taking the first step is enough — we'll guide you through the rest.</p>
+    <section class="rm-contact-hero">
+      <div class="rm-contact-hero-inner">
+        <span class="rm-contact-hero-label">Get In Touch</span>
+        <h1 class="rm-contact-hero-heading">Start Your Healing Process Today</h1>
+        <p class="rm-contact-hero-body">Taking the first step toward therapy is one of the most important decisions you
+          can make. We are here to support you with professional care, clarity, and compassion.</p>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="rm-contact__grid">
+    <!-- MAIN -->
+    <section class="rm-contact-main">
+      <div class="rm-contact-main-inner">
 
-          <!-- INFO -->
-          <div data-animate="left">
-            <span class="rm-label">Contact Information</span>
-            <h3 style="margin-bottom:0.25rem">We're Here for You</h3>
-            <p style="font-size:0.9rem;margin-bottom:0">All sessions are confidential. Reach out anytime.</p>
-
-            <div class="rm-contact-info__item">
-              <div class="rm-contact-info__icon">📍</div>
+        <!-- INFO -->
+        <div data-animate="left" data-delay="0">
+          <span class="rm-contact-info-label">Contact Information</span>
+          <h2 class="rm-contact-info-heading">We'd love to hear from you</h2>
+          <p class="rm-contact-info-body">Reach out to schedule a consultation, verify insurance, or ask any questions
+            about our services.</p>
+          <div class="rm-contact-details">
+            <div class="rm-contact-detail">
+              <div class="rm-contact-detail-icon">
+                <div class="rm-contact-detail-icon-dot"></div>
+              </div>
               <div>
-                <div class="rm-contact-info__label">Location</div>
-                <div class="rm-contact-info__value">Ontario, Canada<br>Virtual &amp; In-Person Available</div>
+                <div class="rm-contact-detail-label">Location</div>
+                <div class="rm-contact-detail-value">New York<br>Telehealth Available Statewide</div>
               </div>
             </div>
-            <div class="rm-contact-info__item">
-              <div class="rm-contact-info__icon">✉️</div>
+            <div class="rm-contact-detail">
+              <div class="rm-contact-detail-icon">
+                <div class="rm-contact-detail-icon-dot"></div>
+              </div>
               <div>
-                <div class="rm-contact-info__label">Email</div>
-                <div class="rm-contact-info__value">hello@realmindpsychotherapy.com</div>
+                <div class="rm-contact-detail-label">Email</div>
+                <div class="rm-contact-detail-value">
+                  <a href="mailto:info@realmindpsychotherapy.com">info@realmindpsychotherapy.com</a>
+                </div>
               </div>
             </div>
-            <div class="rm-contact-info__item">
-              <div class="rm-contact-info__icon">📞</div>
+            <div class="rm-contact-detail">
+              <div class="rm-contact-detail-icon">
+                <div class="rm-contact-detail-icon-dot"></div>
+              </div>
               <div>
-                <div class="rm-contact-info__label">Phone</div>
-                <div class="rm-contact-info__value">Available upon booking confirmation</div>
+                <div class="rm-contact-detail-label">Response Time</div>
+                <div class="rm-contact-detail-value">Within 24-48 business hours</div>
               </div>
-            </div>
-            <div class="rm-contact-info__item">
-              <div class="rm-contact-info__icon">⏱️</div>
-              <div>
-                <div class="rm-contact-info__label">Response Time</div>
-                <div class="rm-contact-info__value">Within 24 hours on business days</div>
-              </div>
-            </div>
-
-            <table class="rm-avail-table">
-              <thead>
-                <tr>
-                  <th>Day</th>
-                  <th>Availability</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Monday – Friday</td><td><span class="rm-avail-dot"></span>9:00 am – 7:00 pm</td></tr>
-                <tr><td>Saturday</td><td><span class="rm-avail-dot"></span>10:00 am – 4:00 pm</td></tr>
-                <tr><td>Sunday</td><td>Closed</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- FORM -->
-          <div data-animate="right">
-            <div class="rm-contact-form-wrap">
-              <h3>Send Us a Message</h3>
-              <p>Tell us a little about what you're looking for and we'll match you with the right therapist.</p>
-
-              <div id="form-success" class="rm-form-success">
-                <h3>Message Received</h3>
-                <p>Thank you for reaching out. We'll be in touch within 24 hours to discuss next steps.</p>
-              </div>
-
-              <form id="contact-form">
-                <div class="rm-form-row">
-                  <div class="rm-form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required>
-                  </div>
-                  <div class="rm-form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                  </div>
-                </div>
-                <div class="rm-form-group">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Optional">
-                </div>
-                <div class="rm-form-row">
-                  <div class="rm-form-group">
-                    <label for="therapyType">Type of Therapy</label>
-                    <select id="therapyType" name="therapyType">
-                      <option value="">Select one...</option>
-                      <option>Individual Therapy</option>
-                      <option>Couples Therapy</option>
-                      <option>Family Therapy</option>
-                      <option>Not Sure Yet</option>
-                    </select>
-                  </div>
-                  <div class="rm-form-group">
-                    <label for="preferredTime">Preferred Time</label>
-                    <select id="preferredTime" name="preferredTime">
-                      <option value="">Select one...</option>
-                      <option>Mornings (9am – 12pm)</option>
-                      <option>Afternoons (12pm – 5pm)</option>
-                      <option>Evenings (5pm – 7pm)</option>
-                      <option>Saturdays</option>
-                      <option>Flexible</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="rm-form-group">
-                  <label for="message">What brings you to therapy? *</label>
-                  <textarea id="message" name="message" placeholder="Share as much or as little as you'd like. This helps us match you with the right therapist." required></textarea>
-                </div>
-                <div id="form-error" class="rm-form-error">Something went wrong. Please try again or email us directly.</div>
-                <button type="submit" class="rm-btn rm-btn-primary" style="width:100%">Send Message</button>
-                <p style="font-size:0.78rem;text-align:center;margin-top:1rem;color:var(--rm-text-muted)">🔒 Your information is strictly confidential.</p>
-              </form>
             </div>
           </div>
-
+          <div class="rm-contact-availability">
+            <div class="rm-contact-availability-heading">Availability</div>
+            <div class="rm-contact-availability-item">
+              <span>Monday — Friday</span>
+              <span class="rm-contact-availability-status">Available</span>
+            </div>
+            <div class="rm-contact-availability-item">
+              <span>Saturday</span>
+              <span class="rm-contact-availability-status">Limited</span>
+            </div>
+            <div class="rm-contact-availability-item">
+              <span>Sunday</span>
+              <span class="rm-contact-availability-status"
+                style="color:var(--rm-text-muted);background:var(--rm-bg);">Closed</span>
+            </div>
+            <div class="rm-contact-availability-item">
+              <span>Telehealth</span>
+              <span class="rm-contact-availability-status">New York State</span>
+            </div>
+          </div>
         </div>
+
+        <!-- FORM -->
+        <div data-animate="right" data-delay="200">
+          <div class="rm-contact-form-wrapper">
+            <div class="rm-contact-form-heading">Schedule a Consultation</div>
+            <div class="rm-contact-form-sub">Fill out the form below and we'll be in touch within 24-48 business hours
+              to confirm your appointment.</div>
+            <div class="rm-contact-form-notice">
+              All information submitted is strictly confidential and protected under HIPAA privacy standards.
+            </div>
+            <div id="form-success" class="form-success">
+              <div class="form-success-icon">
+                <div class="form-success-icon-dot"></div>
+              </div>
+              <div class="form-success-heading">Message received</div>
+              <div class="form-success-body">Thank you for reaching out. We will be in touch within 24-48 business hours
+                to confirm your consultation.</div>
+            </div>
+            <form id="contact-form">
+              <div class="form-row">
+                <div>
+                  <label class="form-label" for="firstName">First Name <span>*</span></label>
+                  <input class="form-input" type="text" id="firstName" name="firstName" required>
+                </div>
+                <div>
+                  <label class="form-label" for="lastName">Last Name <span>*</span></label>
+                  <input class="form-input" type="text" id="lastName" name="lastName" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span>*</span></label>
+                <input class="form-input" type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input class="form-input" type="tel" id="phone" name="phone">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="therapyType">Type of Therapy <span>*</span></label>
+                <div class="form-select-wrapper">
+                  <select class="form-select" id="therapyType" name="therapyType" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Individual Therapy">Individual Therapy</option>
+                    <option value="Couples Therapy">Couples Therapy</option>
+                    <option value="Family Therapy">Family Therapy</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="preferredTime">Preferred Time <span>*</span></label>
+                <div class="form-select-wrapper">
+                  <select class="form-select" id="preferredTime" name="preferredTime" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-textarea" id="message" name="message"
+                  placeholder="Tell us a bit about what you're looking for..."></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
+              <div id="form-error" class="form-error">
+                Something went wrong. Please try again or email us directly at info@realmindpsychotherapy.com
+              </div>
+            </form>
+          </div>
+        </div>
+
       </div>
     </section>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
   <script>
     const form = document.getElementById('contact-form');
     const successMsg = document.getElementById('form-success');
     const errorMsg = document.getElementById('form-error');
+    const submitBtn = document.getElementById('submit-btn');
 
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      const submitBtn = form.querySelector('button[type="submit"]');
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
+      errorMsg.style.display = 'none';
 
       const data = Object.fromEntries(new FormData(form));
 
@@ -261,5 +577,7 @@
       }
     });
   </script>
+
 </body>
+
 </html>

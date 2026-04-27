@@ -1,172 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Real Mind Psychotherapy</title>
-  <meta name="description" content="Privacy Policy for Real Mind Psychotherapy. Learn how we collect, use, and protect your personal information.">
+  <meta name="description"
+    content="Privacy Policy for Real Mind Psychotherapy. Learn how we collect, use, and protect your information.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <style>
-    .rm-legal-content {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .rm-legal-section {
-      margin-bottom: 3rem;
-    }
-    .rm-legal-section h2 {
-      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-      margin-bottom: 1rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--rm-bg-card);
-    }
-    .rm-legal-section p {
-      margin-bottom: 1rem;
-    }
-    .rm-legal-section ul {
-      margin: 1rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .rm-legal-section ul li {
-      display: flex;
-      gap: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--rm-text-muted);
-      font-family: Arial, sans-serif;
-      line-height: 1.65;
-    }
-    .rm-legal-section ul li::before {
-      content: '—';
-      color: var(--rm-accent);
-      flex-shrink: 0;
-    }
-    .rm-legal-contact-box {
+    .rm-legal-hero {
       background: var(--rm-green);
-      border-radius: var(--rm-radius-lg);
-      padding: 2.5rem;
-      margin-top: 3rem;
+      padding: 80px 40px 60px;
       text-align: center;
     }
-    .rm-legal-contact-box h3 { color: var(--rm-white); margin-bottom: 0.75rem; }
-    .rm-legal-contact-box p { color: rgba(255,255,255,0.78); margin-bottom: 1.5rem; }
+
+    .rm-legal-hero-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .rm-legal-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rm-accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .rm-legal-hero-heading {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 400;
+      color: var(--rm-bg);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .rm-legal-hero-date {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: rgba(247, 244, 238, 0.55);
+      letter-spacing: 0.05em;
+    }
+
+    .rm-legal-body {
+      padding: 80px 40px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .rm-legal-section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--rm-bg-card);
+    }
+
+    .rm-legal-section:last-child {
+      border-bottom: none;
+    }
+
+    .rm-legal-section-heading {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--rm-green);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .rm-legal-section-body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--rm-text-muted);
+      margin-bottom: 16px;
+    }
+
+    .rm-legal-section-body:last-child {
+      margin-bottom: 0;
+    }
+
+    .rm-legal-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rm-legal-list li {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: var(--rm-text-muted);
+      line-height: 1.7;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding-left: 4px;
+    }
+
+    .rm-legal-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--rm-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .rm-legal-highlight {
+      background: var(--rm-bg-card);
+      border-left: 3px solid var(--rm-green);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--rm-text-muted);
+      line-height: 1.7;
+    }
+
+    .rm-legal-contact-box {
+      background: var(--rm-green);
+      border-radius: 12px;
+      padding: 32px;
+      margin-top: 48px;
+    }
+
+    .rm-legal-contact-box-heading {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: var(--rm-bg);
+      margin-bottom: 16px;
+    }
+
+    .rm-legal-contact-box-body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: rgba(247, 244, 238, 0.75);
+      line-height: 1.75;
+    }
+
+    .rm-legal-contact-box-body a {
+      color: var(--rm-accent);
+      text-decoration: none;
+    }
+
+    .rm-legal-contact-box-body a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .rm-legal-body {
+        padding: 48px 24px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <div id="header-mount"></div>
+
   <main>
 
     <!-- HERO -->
-    <section class="rm-page-hero rm-bg-green">
-      <div class="container">
-        <span class="rm-label hero-content">Legal</span>
-        <h1 class="hero-content delay-1">Privacy Policy</h1>
-        <p class="hero-content delay-2">Last updated: April 26, 2026</p>
+    <section class="rm-legal-hero">
+      <div class="rm-legal-hero-inner">
+        <span class="rm-legal-label">Legal</span>
+        <h1 class="rm-legal-hero-heading">Privacy Policy</h1>
+        <div class="rm-legal-hero-date">Last updated: April 2026</div>
       </div>
     </section>
 
     <!-- CONTENT -->
-    <section class="rm-section">
-      <div class="container">
-        <div class="rm-legal-content" data-animate>
+    <div class="rm-legal-body">
 
-          <div class="rm-legal-section">
-            <h2>1. Introduction</h2>
-            <p>Real Mind Psychotherapy ("we," "us," or "our") is committed to protecting the privacy and confidentiality of all individuals who visit our website or engage with our services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information in accordance with the <em>Personal Health Information Protection Act (PHIPA)</em> and the <em>Personal Information Protection and Electronic Documents Act (PIPEDA)</em>.</p>
-            <p>By using our website or contacting us, you agree to the terms described in this policy. If you do not agree, please do not use our website.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>2. Information We Collect</h2>
-            <p>We may collect the following categories of information:</p>
-            <ul>
-              <li><strong>Contact information:</strong> name, email address, phone number provided through our contact form</li>
-              <li><strong>Inquiry details:</strong> information you voluntarily share about your reasons for seeking therapy</li>
-              <li><strong>Technical data:</strong> IP address, browser type, pages visited, and time spent on pages (collected automatically via analytics tools)</li>
-              <li><strong>Employment information:</strong> details submitted through our "Join Our Team" application form</li>
-            </ul>
-            <p>We do not collect sensitive personal health information through our website. Clinical records are maintained separately and governed by PHIPA.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
-            <ul>
-              <li>Respond to your inquiries and schedule consultations</li>
-              <li>Match you with the most appropriate clinician for your needs</li>
-              <li>Process employment and practicum applications</li>
-              <li>Improve the performance and content of our website</li>
-              <li>Comply with legal and regulatory obligations</li>
-            </ul>
-            <p>We will never sell, rent, or trade your personal information to third parties for marketing purposes.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>4. Confidentiality of Clinical Information</h2>
-            <p>All clinical communications and records are protected by professional confidentiality obligations under PHIPA and the ethical standards of the Ontario College of Social Workers and Social Service Workers (OCSWSSW) and the College of Psychologists of Ontario (CPO).</p>
-            <p>Information shared in therapy sessions will not be disclosed without your written consent, except in limited circumstances required by law (such as imminent risk of harm or mandatory reporting obligations).</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>5. Cookies and Analytics</h2>
-            <p>Our website may use cookies and analytics tools (such as Vercel Analytics) to understand how visitors interact with our site. This data is aggregated and anonymized — it does not identify you personally.</p>
-            <p>You may disable cookies in your browser settings at any time. Doing so may affect the functionality of certain features on our website.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>6. Third-Party Services</h2>
-            <p>We use the following third-party services to operate our website and communications:</p>
-            <ul>
-              <li><strong>Vercel:</strong> website hosting and deployment</li>
-              <li><strong>Resend:</strong> transactional email delivery for form submissions</li>
-            </ul>
-            <p>These services are bound by their own privacy policies and are used solely for the purposes described above. We do not share personal health information with these providers.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>7. Data Retention</h2>
-            <p>We retain contact form submissions and application data for a maximum of 12 months, after which they are securely deleted. Clinical records are retained according to the timelines required by provincial law and college standards.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>8. Your Rights</h2>
-            <p>You have the right to:</p>
-            <ul>
-              <li>Access the personal information we hold about you</li>
-              <li>Request correction of inaccurate information</li>
-              <li>Request deletion of your information (subject to legal retention requirements)</li>
-              <li>Withdraw consent for non-essential communications at any time</li>
-            </ul>
-            <p>To exercise any of these rights, please contact us at the address below.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>9. Security</h2>
-            <p>We implement appropriate technical and organizational safeguards to protect your personal information against unauthorized access, disclosure, or loss. All data transmitted through our website is encrypted via HTTPS.</p>
-          </div>
-
-          <div class="rm-legal-section">
-            <h2>10. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
-          </div>
-
-          <div class="rm-legal-contact-box">
-            <h3>Questions About This Policy?</h3>
-            <p>Contact our Privacy Officer at:<br>hello@realmindpsychotherapy.com</p>
-            <a href="/contact" class="rm-btn rm-btn-white">Contact Us</a>
-          </div>
-
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Our Commitment to Your Privacy</h2>
+        <p class="rm-legal-section-body">Real Mind Psychotherapy ("we," "our," or "us") is committed to protecting the
+          privacy and confidentiality of all individuals who visit our website and use our services. This Privacy Policy
+          describes how we collect, use, and protect information obtained through our website at
+          realmindpsychotherapy.com.</p>
+        <p class="rm-legal-section-body">As a mental health practice, we are bound by professional ethical standards and
+          applicable law, including the Health Insurance Portability and Accountability Act (HIPAA), regarding the
+          confidentiality of client information. Please read this policy carefully.</p>
+        <div class="rm-legal-highlight">
+          This website is for informational purposes only. It does not constitute a therapeutic relationship. A formal
+          therapeutic relationship is only established through a signed service agreement with Real Mind Psychotherapy.
         </div>
       </div>
-    </section>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Information We Collect</h2>
+        <p class="rm-legal-section-body">We collect the following types of information through this website:</p>
+        <ul class="rm-legal-list">
+          <li>Contact form submissions — including name, email address, phone number, and any message content you choose
+            to provide</li>
+          <li>Scheduling information submitted through our online booking system</li>
+          <li>Clinician application information submitted through our Join Our Team form</li>
+          <li>Website usage data collected automatically through analytics tools, including pages visited, time spent on
+            pages, and general geographic location</li>
+          <li>Technical data such as IP address, browser type, and device information collected automatically by our
+            hosting platform</li>
+        </ul>
+        <p class="rm-legal-section-body">We do not collect sensitive health or clinical information through this
+          website. Clinical information shared during therapy sessions is governed by our separate Notice of Privacy
+          Practices, which is provided to all clients at the start of treatment.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">How We Use Your Information</h2>
+        <p class="rm-legal-section-body">Information collected through this website is used solely for the following
+          purposes:</p>
+        <ul class="rm-legal-list">
+          <li>Responding to inquiries submitted through our contact form</li>
+          <li>Scheduling and confirming appointments</li>
+          <li>Reviewing clinician applications</li>
+          <li>Improving the functionality and content of our website</li>
+          <li>Complying with legal and professional obligations</li>
+        </ul>
+        <p class="rm-legal-section-body">We do not sell, rent, or share your personal information with third parties for
+          marketing purposes. We do not use your information to send unsolicited communications.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">HIPAA and Clinical Confidentiality</h2>
+        <p class="rm-legal-section-body">Real Mind Psychotherapy complies with the Health Insurance Portability and
+          Accountability Act (HIPAA) and all applicable state laws governing the privacy and security of protected
+          health information (PHI).</p>
+        <p class="rm-legal-section-body">Protected health information — including anything shared during therapy
+          sessions, clinical assessments, and treatment records — is maintained separately from website data and is
+          governed by our Notice of Privacy Practices. This document is provided to all clients prior to the
+          commencement of services.</p>
+        <div class="rm-legal-highlight">
+          Information submitted through this website's contact form is not considered protected health information under
+          HIPAA. Please do not submit sensitive clinical or medical information through this form. For clinical matters,
+          please contact us directly by phone or through your secure client portal.
+        </div>
+        <p class="rm-legal-section-body">We use HIPAA-compliant platforms for all telehealth sessions and electronic
+          communications involving clinical information.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Data Storage and Security</h2>
+        <p class="rm-legal-section-body">This website is hosted on Vercel, which maintains industry-standard security
+          protocols including SSL encryption for all data transmission. Form submissions are processed via Resend and
+          transmitted securely in accordance with their privacy and security standards.</p>
+        <p class="rm-legal-section-body">We take reasonable technical and administrative measures to protect the
+          information collected through this website from unauthorized access, disclosure, or misuse. However, no method
+          of internet transmission is completely secure, and we cannot guarantee absolute security.</p>
+        <p class="rm-legal-section-body">We retain contact form submissions for a reasonable period necessary to respond
+          to your inquiry and maintain business records, after which they are deleted.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Cookies and Analytics</h2>
+        <p class="rm-legal-section-body">Our website may use cookies — small text files stored on your device — to
+          improve functionality and analyze website traffic. Analytics data is aggregated and does not identify
+          individual visitors.</p>
+        <p class="rm-legal-section-body">You may configure your browser to refuse cookies or alert you when cookies are
+          being sent. Please note that some features of the website may not function correctly if cookies are disabled.
+        </p>
+        <p class="rm-legal-section-body">We do not use third-party advertising cookies or tracking pixels on this
+          website.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Third-Party Services</h2>
+        <p class="rm-legal-section-body">Our website uses the following third-party services:</p>
+        <ul class="rm-legal-list">
+          <li>Vercel — website hosting and deployment</li>
+          <li>Resend — email delivery for form submissions</li>
+          <li>Google Analytics — anonymous website traffic analysis (if enabled)</li>
+        </ul>
+        <p class="rm-legal-section-body">Each of these services has its own privacy policy governing the data they
+          collect. We encourage you to review their policies if you have concerns about how they handle your data.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Your Rights</h2>
+        <p class="rm-legal-section-body">You have the following rights regarding your personal information:</p>
+        <ul class="rm-legal-list">
+          <li>The right to know what personal information we hold about you</li>
+          <li>The right to request correction of inaccurate information</li>
+          <li>The right to request deletion of your information, subject to applicable legal requirements</li>
+          <li>The right to opt out of any future communications from us</li>
+        </ul>
+        <p class="rm-legal-section-body">To exercise any of these rights, please contact us using the information
+          provided below. We will respond to your request within a reasonable timeframe.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Children's Privacy</h2>
+        <p class="rm-legal-section-body">This website is not directed at children under the age of 13, and we do not
+          knowingly collect personal information from children under 13 through this website. If you believe a child has
+          submitted personal information to us, please contact us immediately and we will take steps to remove that
+          information.</p>
+        <p class="rm-legal-section-body">Therapy services for minors are provided with appropriate parental or guardian
+          consent and are governed by our clinical intake procedures and Notice of Privacy Practices.</p>
+      </div>
+
+      <div class="rm-legal-section">
+        <h2 class="rm-legal-section-heading">Changes to This Policy</h2>
+        <p class="rm-legal-section-body">We may update this Privacy Policy from time to time to reflect changes in our
+          practices, technology, or legal requirements. The date of the most recent revision is displayed at the top of
+          this page. We encourage you to review this policy periodically.</p>
+        <p class="rm-legal-section-body">Continued use of this website following the posting of changes constitutes your
+          acceptance of those changes.</p>
+      </div>
+
+      <div class="rm-legal-contact-box">
+        <div class="rm-legal-contact-box-heading">Questions About This Policy</div>
+        <div class="rm-legal-contact-box-body">
+          If you have any questions about this Privacy Policy or our data practices, please contact us:<br><br>
+          Real Mind Psychotherapy<br>
+          New York (Telehealth)<br>
+          Email: <a href="mailto:info@realmindpsychotherapy.com">info@realmindpsychotherapy.com</a><br><br>
+          For questions related to your clinical records and HIPAA rights specifically, please request a copy of our
+          Notice of Privacy Practices.
+        </div>
+      </div>
+
+    </div>
 
   </main>
+
   <div id="footer-mount"></div>
   <script src="/js/main.js" type="module"></script>
+
 </body>
+
 </html>
