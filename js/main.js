@@ -160,11 +160,16 @@ document.addEventListener('DOMContentLoaded', function () {
   var header = document.getElementById('header');
 
   function updateHeader() {
-    if (!header) return;
+    if (!header) {
+      console.log('Header not found');
+      return;
+    }
     if (window.scrollY <= 10) {
+      console.log('At top');
       header.classList.remove('scrolled');
       header.classList.add('at-top');
     } else {
+      console.log('Scrolled');
       header.classList.remove('at-top');
       header.classList.add('scrolled');
     }
