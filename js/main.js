@@ -73,6 +73,7 @@ const HEADER_HTML = `
 </div>
 `;
 
+
 // =====================
 // FOOTER HTML
 // =====================
@@ -82,7 +83,7 @@ const FOOTER_HTML = `
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo-img">
-          <img src="/images/logo-white.png" alt="Real Mind Psychotherapy">
+          <img src="/images/logo.png" alt="Real Mind Psychotherapy">
         </div>
         <p class="footer-tagline">"Real change starts with a clear mind."</p>
         <div class="footer-badges">
