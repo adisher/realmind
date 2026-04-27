@@ -27,7 +27,7 @@ async function renderBlogIndex() {
     }
 
     container.innerHTML = posts.map((post, index) => `
-      <article class="blog-card" data-animate data-delay="${index * 100}">
+      <article class="blog-card"">
         <a href="/blog/${post.slug}" class="blog-card-link">
           <div class="blog-card-image">
             <img src="${post.image}" alt="${post.imageAlt}" loading="lazy">
