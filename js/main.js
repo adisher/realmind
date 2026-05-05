@@ -127,7 +127,7 @@ const FOOTER_HTML = `
         </div>
         <div class="footer-contact-item">
           <div class="footer-contact-label">Schedule</div>
-          <div class="footer-contact-value"><a href="/contact">Book a Consultation →</a></div>
+          <div class="footer-contact-value"><a href="https://www.zocdoc.com/practice/real-mind-mental-health-counseling-177953?lock=true&isNewPatient=false&referrerType=widget" target="_blank" rel="noopener noreferrer">Book a Consultation →</a></div>
         </div>
       </div>
     </div>
