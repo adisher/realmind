@@ -135,6 +135,17 @@ async function renderPost() {
     if (loading) loading.style.display = 'none';
     container.style.display = 'block';
 
+    // Add canonical tag dynamically for blog posts
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.href = `https://www.realmindpsychotherapy.com/blog/${post.slug}`;
+    } else {
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = `https://www.realmindpsychotherapy.com/blog/${post.slug}`;
+      document.head.appendChild(link);
+    }
+
   } catch (err) {
     if (loading) loading.textContent = 'Unable to load post.';
     console.error('Post render error:', err);
