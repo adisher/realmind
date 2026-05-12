@@ -89,6 +89,50 @@
   border-bottom: 1px solid var(--rm-accent);
   padding-bottom: 2px;
 }
+/* Book appointment button in nav */
+.header-book-btn {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Solid header state */
+#header.at-top .header-book-btn {
+  background: var(--rm-green);
+  color: var(--rm-bg);
+}
+
+#header.at-top .header-book-btn:hover {
+  background: #2D4535;
+  transform: translateY(-1px);
+}
+
+/* Scrolled blurred state */
+#header.scrolled .header-book-btn {
+  background: var(--rm-green);
+  color: var(--rm-bg);
+}
+
+#header.scrolled .header-book-btn:hover {
+  background: #2D4535;
+  transform: translateY(-1px);
+}
+
+/* Hide on mobile — burger menu takes over */
+@media (max-width: 900px) {
+  .header-book-btn {
+    display: none;
+  }
+}
 
 /* Dropdown */
 .header-nav-folder {

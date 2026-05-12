@@ -45,6 +45,7 @@ const HEADER_HTML = `
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
+    <a href="https://www.zocdoc.com/practice/real-mind-mental-health-counseling-177953?lock=true&isNewPatient=true&referrerType=widget" target="_blank" rel="noopener noreferrer" class="header-book-btn">Book Appointment</a>
     <button class="header-burger" aria-label="Open menu">
       <span class="burger-bar"></span>
       <span class="burger-bar"></span>
@@ -71,6 +72,9 @@ const HEADER_HTML = `
     <div class="mobile-nav-item"><a href="/fees">Fees</a></div>
     <div class="mobile-nav-item"><a href="/blog">Blog</a></div>
     <div class="mobile-nav-item"><a href="/contact">Contact</a></div>
+    <div class="mobile-nav-item">
+      <a href="https://www.zocdoc.com/practice/real-mind-mental-health-counseling-177953?lock=true&isNewPatient=true&referrerType=widget" target="_blank" rel="noopener noreferrer" style="color:var(--rm-green);font-weight:500;">Book Appointment →</a>
+    </div>
   </nav>
 </div>
 `;
