@@ -45,7 +45,10 @@ const HEADER_HTML = `
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
-    <a href="https://www.zocdoc.com/practice/real-mind-mental-health-counseling-177953?lock=true&isNewPatient=true&referrerType=widget" target="_blank" rel="noopener noreferrer" class="header-book-btn">Book Appointment</a>
+    <a href="https://www.zocdoc.com/practice/real-mind-mental-health-counseling-177953?lock=true&isNewPatient=true&referrerType=widget" target="_blank" rel="noopener noreferrer" class="header-book-btn">Book Appointment
+      <span class="btn-zocdoc-divider"></span>
+      <img src="/images/zocdoc.png" alt="Zocdoc" class="btn-zocdoc-logo">
+    </a>
     <button class="header-burger" aria-label="Open menu">
       <span class="burger-bar"></span>
       <span class="burger-bar"></span>

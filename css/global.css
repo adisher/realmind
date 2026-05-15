@@ -186,3 +186,84 @@ h4 {
   border-color: rgba(255, 255, 255, 0.8);
   transform: translateY(-2px);
 }
+
+/* Zocdoc branded button */
+.btn-zocdoc {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rm-bg);
+  background: var(--rm-green);
+  border: none;
+  border-radius: 6px;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.btn-zocdoc:hover {
+  background: #2D4535;
+  transform: translateY(-2px);
+}
+
+.btn-zocdoc-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(247, 244, 238, 0.3);
+  flex-shrink: 0;
+}
+
+.btn-zocdoc-logo {
+  height: 16px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+/* Accent variant */
+.btn-zocdoc-accent {
+  background: var(--rm-accent);
+  color: var(--rm-green);
+}
+
+.btn-zocdoc-accent:hover {
+  background: #b8a48a;
+  transform: translateY(-2px);
+}
+
+.btn-zocdoc-accent .btn-zocdoc-divider {
+  background: rgba(61, 90, 71, 0.25);
+}
+
+.btn-zocdoc-accent .btn-zocdoc-logo {
+  filter: none;
+  opacity: 0.7;
+}
+
+/* White outline variant for dark backgrounds */
+.btn-zocdoc-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-zocdoc-outline:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.btn-zocdoc-outline .btn-zocdoc-divider {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-zocdoc-outline .btn-zocdoc-logo {
+  filter: brightness(0) invert(1);
+}
