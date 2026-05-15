@@ -91,12 +91,15 @@
 }
 /* Book appointment button in nav */
 .header-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: Arial, sans-serif;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 500;
-  padding: 10px 22px;
+  padding: 9px 18px 9px 12px;
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.3s ease,
