@@ -45,10 +45,9 @@ const HEADER_HTML = `
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
-    <a href="https://www.zocdoc.com/practice/real-mind-mental-health-counseling-177953?lock=true&isNewPatient=true&referrerType=widget" target="_blank" rel="noopener noreferrer" class="btn-zocdoc btn-zocdoc-accent">
-      <img src="/images/zocdoc-icon.png" alt="Zocdoc" class="btn-zocdoc-icon">
-      <span class="btn-zocdoc-divider"></span>
-      <span class="btn-zocdoc-text">Book Appointment</span>
+    <a href="https://www.zocdoc.com/practice/real-mind-mental-health-counseling-177953?lock=true&isNewPatient=true&referrerType=widget" target="_blank" rel="noopener noreferrer" class="header-book-btn">
+      <img src="/images/zocdoc-icon.png" alt="Zocdoc" style="width:20px;height:20px;border-radius:50%;display:block;flex-shrink:0;">
+      <span>Book Appointment</span>
     </a>
     <button class="header-burger" aria-label="Open menu">
       <span class="burger-bar"></span>
